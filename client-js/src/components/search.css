@@ -1,0 +1,27 @@
+.search-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.search-textinput {
+  width: 730px;
+  height: 65px;
+  opacity: 0.8;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 200px;
+}
+.search-icon {
+  top: 22px;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  position: absolute;
+}
+@media(max-width: 479px) {
+  .search-textinput {
+    width: 441px;
+  }
+}
