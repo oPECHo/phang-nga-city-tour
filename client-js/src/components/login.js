@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
+import GoogleLoginButton from './google-login-button'
 import './login.css'
 
 const Login = (props) => {
@@ -43,14 +44,10 @@ const Login = (props) => {
             <Link to="/" className="login-navlink button">
               {props.button}
             </Link>
-            <Link to="/" className="login-navlink1 button">
-              {props.button1}
-            </Link>
-            <img
-              alt={props.image_alt}
-              src={props.image_src}
-              className="login-image"
-            />
+            <GoogleLoginButton
+              rootClassName="google-login-button-root-class-name"
+              className=""
+            ></GoogleLoginButton>
           </div>
         </div>
       </div>
@@ -60,9 +57,7 @@ const Login = (props) => {
 
 Login.defaultProps = {
   email_placeholder: 'อีเมลล์ของคุณนะจ๊ะ',
-  button1: '        เข้าสู่ระบบด้วย Google',
   rootClassName: '',
-  image_alt: 'image',
   email: 'อีเมลล์',
   pass: 'รหัสผ่าน',
   pass_placeholder: 'รหัสผ่านของคุณ',
@@ -72,15 +67,12 @@ Login.defaultProps = {
   login: 'เข้าสู่ระบบ',
   text1: 'Phang-Nga City Tour',
   button: 'เข้าสู่ระบบ',
-  image_src: '/playground_assets/google-200h.png',
   Imagelogin_alt: 'image',
 }
 
 Login.propTypes = {
   email_placeholder: PropTypes.string,
-  button1: PropTypes.string,
   rootClassName: PropTypes.string,
-  image_alt: PropTypes.string,
   email: PropTypes.string,
   pass: PropTypes.string,
   pass_placeholder: PropTypes.string,
@@ -90,7 +82,6 @@ Login.propTypes = {
   login: PropTypes.string,
   text1: PropTypes.string,
   button: PropTypes.string,
-  image_src: PropTypes.string,
   Imagelogin_alt: PropTypes.string,
 }
 

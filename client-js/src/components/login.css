@@ -135,29 +135,6 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-300);
 }
-.login-navlink1 {
-  top: 453px;
-  left: 0px;
-  color: var(--dl-color-gray-black);
-  right: 0px;
-  width: 378px;
-  height: 43px;
-  margin: auto;
-  position: absolute;
-  font-size: 20px;
-  text-align: center;
-  border-color: var(--dl-color-gray-black);
-  text-decoration: none;
-  background-color: var(--dl-color-gray-white);
-}
-.login-image {
-  top: 457px;
-  left: 135px;
-  width: 34px;
-  height: 35px;
-  position: absolute;
-  object-fit: cover;
-}
 .login-root-class-name {
   top: 9%;
   flex: 1;
