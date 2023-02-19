@@ -20,6 +20,11 @@
   opacity: 0.3;
   position: absolute;
 }
+.search-root-class-name {
+  top: 12%;
+  left: 60%;
+  position: absolute;
+}
 @media(max-width: 479px) {
   .search-textinput {
     width: 441px;

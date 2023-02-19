@@ -32,9 +32,13 @@ const NavBar = (props) => {
               {props.text}
             </Link>
             <span className="nav-bar-text">{props.text1}</span>
-            <span className="nav-bar-text1">{props.text2}</span>
-            <span className="nav-bar-text2">{props.text3}</span>
-            <Link to="/" className="nav-bar-navlink2">
+            <Link to="/cancel-page" className="nav-bar-navlink2">
+              {props.text2}
+            </Link>
+            <Link to="/history-page" className="nav-bar-navlink3">
+              {props.text3}
+            </Link>
+            <Link to="/search-page" className="nav-bar-navlink4">
               {props.text4}
             </Link>
           </nav>
@@ -81,13 +85,13 @@ const NavBar = (props) => {
               data-role="Nav"
               className="nav-bar-nav2"
             >
-              <Link to="/" className="nav-bar-navlink3">
+              <Link to="/" className="nav-bar-navlink5">
                 {props.text5}
               </Link>
-              <span className="nav-bar-text3">{props.text6}</span>
-              <span className="nav-bar-text4">{props.text7}</span>
-              <span className="nav-bar-text5">{props.text8}</span>
-              <Link to="/" className="nav-bar-navlink4">
+              <span className="nav-bar-text1">{props.text6}</span>
+              <span className="nav-bar-text2">{props.text7}</span>
+              <span className="nav-bar-text3">{props.text8}</span>
+              <Link to="/" className="nav-bar-navlink6">
                 {props.text9}
               </Link>
             </nav>

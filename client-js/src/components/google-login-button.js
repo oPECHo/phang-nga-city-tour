@@ -14,8 +14,8 @@ const GoogleLoginButton = (props) => {
         className="google-login-button-button button"
       >
         <img
-          src={props.image_src}
           alt={props.image_alt}
+          src={props.image_src}
           className="google-login-button-image"
         />
         <span className="google-login-button-text">{props.text2}</span>
@@ -25,17 +25,17 @@ const GoogleLoginButton = (props) => {
 }
 
 GoogleLoginButton.defaultProps = {
-  image_src: '/playground_assets/google-200h.png',
-  image_alt: 'image',
-  text2: 'เข้าสู่ระบบด้วย Google',
   rootClassName: '',
+  image_alt: 'image',
+  image_src: '/playground_assets/google-200h.png',
+  text2: 'เข้าสู่ระบบด้วย Google',
 }
 
 GoogleLoginButton.propTypes = {
-  image_src: PropTypes.string,
-  image_alt: PropTypes.string,
-  text2: PropTypes.string,
   rootClassName: PropTypes.string,
+  image_alt: PropTypes.string,
+  image_src: PropTypes.string,
+  text2: PropTypes.string,
 }
 
 export default GoogleLoginButton

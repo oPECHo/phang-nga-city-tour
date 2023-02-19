@@ -1,0 +1,133 @@
+.profile-container {
+  width: 1323px;
+  height: 683px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.profile-icon {
+  top: 20%;
+  fill: var(--dl-color-gray-black);
+  left: 5%;
+  height: 50%;
+  position: absolute;
+}
+.profile-text {
+  top: 16%;
+  left: 35%;
+  color: var(--dl-color-gray-black);
+  position: absolute;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+.profile-text1 {
+  top: 30%;
+  left: 35%;
+  color: var(--dl-color-gray-black);
+  position: absolute;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+.profile-text2 {
+  top: 44%;
+  left: 35%;
+  color: var(--dl-color-gray-black);
+  position: absolute;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+.profile-text3 {
+  top: 58%;
+  left: 35%;
+  color: var(--dl-color-gray-black);
+  position: absolute;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+.profile-button {
+  color: var(--dl-color-primary-300);
+  right: 15%;
+  width: 15%;
+  bottom: 15%;
+  height: 8%;
+  position: absolute;
+  font-size: 28px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  border-width: 0px;
+  border-radius: 10px;
+}
+.profile-button1 {
+  color: var(--dl-color-gray-white);
+  right: 32%;
+  width: 15%;
+  bottom: 15%;
+  height: 8%;
+  position: absolute;
+  font-size: 28px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  border-width: 0px;
+  border-radius: 10px;
+  background-color: var(--dl-color-primary-300);
+}
+.profile-textinput {
+  top: 14%;
+  left: 55%;
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  border-width: 0px;
+  border-radius: 25px;
+}
+.profile-text4 {
+  top: 5%;
+  left: 3%;
+  color: var(--dl-color-gray-black);
+  position: absolute;
+  font-size: 4em;
+  border-width: 0px;
+  border-radius: 25px;
+}
+.profile-textinput1 {
+  top: 28%;
+  left: 55%;
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  border-width: 0px;
+  border-radius: 25px;
+}
+.profile-textinput2 {
+  top: 42%;
+  left: 55%;
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  border-width: 0px;
+  border-radius: 25px;
+}
+.profile-textinput3 {
+  top: 56%;
+  left: 55%;
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  border-width: 0px;
+  border-radius: 25px;
+}
+.profile-root-class-name {
+  top: 20%;
+  left: 0px;
+  right: 0px;
+  width: 70%;
+  margin: auto;
+  position: absolute;
+}
