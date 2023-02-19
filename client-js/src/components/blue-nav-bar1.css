@@ -32,10 +32,12 @@
   display: contents;
 }
 .blue-nav-bar1-logo {
-  top: -38px;
-  left: -32px;
+  top: -27px;
+  left: -24px;
+  right: 0px;
   width: 100%;
   height: auto;
+  margin: auto;
   position: absolute;
   text-decoration: none;
 }
@@ -182,13 +184,15 @@
 .blue-nav-bar1-text1 {
   margin-bottom: var(--dl-space-space-unit);
 }
-.blue-nav-bar1-text2 {
-  margin-bottom: var(--dl-space-space-unit);
-}
-.blue-nav-bar1-text3 {
-  margin-bottom: var(--dl-space-space-unit);
-}
 .blue-nav-bar1-navlink6 {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+.blue-nav-bar1-navlink7 {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+.blue-nav-bar1-navlink8 {
   margin-bottom: var(--dl-space-space-unit);
   text-decoration: none;
 }

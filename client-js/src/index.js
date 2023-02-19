@@ -11,7 +11,7 @@ import Home from './views/home'
 import LoginPage from './views/login-page'
 import CommentPage from './views/comment-page'
 import ProfilePage from './views/profile-page'
-import CancelPage from './views/cancel-page'
+import YourBookingPage from './views/your-booking-page'
 import RegisterPage from './views/register-page'
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
         <Route component={LoginPage} exact path="/login-page" />
         <Route component={CommentPage} exact path="/comment-page" />
         <Route component={ProfilePage} exact path="/profile-page" />
-        <Route component={CancelPage} exact path="/cancel-page" />
+        <Route component={YourBookingPage} exact path="/your-booking-page" />
         <Route component={RegisterPage} exact path="/register-page" />
       </div>
     </Router>

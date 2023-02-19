@@ -8,4 +8,14 @@
   background-size: cover;
   justify-content: flex-start;
   background-image: url("/playground_assets/blurjamebon-1500w.jpg");
+  background-position: center;
+}
+.search-page-container1 {
+  flex: 0 0 auto;
+  width: auto;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }

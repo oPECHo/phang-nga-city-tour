@@ -129,7 +129,9 @@
 }
 .cancel-root-class-name {
   top: 15%;
+  flex: 1;
   left: 239px;
+  width: var(--dl-size-size-maxwidth);
   position: absolute;
   align-self: center;
 }

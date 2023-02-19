@@ -181,13 +181,15 @@
 .transparent-nav-bar-text1 {
   margin-bottom: var(--dl-space-space-unit);
 }
-.transparent-nav-bar-text2 {
-  margin-bottom: var(--dl-space-space-unit);
-}
-.transparent-nav-bar-text3 {
-  margin-bottom: var(--dl-space-space-unit);
-}
 .transparent-nav-bar-navlink6 {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+.transparent-nav-bar-navlink7 {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+.transparent-nav-bar-navlink8 {
   margin-bottom: var(--dl-space-space-unit);
   text-decoration: none;
 }

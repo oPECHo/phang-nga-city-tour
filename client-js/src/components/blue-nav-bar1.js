@@ -35,7 +35,7 @@ const BlueNavBar1 = (props) => {
               {props.text}
             </Link>
             <span className="blue-nav-bar1-text">{props.text1}</span>
-            <Link to="/cancel-page" className="blue-nav-bar1-navlink2">
+            <Link to="/your-booking-page" className="blue-nav-bar1-navlink2">
               {props.text2}
             </Link>
             <Link to="/history-page" className="blue-nav-bar1-navlink3">
@@ -98,9 +98,13 @@ const BlueNavBar1 = (props) => {
                 {props.text5}
               </Link>
               <span className="blue-nav-bar1-text1">{props.text6}</span>
-              <span className="blue-nav-bar1-text2">{props.text7}</span>
-              <span className="blue-nav-bar1-text3">{props.text8}</span>
-              <Link to="/" className="blue-nav-bar1-navlink6">
+              <Link to="/your-booking-page" className="blue-nav-bar1-navlink6">
+                {props.text7}
+              </Link>
+              <Link to="/history-page" className="blue-nav-bar1-navlink7">
+                {props.text8}
+              </Link>
+              <Link to="/search-page" className="blue-nav-bar1-navlink8">
                 {props.text9}
               </Link>
             </nav>

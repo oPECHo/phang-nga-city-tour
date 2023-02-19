@@ -1,4 +1,4 @@
-.component-container {
+.payment-complete-container {
   width: 560px;
   height: 700px;
   display: flex;
@@ -6,12 +6,12 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.component-icon {
+.payment-complete-icon {
   fill: #5efb83;
   width: 100%;
   height: 70%;
 }
-.component-text {
+.payment-complete-text {
   left: 134px;
   bottom: 20%;
   position: absolute;
@@ -21,7 +21,7 @@
   text-align: center;
   font-weight: 700;
 }
-.component-navlink {
+.payment-complete-navlink {
   left: 142px;
   color: var(--dl-color-gray-white);
   bottom: 10%;

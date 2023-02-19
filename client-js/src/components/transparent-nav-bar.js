@@ -35,7 +35,10 @@ const TransparentNavBar = (props) => {
               {props.text}
             </Link>
             <span className="transparent-nav-bar-text">{props.text1}</span>
-            <Link to="/cancel-page" className="transparent-nav-bar-navlink2">
+            <Link
+              to="/your-booking-page"
+              className="transparent-nav-bar-navlink2"
+            >
               {props.text2}
             </Link>
             <Link to="/history-page" className="transparent-nav-bar-navlink3">
@@ -110,9 +113,16 @@ const TransparentNavBar = (props) => {
                 {props.text5}
               </Link>
               <span className="transparent-nav-bar-text1">{props.text6}</span>
-              <span className="transparent-nav-bar-text2">{props.text7}</span>
-              <span className="transparent-nav-bar-text3">{props.text8}</span>
-              <Link to="/" className="transparent-nav-bar-navlink6">
+              <Link
+                to="/your-booking-page"
+                className="transparent-nav-bar-navlink6"
+              >
+                {props.text7}
+              </Link>
+              <Link to="/history-page" className="transparent-nav-bar-navlink7">
+                {props.text8}
+              </Link>
+              <Link to="/search-page" className="transparent-nav-bar-navlink8">
                 {props.text9}
               </Link>
               <div className="transparent-nav-bar-container3">

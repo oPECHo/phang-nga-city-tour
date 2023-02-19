@@ -12,17 +12,22 @@
   border-color: rgba(0, 0, 0, 0);
   border-radius: 200px;
 }
-.search-icon {
-  top: 22px;
-  right: 25px;
-  width: 24px;
-  height: 24px;
-  opacity: 0.3;
-  position: absolute;
-}
 .search-root-class-name {
-  top: 12%;
-  left: 60%;
+  top: 141px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  position: static;
+  align-self: center;
+}
+.search-root-class-name1 {
+  flex: 1;
+  left: 0px;
+  right: 0px;
+  width: auto;
+  bottom: 0px;
+  height: auto;
+  margin: auto;
   position: absolute;
 }
 @media(max-width: 479px) {

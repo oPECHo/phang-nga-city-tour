@@ -182,13 +182,14 @@
 .nav-bar-text1 {
   margin-bottom: var(--dl-space-space-unit);
 }
+.nav-bar-navlink6 {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
 .nav-bar-text2 {
   margin-bottom: var(--dl-space-space-unit);
 }
-.nav-bar-text3 {
-  margin-bottom: var(--dl-space-space-unit);
-}
-.nav-bar-navlink6 {
+.nav-bar-navlink7 {
   margin-bottom: var(--dl-space-space-unit);
   text-decoration: none;
 }

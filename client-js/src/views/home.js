@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
-import Search1 from '../components/search1'
+import Search from '../components/search'
 import TransparentNavBar from '../components/transparent-nav-bar'
 import './home.css'
 
@@ -14,8 +14,10 @@ const Home = (props) => {
         <meta property="og:title" content="Phang-Nga-City-Tour" />
       </Helmet>
       <div className="home-container1">
-        <Search1 rootClassName="search1-root-class-name1"></Search1>
         <h1 className="home-text">ค้นหาทัวร์ท่องเที่ยวที่ดีที่สุดในพังงา</h1>
+      </div>
+      <div className="home-container2">
+        <Search rootClassName="search-root-class-name1"></Search>
       </div>
       <TransparentNavBar rootClassName="transparent-nav-bar-root-class-name"></TransparentNavBar>
     </div>

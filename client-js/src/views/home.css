@@ -8,6 +8,7 @@
   background-size: cover;
   justify-content: flex-start;
   background-image: url("/playground_assets/james%20bond%20island%20small-1500w.png");
+  background-position: center;
 }
 .home-container1 {
   top: 0px;
@@ -40,6 +41,20 @@
   line-height: 1.15;
   text-transform: none;
   text-decoration: none;
+}
+.home-container2 {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: var(--dl-size-size-xxlarge);
+  bottom: 0px;
+  height: var(--dl-size-size-medium);
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 @media(max-width: 1200px) {
   .home-container {
