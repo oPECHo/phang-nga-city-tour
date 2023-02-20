@@ -8,3 +8,14 @@
   justify-content: flex-start;
   background-color: #ccd6dd;
 }
+.history-page-container1 {
+  top: 150px;
+  left: 239px;
+  width: 1442px;
+  height: 233px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}

@@ -8,3 +8,17 @@
   justify-content: flex-start;
   background-color: #ccd6dd;
 }
+.comment-page-container1 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+@media(max-width: 991px) {
+  .comment-page-container1 {
+    top: 93px;
+    left: 4.5%;
+    position: absolute;
+  }
+}

@@ -128,7 +128,44 @@
   border-color: #000000;
 }
 .history-root-class-name {
-  top: 15%;
-  left: 239px;
+  top: 0px;
+  left: 0px;
   position: absolute;
+}
+@media(max-width: 991px) {
+  .history-container {
+    width: 95%;
+  }
+  .history-container1 {
+    width: 100%;
+  }
+  .history-text2 {
+    top: 10%;
+    right: 2%;
+    position: absolute;
+  }
+  .history-text3 {
+    left: 35%;
+  }
+  .history-navlink {
+    right: 2%;
+    width: 180px;
+    bottom: 10%;
+    height: 36px;
+  }
+  .history-root-class-name {
+    left: 25px;
+  }
+}
+@media(max-width: 767px) {
+  .history-container1 {
+    width: 100%;
+  }
+  .history-text3 {
+    left: 40%;
+  }
+  .history-icon06 {
+    left: 85px;
+    bottom: -48px;
+  }
 }

@@ -56,7 +56,7 @@ const Login = (props) => {
 }
 
 Login.defaultProps = {
-  email_placeholder: 'อีเมลล์ของคุณนะจ๊ะ',
+  email_placeholder: 'อีเมลล์ของคุณ',
   rootClassName: '',
   email: 'อีเมลล์',
   pass: 'รหัสผ่าน',

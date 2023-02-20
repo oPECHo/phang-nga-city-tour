@@ -17,36 +17,38 @@ const CommentCard = (props) => {
         <span className="comment-card-text">{props.text}</span>
         <span className="comment-card-text1">{props.text1}</span>
         <span className="comment-card-text2">{props.text11}</span>
-        <svg viewBox="0 0 1024 1024" className="comment-card-icon02">
-          <path
-            d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-            className=""
-          ></path>
-        </svg>
-        <svg viewBox="0 0 1024 1024" className="comment-card-icon04">
-          <path
-            d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-            className=""
-          ></path>
-        </svg>
-        <svg viewBox="0 0 1024 1024" className="comment-card-icon06">
-          <path
-            d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-            className=""
-          ></path>
-        </svg>
-        <svg viewBox="0 0 1024 1024" className="comment-card-icon08">
-          <path
-            d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-            className=""
-          ></path>
-        </svg>
-        <svg viewBox="0 0 1024 1024" className="comment-card-icon10">
-          <path
-            d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-            className=""
-          ></path>
-        </svg>
+        <div className="comment-card-container2">
+          <svg viewBox="0 0 1024 1024" className="comment-card-icon02">
+            <path
+              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+              className=""
+            ></path>
+          </svg>
+          <svg viewBox="0 0 1024 1024" className="comment-card-icon04">
+            <path
+              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+              className=""
+            ></path>
+          </svg>
+          <svg viewBox="0 0 1024 1024" className="comment-card-icon06">
+            <path
+              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+              className=""
+            ></path>
+          </svg>
+          <svg viewBox="0 0 1024 1024" className="comment-card-icon08">
+            <path
+              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+              className=""
+            ></path>
+          </svg>
+          <svg viewBox="0 0 1024 1024" className="comment-card-icon10">
+            <path
+              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+              className=""
+            ></path>
+          </svg>
+        </div>
       </div>
     </div>
   )

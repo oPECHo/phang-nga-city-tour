@@ -13,7 +13,9 @@ const HistoryPage = (props) => {
         <title>HistoryPage - Phang-Nga-City-Tour</title>
         <meta property="og:title" content="HistoryPage - Phang-Nga-City-Tour" />
       </Helmet>
-      <History rootClassName="history-root-class-name"></History>
+      <div className="history-page-container1">
+        <History rootClassName="history-root-class-name"></History>
+      </div>
       <BlueNavBar1 rootClassName="blue-nav-bar1-root-class-name2"></BlueNavBar1>
     </div>
   )

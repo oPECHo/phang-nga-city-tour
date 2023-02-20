@@ -9,8 +9,8 @@
 }
 .comment-card-container1 {
   flex: 0 0 auto;
-  width: 100%;
-  height: 80%;
+  width: 500px;
+  height: 300px;
   display: flex;
   position: relative;
   align-items: flex-start;
@@ -53,57 +53,127 @@
   font-style: normal;
   font-weight: 700;
 }
-.comment-card-icon02 {
-  top: 37%;
-  fill: #f9ef00;
+.comment-card-container2 {
+  top: 118.33749389648438px;
   left: 40%;
+  width: 112px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.comment-card-icon02 {
+  top: 0px;
+  fill: #f9ef00;
+  left: 0px;
   width: 24px;
   height: 24px;
   position: absolute;
 }
 .comment-card-icon04 {
-  top: 37%;
+  top: 0px;
   fill: #f9ef00;
-  left: 44%;
+  left: 22px;
   width: 24px;
   height: 24px;
   position: absolute;
 }
 .comment-card-icon06 {
-  top: 37%;
+  top: 0px;
   fill: #f9ef00;
-  left: 48%;
+  left: 44px;
   width: 24px;
   height: 24px;
   position: absolute;
 }
 .comment-card-icon08 {
-  top: 37%;
+  top: 0px;
   fill: #f9ef00;
-  left: 52%;
+  right: 22px;
   width: 24px;
   height: 24px;
   position: absolute;
 }
 .comment-card-icon10 {
-  top: 37%;
+  top: 0px;
   fill: #f9ef00;
-  left: 56%;
+  right: 0px;
   width: 24px;
   height: 24px;
   position: absolute;
 }
-.comment-card-root-class-name {
-  top: 12%;
-  left: 3%;
-  width: 25%;
-  height: 30%;
-  position: absolute;
+
+
+@media(max-width: 991px) {
+  .comment-card-container {
+    width: 900px;
+    height: 200px;
+    align-items: center;
+  }
+  .comment-card-container1 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 900px;
+    height: 200px;
+    margin: auto;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .comment-card-icon {
+    top: 10%;
+    left: 60px;
+    width: 130px;
+    height: 102px;
+    padding-right: 0px;
+  }
+  .comment-card-text {
+    left: 25%;
+  }
+  .comment-card-text1 {
+    top: 27%;
+    left: 25%;
+  }
+  .comment-card-text2 {
+    top: 70%;
+    left: 8%;
+  }
+  .comment-card-container2 {
+    top: 80px;
+    left: 25%;
+    width: 112px;
+  }
+  .comment-card-root-class-name {
+    top: 30px;
+    left: 0px;
+    position: absolute;
+  }
+  .comment-card-root-class-name1 {
+    top: 260px;
+    left: 0px;
+    position: absolute;
+  }
 }
-.comment-card-root-class-name1 {
-  top: 12%;
-  left: 31%;
-  width: 25%;
-  height: 30%;
-  position: absolute;
+@media(max-width: 767px) {
+  .comment-card-container {
+    width: 720px;
+  }
+  .comment-card-container1 {
+    width: 720px;
+  }
+  .comment-card-text {
+    left: 30%;
+  }
+  .comment-card-text1 {
+    left: 30%;
+  }
+  .comment-card-text2 {
+    left: 10%;
+  }
+  .comment-card-container2 {
+    left: 30%;
+  }
 }

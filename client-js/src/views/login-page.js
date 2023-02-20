@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Login from '../components/login'
-import NavBar from '../components/nav-bar'
+import TransparentNavBar1 from '../components/transparent-nav-bar1'
 import './login-page.css'
 
 const LoginPage = (props) => {
@@ -14,7 +14,7 @@ const LoginPage = (props) => {
         <meta property="og:title" content="LoginPage - Phang-Nga-City-Tour" />
       </Helmet>
       <Login rootClassName="login-root-class-name"></Login>
-      <NavBar rootClassName="nav-bar-root-class-name"></NavBar>
+      <TransparentNavBar1 rootClassName="transparent-nav-bar1-root-class-name1"></TransparentNavBar1>
     </div>
   )
 }
