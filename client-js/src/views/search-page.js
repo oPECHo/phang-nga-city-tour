@@ -18,8 +18,6 @@ const SearchPage = (props) => {
       <NavBar rootClassName="nav-bar-root-class-name1"></NavBar>
       <TripCard rootClassName="trip-card-root-class-name4"></TripCard>
       <TripCard rootClassName="trip-card-root-class-name3"></TripCard>
-      <TripCard rootClassName="trip-card-root-class-name"></TripCard>
-      <TripCard rootClassName="trip-card-root-class-name2"></TripCard>
       <CategoryButton rootClassName="category-button-root-class-name"></CategoryButton>
       <Search rootClassName="search-root-class-name"></Search>
     </div>
