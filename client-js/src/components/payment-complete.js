@@ -7,9 +7,12 @@ import './payment-complete.css'
 
 const PaymentComplete = (props) => {
   return (
-    <div className="payment-complete-container">
+    <div className={`payment-complete-container ${props.rootClassName} `}>
       <svg viewBox="0 0 1024 1024" className="payment-complete-icon">
-        <path d="M426 726l384-384-60-62-324 324-152-152-60 60zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
+        <path
+          d="M426 726l384-384-60-62-324 324-152-152-60 60zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
+          className=""
+        ></path>
       </svg>
       <span className="payment-complete-text">{props.text}</span>
       <Link to="/" className="payment-complete-navlink button">
@@ -21,11 +24,13 @@ const PaymentComplete = (props) => {
 
 PaymentComplete.defaultProps = {
   text: 'ชำระเงินเสร็จสิ้น',
+  rootClassName: '',
   button: 'กลับไปยังหน้าหลัก',
 }
 
 PaymentComplete.propTypes = {
   text: PropTypes.string,
+  rootClassName: PropTypes.string,
   button: PropTypes.string,
 }
 

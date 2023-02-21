@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
@@ -11,9 +12,10 @@ const Payment = (props) => {
       <h1 className="payment-text1">{props.heading}</h1>
       <span className="payment-text2">{props.text1}</span>
       <span className="payment-text3">{props.text2}</span>
-      <button className="payment-button button">{props.button}</button>
+      <Link to="/payment-success" className="payment-navlink button">
+        {props.button}
+      </Link>
       <span className="payment-text4">{props.text3}</span>
-      <span className="payment-text5">{props.text6}</span>
       <img
         alt={props.image_alt}
         src={props.image_src}
@@ -30,24 +32,24 @@ const Payment = (props) => {
         className="payment-image2"
       />
       <div className="payment-container1">
-        <span className="payment-text6">{props.text4}</span>
-        <input
-          type="text"
-          placeholder={props.textinput_placeholder}
-          className="payment-textinput input"
-        />
+        <span className="payment-text5">{props.text4}</span>
         <svg viewBox="0 0 1024 1024" className="payment-icon">
           <path
             d="M854 896v-554h-684v554h684zM854 128q34 0 59 26t25 60v682q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-682q0-34 25-60t59-26h44v-86h84v86h428v-86h84v86h44z"
             className=""
           ></path>
         </svg>
-      </div>
-      <div className="payment-container2">
-        <span className="payment-text7">{props.text5}</span>
         <input
           type="text"
-          placeholder={props.textinput_placeholder1}
+          placeholder={props.textinput_placeholder121}
+          className="payment-textinput input"
+        />
+      </div>
+      <div className="payment-container2">
+        <span className="payment-text6">{props.text5}</span>
+        <input
+          type="text"
+          placeholder={props.textinput_placeholder12}
           className="payment-textinput1 input"
         />
         <svg viewBox="0 0 731.4285714285713 1024" className="payment-icon2">
@@ -59,6 +61,13 @@ const Payment = (props) => {
       </div>
       <input type="radio" name="radio" className="payment-radiobutton" />
       <input type="radio" name="radio" className="payment-radiobutton1" />
+      <span className="payment-text7">{props.text6}</span>
+      <svg viewBox="0 0 1024 1024" className="payment-icon4">
+        <path
+          d="M854 896v-554h-684v554h684zM854 128q34 0 59 26t25 60v682q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-682q0-34 25-60t59-26h44v-86h84v86h428v-86h84v86h44z"
+          className=""
+        ></path>
+      </svg>
     </div>
   )
 }
@@ -68,7 +77,9 @@ Payment.defaultProps = {
   image_src: 'https://play.teleporthq.io/static/svg/default-img.svg',
   rootClassName: '',
   button: 'ชำระเงิน',
-  image_src2: '/playground_assets/scb-900h.jpg',
+  image_src2: '/playground_assets/scb-200h.jpg',
+  textinput_placeholder121: 'DD/MM/YYYY',
+  textinput_placeholder12: '์Number',
   text4: 'วันที่',
   text: '729.00 บาท/ท่าน',
   text1: 'เลือกวิธีการชำระเงิน',
@@ -77,9 +88,7 @@ Payment.defaultProps = {
   text2: 'รวมทั้งหมด 729.00 บาท',
   text5: 'จำนวนคน',
   image_alt: 'image',
-  image_src1: '/playground_assets/promptpay-900h.jpg',
-  textinput_placeholder1: 'placeholder',
-  textinput_placeholder: 'placeholder',
+  image_src1: '/playground_assets/promptpay-200h.jpg',
   text6: 'จองหลังจากนั้นจะถูกยกเลิกการจอง',
   heading: 'ชื่อสถานที่',
 }
@@ -90,6 +99,8 @@ Payment.propTypes = {
   rootClassName: PropTypes.string,
   button: PropTypes.string,
   image_src2: PropTypes.string,
+  textinput_placeholder121: PropTypes.string,
+  textinput_placeholder12: PropTypes.string,
   text4: PropTypes.string,
   text: PropTypes.string,
   text1: PropTypes.string,
@@ -99,8 +110,6 @@ Payment.propTypes = {
   text5: PropTypes.string,
   image_alt: PropTypes.string,
   image_src1: PropTypes.string,
-  textinput_placeholder1: PropTypes.string,
-  textinput_placeholder: PropTypes.string,
   text6: PropTypes.string,
   heading: PropTypes.string,
 }

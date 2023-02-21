@@ -31,10 +31,12 @@
   display: contents;
 }
 .transparent-nav-bar-logo {
-  top: -38px;
-  left: -32px;
+  top: -27;
+  left: -24;
+  right: 0;
   width: 100%;
   height: auto;
+  margin: auto;
   position: absolute;
   text-decoration: none;
 }

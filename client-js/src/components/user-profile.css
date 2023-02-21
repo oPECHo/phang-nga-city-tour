@@ -1,5 +1,5 @@
 .user-profile-container {
-  width: 1323px;
+  width: 1600px;
   height: 683px;
   display: flex;
   position: relative;
@@ -8,7 +8,7 @@
 }
 .user-profile-icon {
   top: 20%;
-  fill: var(--dl-color-gray-black);
+  fill: #000000;
   left: 5%;
   height: 50%;
   position: absolute;
@@ -20,7 +20,7 @@
   position: absolute;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
 }
 .user-profile-text1 {
   top: 30%;
@@ -29,7 +29,7 @@
   position: absolute;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
 }
 .user-profile-text2 {
   top: 44%;
@@ -38,7 +38,7 @@
   position: absolute;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
 }
 .user-profile-text3 {
   top: 58%;
@@ -47,13 +47,22 @@
   position: absolute;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
 }
-.user-profile-button {
+.user-profile-text4 {
+  top: 58%;
+  left: 35%;
+  color: var(--dl-color-gray-black);
+  position: absolute;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+.user-profile-navlink {
   color: var(--dl-color-primary-300);
-  right: 15%;
-  width: 15%;
-  bottom: 15%;
+  right: 10%;
+  width: 10%;
+  bottom: 10%;
   height: 8%;
   position: absolute;
   font-size: 28px;
@@ -62,12 +71,13 @@
   font-weight: 700;
   border-width: 0px;
   border-radius: 10px;
+  text-decoration: none;
 }
-.user-profile-button1 {
+.user-profile-button {
   color: var(--dl-color-gray-white);
-  right: 32%;
-  width: 15%;
-  bottom: 15%;
+  right: 22%;
+  width: 10%;
+  bottom: 10%;
   height: 8%;
   position: absolute;
   font-size: 28px;
@@ -78,56 +88,163 @@
   border-radius: 10px;
   background-color: var(--dl-color-primary-300);
 }
-.user-profile-textinput {
-  top: 14%;
-  left: 55%;
-  width: 30%;
-  height: 10%;
-  position: absolute;
-  border-width: 0px;
-  border-radius: 25px;
-}
-.user-profile-text4 {
+.user-profile-text5 {
   top: 5%;
-  left: 3%;
+  left: 6%;
   color: var(--dl-color-gray-black);
   position: absolute;
-  font-size: 4em;
-  border-width: 0px;
+  font-size: 3em;
+  align-self: center;
   border-radius: 25px;
+}
+.user-profile-textinput {
+  top: 16%;
+  left: 60%;
+  width: 450px;
+  height: 50px;
+  position: absolute;
+  align-self: center;
+  border-width: 0px;
+  border-radius: 20px;
 }
 .user-profile-textinput1 {
-  top: 28%;
-  left: 55%;
-  width: 30%;
-  height: 10%;
+  top: 30%;
+  left: 60%;
+  width: 450px;
+  height: 50px;
   position: absolute;
+  align-self: center;
   border-width: 0px;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 .user-profile-textinput2 {
-  top: 42%;
-  left: 55%;
-  width: 30%;
-  height: 10%;
+  top: 44%;
+  left: 60%;
+  width: 450px;
+  height: 50px;
   position: absolute;
+  align-self: center;
   border-width: 0px;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 .user-profile-textinput3 {
-  top: 56%;
-  left: 55%;
-  width: 30%;
-  height: 10%;
+  top: 58%;
+  left: 60%;
+  width: 450px;
+  height: 50px;
   position: absolute;
+  align-self: center;
   border-width: 0px;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 .user-profile-root-class-name {
-  top: 20%;
+  top: 150px;
   left: 0px;
-  right: 0px;
-  width: 70%;
-  margin: auto;
   position: absolute;
+}
+@media(max-width: 412px) {
+  .user-profile-container {
+    width: 412px;
+    height: 650px;
+  }
+  .user-profile-icon {
+    top: 90px;
+    fill: var(--dl-color-gray-black);
+    left: 0px;
+    right: 0px;
+    height: 30%;
+    margin: auto;
+  }
+  .user-profile-text {
+    top: 335px;
+    left: 21px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 100;
+  }
+  .user-profile-text1 {
+    top: 399px;
+    left: 20px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 100;
+  }
+  .user-profile-text2 {
+    top: -330px;
+    left: 26px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 100;
+  }
+  .user-profile-text3 {
+    top: 467px;
+    left: 22px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 100;
+  }
+  .user-profile-text4 {
+    top: 535px;
+    left: 22px;
+    bottom: 0px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 100;
+  }
+  .user-profile-navlink {
+    right: 26px;
+    width: 100px;
+    bottom: 16px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .user-profile-button {
+    left: 170px;
+    width: 100px;
+    bottom: 16px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .user-profile-text5 {
+    top: 1px;
+    left: 107px;
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+  }
+  .user-profile-textinput {
+    top: 50%;
+    left: 130px;
+    width: 250px;
+    height: 43px;
+    position: absolute;
+    border-width: 0px;
+    border-radius: 20px;
+  }
+  .user-profile-textinput1 {
+    top: 389px;
+    left: 131px;
+    width: 251px;
+    height: 42px;
+    position: absolute;
+    border-width: 0px;
+    border-radius: 20px;
+  }
+  .user-profile-textinput2 {
+    top: 80.5%;
+    left: 130px;
+    width: 251px;
+    bottom: 0px;
+    height: 46px;
+    position: absolute;
+    border-width: 0px;
+    border-radius: 20px;
+  }
+  .user-profile-textinput3 {
+    top: 70%;
+    left: 130px;
+    width: 251px;
+    height: 46px;
+    position: absolute;
+  }
 }

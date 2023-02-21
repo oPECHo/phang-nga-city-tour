@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
@@ -17,27 +18,30 @@ const UserProfile = (props) => {
       <span className="user-profile-text1">{props.text1}</span>
       <span className="user-profile-text2">{props.text2}</span>
       <span className="user-profile-text3">{props.text3}</span>
-      <button className="user-profile-button button">{props.button1}</button>
-      <button className="user-profile-button1 button">{props.button2}</button>
-      <input
-        type="text"
-        placeholder={props.textinput_placeholder}
-        className="user-profile-textinput input"
-      />
-      <h1 className="user-profile-text4">{props.heading}</h1>
+      <span className="user-profile-text4">{props.text31}</span>
+      <Link to="/" className="user-profile-navlink button">
+        {props.button1}
+      </Link>
+      <button className="user-profile-button button">{props.button2}</button>
+      <h1 className="user-profile-text5">{props.heading}</h1>
       <input
         type="text"
         placeholder={props.textinput_placeholder1}
-        className="user-profile-textinput1 input"
+        className="user-profile-textinput input"
       />
       <input
         type="text"
         placeholder={props.textinput_placeholder2}
-        className="user-profile-textinput2 input"
+        className="user-profile-textinput1 input"
       />
       <input
         type="text"
         placeholder={props.textinput_placeholder3}
+        className="user-profile-textinput2 input"
+      />
+      <input
+        type="text"
+        placeholder={props.textinput_placeholder}
         className="user-profile-textinput3 input"
       />
     </div>
@@ -48,29 +52,31 @@ UserProfile.defaultProps = {
   rootClassName: '',
   button2: 'ยกเลิก',
   heading: 'แก้ไขโปรไฟล์',
+  textinput_placeholder2: 'นามสกุล',
   button1: 'บันทึก',
   text1: 'นามสกุล',
-  textinput_placeholder3: 'placeholder',
-  textinput_placeholder1: 'placeholder',
-  text3: 'อีเมล',
+  textinput_placeholder3: 'เบอร์โทรศัพท์',
+  text3: 'อีเมลล์',
+  text31: 'เบอร์โทรศัพท์',
   text: 'ชื่อ',
   text2: 'เบอร์โทรศัพท์',
-  textinput_placeholder2: 'placeholder',
-  textinput_placeholder: 'placeholder',
+  textinput_placeholder1: 'ชื่อจริง',
+  textinput_placeholder: 'อีเมลล์',
 }
 
 UserProfile.propTypes = {
   rootClassName: PropTypes.string,
   button2: PropTypes.string,
   heading: PropTypes.string,
+  textinput_placeholder2: PropTypes.string,
   button1: PropTypes.string,
   text1: PropTypes.string,
   textinput_placeholder3: PropTypes.string,
-  textinput_placeholder1: PropTypes.string,
   text3: PropTypes.string,
+  text31: PropTypes.string,
   text: PropTypes.string,
   text2: PropTypes.string,
-  textinput_placeholder2: PropTypes.string,
+  textinput_placeholder1: PropTypes.string,
   textinput_placeholder: PropTypes.string,
 }
 

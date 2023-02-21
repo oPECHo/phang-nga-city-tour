@@ -1,5 +1,5 @@
 .history-container {
-  width: 1442px;
+  width: 1018px;
   height: 233px;
   display: flex;
   position: relative;
@@ -46,15 +46,15 @@
   font-size: 25px;
 }
 .history-text3 {
-  top: 54%;
-  left: 34%;
+  top: 96px;
+  left: 345px;
   position: absolute;
   font-size: 18px;
 }
 .history-icon {
-  top: 52%;
+  top: 91px;
   fill: #ff0000;
-  left: 32%;
+  left: 325px;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -72,63 +72,54 @@
   text-decoration: none;
   background-color: #5efb83;
 }
-.history-s-t-a-r {
-  top: 35%;
-  left: 32%;
-  width: 124px;
-  height: 25px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.history-icon02 {
-  top: 10px;
-  fill: #f9ef00;
-  left: 0px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-}
-.history-icon04 {
-  top: 10px;
-  fill: #f9ef00;
-  right: 0px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  border-color: #000000;
-}
-.history-icon06 {
-  top: 10px;
-  fill: #f9ef00;
-  right: 25px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  border-color: #000000;
-}
-.history-icon08 {
-  top: 10px;
-  fill: #f9ef00;
-  left: 50px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  border-color: #000000;
-}
-.history-icon10 {
-  top: 10px;
-  fill: #f9ef00;
-  left: 25px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  border-color: #000000;
-}
-.history-root-class-name {
-  top: 15%;
-  left: 239px;
-  position: absolute;
+
+@media(max-width: 412px) {
+  .history-container {
+    height: 146px;
+  }
+  .history-container1 {
+    width: 100%;
+    height: 147px;
+  }
+  .history-image {
+    top: 24px;
+    left: 21px;
+    width: 104px;
+    height: 102px;
+  }
+  .history-text {
+    top: 26px;
+    left: 136px;
+    font-size: 1em;
+  }
+  .history-text1 {
+    top: 48px;
+    left: 137px;
+    font-size: 16px;
+  }
+  .history-text2 {
+    top: 20px;
+    right: 23px;
+    font-size: 16px;
+  }
+  .history-text3 {
+    top: 72px;
+    left: 152px;
+    font-size: 16px;
+  }
+  .history-icon {
+    top: 72px;
+    left: 130px;
+    width: 22px;
+    height: 17px;
+  }
+  .history-navlink {
+    width: 113px;
+    font-size: 10px;
+  }
+  .history-root-class-name {
+    width: 100%;
+    height: auto;
+    align-self: center;
+  }
 }

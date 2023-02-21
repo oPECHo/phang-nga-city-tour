@@ -92,8 +92,10 @@ const NavBar = (props) => {
               <Link to="/your-booking-page" className="nav-bar-navlink6">
                 {props.text7}
               </Link>
-              <span className="nav-bar-text2">{props.text8}</span>
-              <Link to="/" className="nav-bar-navlink7">
+              <Link to="/history-page" className="nav-bar-navlink7">
+                {props.text8}
+              </Link>
+              <Link to="/search-page" className="nav-bar-navlink8">
                 {props.text9}
               </Link>
             </nav>
@@ -113,47 +115,47 @@ const NavBar = (props) => {
 }
 
 NavBar.defaultProps = {
-  text5: 'หน้าหลัก',
-  Register1: 'ลงทะเบียน',
-  text1: 'หมวดหมู่',
-  text3: 'ประวัติ',
-  Login: 'เข้าสู่ระบบ',
   Logo_src: '/playground_assets/phang-nga%20city%20tour-1500h.png',
+  text3: 'ประวัติ',
   text8: 'ประวัติ',
   image_src: '/playground_assets/phang-nga%20city%20tour-1500h.png',
-  text: 'หน้าหลัก',
-  Register: 'ลงทะเบียน',
-  text6: 'หมวดหมู่',
-  text2: 'ทัวร์ของคุณ',
   rootClassName: '',
-  text9: 'ค้นหา',
+  text5: 'หน้าหลัก',
   image_alt: 'image',
-  Logo_alt: 'logo',
-  Login1: 'เข้าสู่ระบบ',
+  text6: 'หมวดหมู่',
   text7: 'ทัวร์ของคุณ',
+  Login: 'เข้าสู่ระบบ',
+  Register1: 'ลงทะเบียน',
+  text9: 'ค้นหา',
+  text2: 'ทัวร์ของคุณ',
+  text: 'หน้าหลัก',
+  Logo_alt: 'logo',
+  text1: 'หมวดหมู่',
+  Login1: 'เข้าสู่ระบบ',
   text4: 'ค้นหา',
+  Register: 'ลงทะเบียน',
 }
 
 NavBar.propTypes = {
-  text5: PropTypes.string,
-  Register1: PropTypes.string,
-  text1: PropTypes.string,
-  text3: PropTypes.string,
-  Login: PropTypes.string,
   Logo_src: PropTypes.string,
+  text3: PropTypes.string,
   text8: PropTypes.string,
   image_src: PropTypes.string,
-  text: PropTypes.string,
-  Register: PropTypes.string,
-  text6: PropTypes.string,
-  text2: PropTypes.string,
   rootClassName: PropTypes.string,
-  text9: PropTypes.string,
+  text5: PropTypes.string,
   image_alt: PropTypes.string,
-  Logo_alt: PropTypes.string,
-  Login1: PropTypes.string,
+  text6: PropTypes.string,
   text7: PropTypes.string,
+  Login: PropTypes.string,
+  Register1: PropTypes.string,
+  text9: PropTypes.string,
+  text2: PropTypes.string,
+  text: PropTypes.string,
+  Logo_alt: PropTypes.string,
+  text1: PropTypes.string,
+  Login1: PropTypes.string,
   text4: PropTypes.string,
+  Register: PropTypes.string,
 }
 
 export default NavBar

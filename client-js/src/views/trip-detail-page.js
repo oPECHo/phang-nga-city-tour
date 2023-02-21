@@ -16,7 +16,7 @@ const TripDetailPage = (props) => {
           content="TripDetailPage - Phang-Nga-City-Tour"
         />
       </Helmet>
-      <NavBar rootClassName="nav-bar-root-class-name3"></NavBar>
+      <NavBar rootClassName="nav-bar-root-class-name2"></NavBar>
       <TripDetailCard rootClassName="trip-detail-card-root-class-name"></TripDetailCard>
     </div>
   )

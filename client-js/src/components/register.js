@@ -64,7 +64,7 @@ Register.defaultProps = {
   text: 'Welcome to ',
   email: 'อีเมลล์',
   textinput_placeholder: 'ยืนยันรหัสผ่านของคุณ',
-  email_placeholder: 'อีเมลล์ของคุณนะจ๊ะ',
+  email_placeholder: 'อีเมลล์ของคุณ',
 }
 
 Register.propTypes = {

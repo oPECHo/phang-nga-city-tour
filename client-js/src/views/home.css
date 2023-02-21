@@ -56,21 +56,21 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-@media(max-width: 1200px) {
-  .home-container {
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--dl-color-gray-white);
+@media(max-width: 412px) {
+  .home-container1 {
+    top: 292px;
+    right: -5px;
+    height: 282px;
   }
-}
-@media(max-width: 479px) {
   .home-text {
-    top: 13px;
+    top: -47px;
     left: 0px;
     color: rgb(255, 255, 255);
     right: 0px;
+    width: 329px;
+    height: 8px;
     margin: auto;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-family: Noto Serif Thai;
     font-weight: 700;

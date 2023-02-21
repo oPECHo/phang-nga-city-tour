@@ -24,31 +24,26 @@ const Login = (props) => {
           </h1>
         </div>
         <div className="login-container2">
-          <div className="login-container3">
-            <h1 className="login-login">{props.login}</h1>
-            <input
-              type="text"
-              placeholder={props.email_placeholder}
-              className="login-email input"
-            />
-            <span className="login-email1">{props.email}</span>
-            <input
-              type="text"
-              placeholder={props.pass_placeholder}
-              className="login-pass input"
-            />
-            <span className="login-pass1">{props.pass}</span>
-            <Link to="/register-page" className="login-pass2">
-              {props.pass1}
-            </Link>
-            <Link to="/" className="login-navlink button">
-              {props.button}
-            </Link>
-            <GoogleLoginButton
-              rootClassName="google-login-button-root-class-name"
-              className=""
-            ></GoogleLoginButton>
-          </div>
+          <h1 className="login-login">{props.login}</h1>
+          <input
+            type="text"
+            placeholder={props.email_placeholder}
+            className="login-email input"
+          />
+          <Link to="/" className="login-navlink button">
+            {props.button1}
+          </Link>
+          <span className="login-email1">{props.email}</span>
+          <input
+            type="text"
+            placeholder={props.pass_placeholder}
+            className="login-pass input"
+          />
+          <span className="login-pass1">{props.pass}</span>
+          <GoogleLoginButton
+            rootClassName="google-login-button-root-class-name1"
+            className=""
+          ></GoogleLoginButton>
         </div>
       </div>
     </div>
@@ -56,33 +51,31 @@ const Login = (props) => {
 }
 
 Login.defaultProps = {
-  email_placeholder: 'อีเมลล์ของคุณนะจ๊ะ',
+  login: 'เข้าสู่ระบบ',
   rootClassName: '',
-  email: 'อีเมลล์',
-  pass: 'รหัสผ่าน',
+  email_placeholder: 'อีเมลล์ของคุณ',
+  text1: 'Phang-Nga City Tour',
   pass_placeholder: 'รหัสผ่านของคุณ',
-  pass1: 'ยังไม่มีบัญชี',
+  Imagelogin_alt: 'image',
+  button1: 'เข้าสู่ระบบ',
+  email: 'อีเมลล์',
   Imagelogin_src: '/playground_assets/phangnga-700w.png',
   text: 'Welcome to ',
-  login: 'เข้าสู่ระบบ',
-  text1: 'Phang-Nga City Tour',
-  button: 'เข้าสู่ระบบ',
-  Imagelogin_alt: 'image',
+  pass: 'รหัสผ่าน',
 }
 
 Login.propTypes = {
-  email_placeholder: PropTypes.string,
+  login: PropTypes.string,
   rootClassName: PropTypes.string,
-  email: PropTypes.string,
-  pass: PropTypes.string,
+  email_placeholder: PropTypes.string,
+  text1: PropTypes.string,
   pass_placeholder: PropTypes.string,
-  pass1: PropTypes.string,
+  Imagelogin_alt: PropTypes.string,
+  button1: PropTypes.string,
+  email: PropTypes.string,
   Imagelogin_src: PropTypes.string,
   text: PropTypes.string,
-  login: PropTypes.string,
-  text1: PropTypes.string,
-  button: PropTypes.string,
-  Imagelogin_alt: PropTypes.string,
+  pass: PropTypes.string,
 }
 
 export default Login

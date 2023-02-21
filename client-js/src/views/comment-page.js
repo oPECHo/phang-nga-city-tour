@@ -2,8 +2,7 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
-import CommentCard from '../components/comment-card'
-import BlueNavBar1 from '../components/blue-nav-bar1'
+import NavBar from '../components/nav-bar'
 import './comment-page.css'
 
 const CommentPage = (props) => {
@@ -13,9 +12,23 @@ const CommentPage = (props) => {
         <title>CommentPage - Phang-Nga-City-Tour</title>
         <meta property="og:title" content="CommentPage - Phang-Nga-City-Tour" />
       </Helmet>
-      <CommentCard rootClassName="comment-card-root-class-name"></CommentCard>
-      <BlueNavBar1 rootClassName="blue-nav-bar1-root-class-name1"></BlueNavBar1>
-      <CommentCard rootClassName="comment-card-root-class-name1"></CommentCard>
+      <NavBar rootClassName="nav-bar-root-class-name3"></NavBar>
+      <div className="comment-page-container1">
+        <svg viewBox="0 0 1024 1024" className="comment-page-icon">
+          <path d="M870.286 765.143c-14.857-106.857-58.286-201.714-155.429-214.857-50.286 54.857-122.857 89.714-202.857 89.714s-152.571-34.857-202.857-89.714c-97.143 13.143-140.571 108-155.429 214.857 79.429 112 210.286 185.714 358.286 185.714s278.857-73.714 358.286-185.714zM731.429 365.714c0-121.143-98.286-219.429-219.429-219.429s-219.429 98.286-219.429 219.429 98.286 219.429 219.429 219.429 219.429-98.286 219.429-219.429zM1024 512c0 281.714-228.571 512-512 512-282.857 0-512-229.714-512-512 0-282.857 229.143-512 512-512s512 229.143 512 512z"></path>
+        </svg>
+        <span className="comment-page-text">ชื่อ user</span>
+        <span className="comment-page-text1">08/02/2566</span>
+        <span className="comment-page-text2">comment</span>
+      </div>
+      <div className="comment-page-container2">
+        <svg viewBox="0 0 1024 1024" className="comment-page-icon2">
+          <path d="M870.286 765.143c-14.857-106.857-58.286-201.714-155.429-214.857-50.286 54.857-122.857 89.714-202.857 89.714s-152.571-34.857-202.857-89.714c-97.143 13.143-140.571 108-155.429 214.857 79.429 112 210.286 185.714 358.286 185.714s278.857-73.714 358.286-185.714zM731.429 365.714c0-121.143-98.286-219.429-219.429-219.429s-219.429 98.286-219.429 219.429 98.286 219.429 219.429 219.429 219.429-98.286 219.429-219.429zM1024 512c0 281.714-228.571 512-512 512-282.857 0-512-229.714-512-512 0-282.857 229.143-512 512-512s512 229.143 512 512z"></path>
+        </svg>
+        <span className="comment-page-text3">ชื่อ user</span>
+        <span className="comment-page-text4">08/02/2566</span>
+        <span className="comment-page-text5">comment</span>
+      </div>
     </div>
   )
 }

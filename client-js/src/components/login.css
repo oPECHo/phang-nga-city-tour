@@ -1,6 +1,6 @@
 .login-container {
-  width: 1120px;
-  height: 614px;
+  width: 1126px;
+  height: 623px;
   display: flex;
   position: relative;
   align-items: flex-start;
@@ -48,18 +48,8 @@
 }
 .login-container2 {
   top: 0px;
-  left: 606px;
-  width: 506px;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.login-container3 {
-  top: 0px;
   flex: 0 0 auto;
-  left: 0px;
+  right: 1px;
   width: 506px;
   height: 100%;
   display: flex;
@@ -77,8 +67,9 @@
 }
 .login-email {
   top: 150px;
-  left: 65px;
+  left: 0px;
   color: var(--dl-color-gray-black);
+  right: 0px;
   width: 376px;
   height: 54px;
   margin: auto;
@@ -86,6 +77,21 @@
   align-self: center;
   border-color: #000000;
   background-color: #ffffff;
+}
+.login-navlink {
+  top: 400px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  right: 0px;
+  width: 378px;
+  height: 43px;
+  margin: auto;
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  border-color: var(--dl-color-gray-white);
+  text-decoration: none;
+  background-color: var(--dl-color-primary-300);
 }
 .login-email1 {
   top: 120px;
@@ -112,38 +118,43 @@
   position: absolute;
   font-size: 20px;
 }
-.login-pass2 {
-  left: 213px;
-  color: var(--dl-color-gray-700);
-  bottom: 55px;
-  position: absolute;
-  font-size: 20px;
-  text-decoration: underline;
-}
-.login-navlink {
-  top: 400px;
-  left: 0px;
-  color: var(--dl-color-gray-white);
-  right: 0px;
-  width: 378px;
-  height: 43px;
-  margin: auto;
-  position: absolute;
-  font-size: 20px;
-  text-align: center;
-  border-color: var(--dl-color-gray-white);
-  text-decoration: none;
-  background-color: var(--dl-color-primary-300);
-}
 .login-root-class-name {
-  top: 9%;
   flex: 1;
-  left: 0px;
-  right: 0px;
-  width: auto;
-  bottom: 0px;
-  height: auto;
-  margin: auto;
-  position: absolute;
-  align-self: stretch;
+  width: 100%;
+  height: 90%;
+  align-self: center;
+}
+@media(max-width: 412px) {
+  .login-imagelogin {
+    display: none;
+  }
+  .login-container1 {
+    display: none;
+  }
+  .login-container2 {
+    left: 0px;
+    width: 412px;
+  }
+  .login-login {
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    text-align: center;
+  }
+  .login-email {
+    left: 0px;
+    right: 0px;
+    width: 271px;
+    height: 54px;
+    margin: auto;
+  }
+  .login-navlink {
+    width: 275px;
+  }
+  .login-pass {
+    left: 0px;
+    right: 0px;
+    width: 275px;
+    margin: auto;
+  }
 }

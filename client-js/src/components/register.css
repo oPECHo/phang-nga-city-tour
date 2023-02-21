@@ -149,3 +149,45 @@
   position: absolute;
   align-self: stretch;
 }
+@media(max-width: 412px) {
+  .register-imagelogin {
+    display: none;
+  }
+  .register-container1 {
+    display: none;
+  }
+  .register-container2 {
+    left: 0px;
+    width: 412px;
+  }
+  .register-login {
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    text-align: center;
+  }
+  .register-email {
+    left: 0px;
+    right: 0px;
+    width: 275px;
+    margin: auto;
+  }
+  .register-pass {
+    left: 0px;
+    right: 0px;
+    width: 275px;
+    margin: auto;
+  }
+  .register-navlink {
+    left: 0px;
+    right: 0px;
+    width: 275px;
+    margin: auto;
+  }
+  .register-pass2input {
+    left: 0px;
+    right: 0px;
+    width: 275px;
+    margin: auto;
+  }
+}

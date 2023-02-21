@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
+import NavBar from '../components/nav-bar'
 import Cancel from '../components/cancel'
-import BlueNavBar1 from '../components/blue-nav-bar1'
 import './your-booking-page.css'
 
 const YourBookingPage = (props) => {
@@ -16,8 +16,10 @@ const YourBookingPage = (props) => {
           content="YourBookingPage - Phang-Nga-City-Tour"
         />
       </Helmet>
-      <Cancel rootClassName="cancel-root-class-name"></Cancel>
-      <BlueNavBar1 rootClassName="blue-nav-bar1-root-class-name"></BlueNavBar1>
+      <NavBar rootClassName="nav-bar-root-class-name9"></NavBar>
+      <div className="your-booking-page-container1">
+        <Cancel rootClassName="cancel-root-class-name"></Cancel>
+      </div>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-.trip-detail-card-container {
+.page-mobile-details-container {
   width: 100%;
   height: 1000px;
   display: flex;
@@ -7,24 +7,24 @@
   flex-direction: column;
   justify-content: center;
 }
-.trip-detail-card-container1 {
+.page-mobile-details-container1 {
   top: 54px;
   flex: 0 0 auto;
   left: 82px;
   width: 90%;
   height: 900px;
-  display: flex;
+  display: none;
   position: absolute;
   align-self: center;
-  align-items: center;
+  align-items: flex-end;
   border-radius: 50px;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   border-top-right-radius: 50;
   border-bottom-right-radius: 50;
 }
-.trip-detail-card-image {
+.page-mobile-details-image {
   top: 50px;
   left: 50px;
   width: 600px;
@@ -37,13 +37,13 @@
   border-bottom-left-radius: 5%;
   border-bottom-right-radius: 5%;
 }
-.trip-detail-card-text {
+.page-mobile-details-text {
   top: 520px;
   left: 53px;
   color: var(--dl-color-gray-white);
   position: absolute;
 }
-.trip-detail-card-navlink {
+.page-mobile-details-navlink {
   left: 69px;
   color: var(--dl-color-gray-white);
   width: 500px;
@@ -60,7 +60,7 @@
   border-top-right-radius: 200;
   border-bottom-right-radius: 200;
 }
-.trip-detail-card-s-t-a-r {
+.page-mobile-details-s-t-a-r {
   top: 565px;
   left: 53px;
   width: 124px;
@@ -71,7 +71,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.trip-detail-card-icon {
+.page-mobile-details-icon {
   top: 10px;
   fill: #f9ef00;
   left: 0px;
@@ -79,7 +79,7 @@
   height: 24px;
   position: absolute;
 }
-.trip-detail-card-icon02 {
+.page-mobile-details-icon02 {
   top: 10px;
   fill: #f9ef00;
   right: 0px;
@@ -88,7 +88,7 @@
   position: absolute;
   border-color: #000000;
 }
-.trip-detail-card-icon04 {
+.page-mobile-details-icon04 {
   top: 10px;
   fill: #f9ef00;
   right: 25px;
@@ -97,7 +97,7 @@
   position: absolute;
   border-color: #000000;
 }
-.trip-detail-card-icon06 {
+.page-mobile-details-icon06 {
   top: 10px;
   fill: #f9ef00;
   left: 50px;
@@ -106,7 +106,7 @@
   position: absolute;
   border-color: #000000;
 }
-.trip-detail-card-icon08 {
+.page-mobile-details-icon08 {
   top: 10px;
   fill: #f9ef00;
   left: 25px;
@@ -115,7 +115,7 @@
   position: absolute;
   border-color: #000000;
 }
-.trip-detail-card-pin {
+.page-mobile-details-pin {
   top: 620px;
   fill: #ff0000;
   left: 51px;
@@ -123,14 +123,14 @@
   height: 24px;
   position: absolute;
 }
-.trip-detail-card-text01 {
+.page-mobile-details-text01 {
   top: 620px;
   left: 79px;
   color: var(--dl-color-gray-white);
   position: absolute;
   font-size: 25px;
 }
-.trip-detail-card-container2 {
+.page-mobile-details-container2 {
   top: 70.99431228637695px;
   left: 697.9971389770508px;
   width: 451.9886169433594px;
@@ -141,7 +141,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.trip-detail-card-text02 {
+.page-mobile-details-text02 {
   top: 0px;
   left: -15px;
   color: var(--dl-color-gray-white);
@@ -153,7 +153,7 @@
   text-align: left;
   font-weight: 800;
 }
-.trip-detail-card-text03 {
+.page-mobile-details-text03 {
   top: 128px;
   left: 683px;
   color: var(--dl-color-gray-white);
@@ -162,7 +162,7 @@
   font-style: normal;
   font-weight: 700;
 }
-.trip-detail-card-text04 {
+.page-mobile-details-text04 {
   top: 173px;
   left: 682px;
   color: var(--dl-color-gray-white);
@@ -171,7 +171,7 @@
   font-style: normal;
   font-weight: 700;
 }
-.trip-detail-card-text05 {
+.page-mobile-details-text05 {
   top: 219px;
   left: 683px;
   color: var(--dl-color-gray-white);
@@ -180,7 +180,7 @@
   font-style: normal;
   font-weight: 700;
 }
-.trip-detail-card-text06 {
+.page-mobile-details-text06 {
   top: 264px;
   left: 683px;
   color: var(--dl-color-gray-white);
@@ -189,27 +189,21 @@
   font-style: normal;
   font-weight: 700;
 }
-.trip-detail-card-text07 {
+.page-mobile-details-text07 {
   top: 563px;
   left: 540px;
   color: var(--dl-color-gray-900);
   position: absolute;
   font-size: 25px;
 }
-.trip-detail-card-text08 {
+.page-mobile-details-text08 {
   top: 563px;
   left: 540px;
   color: var(--dl-color-gray-900);
   position: absolute;
   font-size: 25px;
 }
-.trip-detail-card-text09 {
-  left: 602px;
-  color: var(--dl-color-gray-white);
-  bottom: 75px;
-  position: absolute;
-}
-.trip-detail-card-textinput {
+.page-mobile-details-textinput {
   color: var(--dl-color-gray-700);
   right: 37px;
   width: 396px;
@@ -221,7 +215,7 @@
   border-radius: var(--dl-radius-radius-radius8);
   background-color: rgba(0, 0, 0, 0.1);
 }
-.trip-detail-card-icon11 {
+.page-mobile-details-icon11 {
   top: 556px;
   fill: #D9D9D9;
   left: 611px;
@@ -229,38 +223,7 @@
   height: 35px;
   position: absolute;
 }
-.trip-detail-card-text10 {
-  top: 563px;
-  left: 540px;
-  color: var(--dl-color-gray-900);
-  position: absolute;
-  font-size: 25px;
-}
-.trip-detail-card-text11 {
-  top: 609px;
-  left: 491px;
-  color: var(--dl-color-gray-900);
-  position: absolute;
-  font-size: 25px;
-}
-.trip-detail-card-text12 {
-  top: 327px;
-  left: 673px;
-  color: var(--dl-color-gray-white);
-  position: absolute;
-  font-size: 2em;
-  font-style: normal;
-  font-weight: 800;
-}
-.trip-detail-card-icon13 {
-  fill: var(--dl-color-gray-700);
-  right: 67px;
-  width: 24px;
-  bottom: 63px;
-  height: 24px;
-  position: absolute;
-}
-.trip-detail-card-text13 {
+.page-mobile-details-text09 {
   top: 379px;
   left: 675px;
   color: var(--dl-color-gray-white);
@@ -270,7 +233,38 @@
   text-align: left;
   font-weight: 700;
 }
-.trip-detail-card-text14 {
+.page-mobile-details-text10 {
+  top: 563px;
+  left: 540px;
+  color: var(--dl-color-gray-900);
+  position: absolute;
+  font-size: 25px;
+}
+.page-mobile-details-text11 {
+  top: 609px;
+  left: 491px;
+  color: var(--dl-color-gray-900);
+  position: absolute;
+  font-size: 25px;
+}
+.page-mobile-details-text12 {
+  top: 327px;
+  left: 673px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 800;
+}
+.page-mobile-details-icon13 {
+  fill: var(--dl-color-gray-700);
+  right: 67px;
+  width: 24px;
+  bottom: 63px;
+  height: 24px;
+  position: absolute;
+}
+.page-mobile-details-text13 {
   top: 417px;
   left: 674px;
   color: var(--dl-color-gray-white);
@@ -279,7 +273,7 @@
   font-style: normal;
   font-weight: 700;
 }
-.trip-detail-card-text15 {
+.page-mobile-details-text14 {
   top: 455px;
   left: 674px;
   color: var(--dl-color-gray-white);
@@ -288,7 +282,7 @@
   font-style: normal;
   font-weight: 700;
 }
-.trip-detail-card-text16 {
+.page-mobile-details-text15 {
   color: var(--dl-color-gray-white);
   right: 167px;
   bottom: 384px;
@@ -297,7 +291,7 @@
   font-style: normal;
   font-weight: 700;
 }
-.trip-detail-card-text17 {
+.page-mobile-details-text16 {
   top: 562px;
   color: var(--dl-color-gray-white);
   right: 29px;
@@ -306,21 +300,14 @@
   font-style: normal;
   font-weight: 700;
 }
-.trip-detail-card-text18 {
+.page-mobile-details-text17 {
   left: 721px;
   color: var(--dl-color-primary-500);
   bottom: 76px;
   position: absolute;
   text-decoration: underline;
 }
-.trip-detail-card-text19 {
-  left: 604px;
-  color: var(--dl-color-primary-500);
-  bottom: 39px;
-  position: absolute;
-  text-decoration: underline;
-}
-.trip-detail-card-text20 {
+.page-mobile-details-text18 {
   top: 527px;
   left: 688px;
   color: var(--dl-color-gray-white);
@@ -330,174 +317,205 @@
   text-align: left;
   font-weight: 700;
 }
-.trip-detail-card-navlink1 {
-  display: none;
-  text-decoration: none;
-}
-.trip-detail-card-text21 {
-  top: 128px;
-  left: 683px;
+.page-mobile-details-text19 {
+  left: 602px;
   color: var(--dl-color-gray-white);
+  bottom: 75px;
   position: absolute;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
+}
+.page-mobile-details-text20 {
+  left: 604px;
+  color: var(--dl-color-primary-500);
+  bottom: 39px;
+  position: absolute;
+  text-decoration: underline;
 }
 
 @media(max-width: 412px) {
-  .trip-detail-card-container1 {
+  .page-mobile-details-container1 {
     top: 50px;
     left: 21px;
     right: 21px;
+    display: flex;
   }
-  .trip-detail-card-image {
+  .page-mobile-details-image {
     top: 42px;
     left: 29px;
     width: 312px;
     height: 283px;
+    display: none;
   }
-  .trip-detail-card-text {
+  .page-mobile-details-text {
     top: 363px;
     left: 34px;
+    display: none;
   }
-  .trip-detail-card-navlink {
+  .page-mobile-details-navlink {
     left: 21px;
     width: 309px;
     bottom: 98px;
     height: 64px;
+    display: none;
   }
-  .trip-detail-card-icon {
+  .page-mobile-details-s-t-a-r {
+    display: none;
+  }
+  .page-mobile-details-icon {
     top: -147px;
     left: -21px;
   }
-  .trip-detail-card-icon02 {
+  .page-mobile-details-icon02 {
     top: -147px;
     left: 79px;
+    right: 21px;
   }
-  .trip-detail-card-icon04 {
+  .page-mobile-details-icon04 {
     top: -147px;
     left: 54px;
   }
-  .trip-detail-card-icon06 {
+  .page-mobile-details-icon06 {
     top: -147px;
     left: 29px;
   }
-  .trip-detail-card-icon08 {
+  .page-mobile-details-icon08 {
     top: -147px;
     left: 4px;
   }
-  .trip-detail-card-pin {
+  .page-mobile-details-pin {
     top: 467px;
     left: 33px;
+    display: none;
   }
-  .trip-detail-card-text01 {
+  .page-mobile-details-text01 {
     top: 464px;
     left: 61px;
-  }
-  .trip-detail-card-container2 {
     display: none;
   }
-  .trip-detail-card-text03 {
+  .page-mobile-details-container2 {
     display: none;
   }
-  .trip-detail-card-text04 {
+  .page-mobile-details-text03 {
+    top: 42px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page-mobile-details-text04 {
+    top: 111px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page-mobile-details-text05 {
+    top: 157px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page-mobile-details-text06 {
+    top: 202px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page-mobile-details-text07 {
+    top: 543px;
+    right: 174px;
+    margin: auto;
     display: none;
   }
-  .trip-detail-card-text05 {
+  .page-mobile-details-text08 {
+    top: 716px;
+    left: 166px;
+    margin: auto;
     display: none;
   }
-  .trip-detail-card-text06 {
-    display: none;
-  }
-  .trip-detail-card-text07 {
-    display: none;
-  }
-  .trip-detail-card-text08 {
-    display: none;
-  }
-  .trip-detail-card-text09 {
-    display: none;
-  }
-  .trip-detail-card-textinput {
+  .page-mobile-details-textinput {
     left: 20px;
     width: 324px;
     bottom: 31px;
     height: 47px;
   }
-  .trip-detail-card-icon11 {
-    top: 360px;
-    left: 308px;
-    right: 18px;
-    width: 50px;
-    height: 41px;
-    margin: auto;
-  }
-  .trip-detail-card-text10 {
-    top: 373px;
-    left: 231px;
-  }
-  .trip-detail-card-text11 {
-    top: 420px;
+  .page-mobile-details-icon11 {
+    top: 539px;
     left: 220px;
-    right: 20px;
-    font-size: 20px;
-  }
-  .trip-detail-card-text12 {
+    right: 29px;
+    width: 43px;
+    height: 47px;
     display: none;
   }
-  .trip-detail-card-icon13 {
+  .page-mobile-details-text09 {
+    top: 273px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page-mobile-details-text10 {
+    top: 373px;
+    left: 231px;
+    right: 42px;
+    display: none;
+    font-size: 20px;
+  }
+  .page-mobile-details-text11 {
+    top: 595px;
+    left: 153px;
+    display: none;
+  }
+  .page-mobile-details-text12 {
+    display: none;
+  }
+  .page-mobile-details-icon13 {
     right: 46px;
     bottom: 42px;
   }
-  .trip-detail-card-text13 {
+  .page-mobile-details-text13 {
+    top: 331px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
     display: none;
   }
-  .trip-detail-card-text14 {
+  .page-mobile-details-text14 {
+    top: 372px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page-mobile-details-text15 {
+    top: 414px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page-mobile-details-text16 {
+    top: 478px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page-mobile-details-text17 {
+    left: 0px;
+    right: 0px;
+    margin: auto;
     display: none;
   }
-  .trip-detail-card-text15 {
-    display: none;
+  .page-mobile-details-text18 {
+    top: 560px;
+    left: 0px;
+    right: 0px;
+    margin: var(--dl-space-space-halfunit);
   }
-  .trip-detail-card-text16 {
-    top: 472px;
-    right: -832px;
-    display: none;
+  .page-mobile-details-text19 {
+    left: 0px;
+    right: 0px;
+    bottom: 130px;
+    margin: var(--dl-space-space-halfunit);
   }
-  .trip-detail-card-text17 {
-    top: 589px;
-    right: -1126px;
-    display: none;
-  }
-  .trip-detail-card-text18 {
-    display: none;
-  }
-  .trip-detail-card-text19 {
-    display: none;
-  }
-  .trip-detail-card-text20 {
-    display: none;
-  }
-  .trip-detail-card-navlink1 {
-    top: 671px;
-    color: var(--dl-color-gray-white);
-    right: 29px;
-    width: 126px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    font-size: 24px;
-    border-width: 0px;
-    padding-right: 0px;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  .trip-detail-card-text21 {
-    top: 500px;
-    left: 30px;
-    right: 30px;
-    display: none;
-    position: absolute;
-    font-size: 20px;
-    align-self: flex-start;
-    text-align: left;
+  .page-mobile-details-text20 {
+    left: 0px;
+    right: 0px;
+    bottom: 89px;
+    margin: var(--dl-space-space-halfunit);
   }
 }

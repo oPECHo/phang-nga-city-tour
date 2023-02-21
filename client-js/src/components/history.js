@@ -27,38 +27,6 @@ const History = (props) => {
         <Link to="/comment-page" className="history-navlink button">
           {props.button}
         </Link>
-        <div className="history-s-t-a-r">
-          <svg viewBox="0 0 1024 1024" className="history-icon02">
-            <path
-              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-              className=""
-            ></path>
-          </svg>
-          <svg viewBox="0 0 1024 1024" className="history-icon04">
-            <path
-              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-              className=""
-            ></path>
-          </svg>
-          <svg viewBox="0 0 1024 1024" className="history-icon06">
-            <path
-              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-              className=""
-            ></path>
-          </svg>
-          <svg viewBox="0 0 1024 1024" className="history-icon08">
-            <path
-              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-              className=""
-            ></path>
-          </svg>
-          <svg viewBox="0 0 1024 1024" className="history-icon10">
-            <path
-              d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
-              className=""
-            ></path>
-          </svg>
-        </div>
       </div>
     </div>
   )

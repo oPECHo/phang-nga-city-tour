@@ -35,3 +35,23 @@
   position: absolute;
   align-self: center;
 }
+.google-login-button-root-class-name1 {
+  left: 64px;
+  bottom: 106px;
+  position: absolute;
+}
+@media(max-width: 412px) {
+  .google-login-button-button {
+    width: 275px;
+    align-self: center;
+    margin-right: 0px;
+  }
+  .google-login-button-text {
+    margin-left: var(--dl-space-space-oneandhalfunits);
+  }
+  .google-login-button-root-class-name1 {
+    top: 460px;
+    left: 70px;
+    margin: auto;
+  }
+}

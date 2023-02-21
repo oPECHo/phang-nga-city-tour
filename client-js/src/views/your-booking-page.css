@@ -8,3 +8,25 @@
   justify-content: flex-start;
   background-color: #ccd6dd;
 }
+.your-booking-page-container1 {
+  top: 150px;
+  left: 0px;
+  right: 0px;
+  width: 1442px;
+  height: 233px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media(max-width: 412px) {
+  .your-booking-page-container1 {
+    left: 0px;
+    right: 0px;
+    width: 364px;
+    height: 150px;
+    margin: auto;
+  }
+}

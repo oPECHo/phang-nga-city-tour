@@ -17,7 +17,7 @@ const RegisterPage = (props) => {
         />
       </Helmet>
       <Register rootClassName="register-root-class-name1"></Register>
-      <NavBar rootClassName="nav-bar-root-class-name2"></NavBar>
+      <NavBar rootClassName="nav-bar-root-class-name"></NavBar>
     </div>
   )
 }

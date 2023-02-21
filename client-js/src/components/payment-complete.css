@@ -22,9 +22,9 @@
   font-weight: 700;
 }
 .payment-complete-navlink {
-  left: 142px;
+  left: 162px;
   color: var(--dl-color-gray-white);
-  bottom: 10%;
+  bottom: 63px;
   position: absolute;
   font-size: 25px;
   align-self: center;
@@ -34,4 +34,37 @@
   border-radius: 20px;
   text-decoration: none;
   background-color: var(--dl-color-primary-500);
+}
+.payment-complete-root-class-name {
+  align-self: center;
+}
+@media(max-width: 412px) {
+  .payment-complete-icon {
+    width: 100%;
+    height: 455px;
+    align-self: center;
+  }
+  .payment-complete-text {
+    top: 470px;
+    left: 0px;
+    right: 0px;
+    position: static;
+  }
+  .payment-complete-navlink {
+    flex: 1;
+    left: 84px;
+    width: auto;
+    bottom: 83px;
+    height: 49px;
+    margin: auto;
+  }
+  .payment-complete-root-class-name {
+    top: 93px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    position: static;
+    align-self: center;
+  }
 }

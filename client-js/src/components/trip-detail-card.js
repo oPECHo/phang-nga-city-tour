@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
@@ -13,9 +14,9 @@ const TripDetailCard = (props) => {
           className="trip-detail-card-image"
         />
         <h1 className="trip-detail-card-text">{props.heading}</h1>
-        <button className="trip-detail-card-button button">
+        <Link to="/payment-page" className="trip-detail-card-navlink button">
           {props.button}
-        </button>
+        </Link>
         <div className="trip-detail-card-s-t-a-r">
           <svg viewBox="0 0 1024 1024" className="trip-detail-card-icon">
             <path
@@ -55,7 +56,9 @@ const TripDetailCard = (props) => {
           ></path>
         </svg>
         <span className="trip-detail-card-text01">{props.text}</span>
-        <h1 className="trip-detail-card-text02">{props.heading1}</h1>
+        <div className="trip-detail-card-container2">
+          <h1 className="trip-detail-card-text02">{props.heading1}</h1>
+        </div>
         <span className="trip-detail-card-text03">{props.text3}</span>
         <span className="trip-detail-card-text04">{props.text4}</span>
         <span className="trip-detail-card-text05">{props.text5}</span>
@@ -94,6 +97,13 @@ const TripDetailCard = (props) => {
         <span className="trip-detail-card-text18">{props.text13}</span>
         <span className="trip-detail-card-text19">{props.text14}</span>
         <span className="trip-detail-card-text20">{props.text12}</span>
+        <Link
+          to="/trip-detail-page-mobile-details"
+          className="trip-detail-card-navlink1 button"
+        >
+          {props.button1}
+        </Link>
+        <span className="trip-detail-card-text21">{props.text31}</span>
       </div>
     </div>
   )
@@ -109,10 +119,10 @@ TripDetailCard.defaultProps = {
   text14: 'brisk-trim-lyrebird-aruwe9/editor/0ded533b-638f',
   text6: 'วันที่สอง - xxxxx',
   image_src: 'https://play.teleporthq.io/static/svg/default-img.svg',
-  text10:
-    '- แถมฟรี!!! ประกันอุบัติเหตุในระหว่างการเดินทาง คุ้มครองในระหว่างการเดินทาง',
+  text10: '- แถมฟรี!! ประกันอุบัติเหตุ และคุ้มครองในระหว่างการเดินทาง',
   text3: 'รายละเอียดโปรแกรม - เดินทางได้ทุกวัน ตั้งแต่ 2 ท่านขึ้นไป',
   heading1: 'รายละเอียดแพ็คเกจ',
+  button1: '...เพิ่มเติม',
   text21: '729 บาท/ท่าน',
   text12: 'วงเงินไม่เกินท่านละ 1,000,000 บาท ตามเงื่อนไขกรมธรรม์',
   text1: 'Direction Link',
@@ -127,7 +137,8 @@ TripDetailCard.defaultProps = {
   rootClassName: '',
   text: 'ที่อยู่',
   text11:
-    'วงเงินท่านละ 2,000,000 บาท, ค่ารักษาพยาบาลในกรณีที่เกิด จากอุบัติเหตุ',
+    'วงเงินท่านละ 2,000,000 บาท, ค่ารักษาพยาบาลในกรณีที่เกิดจากอุบัติเหตุ',
+  text31: 'รายละเอียดโปรแกรม',
 }
 
 TripDetailCard.propTypes = {
@@ -143,6 +154,7 @@ TripDetailCard.propTypes = {
   text10: PropTypes.string,
   text3: PropTypes.string,
   heading1: PropTypes.string,
+  button1: PropTypes.string,
   text21: PropTypes.string,
   text12: PropTypes.string,
   text1: PropTypes.string,
@@ -157,6 +169,7 @@ TripDetailCard.propTypes = {
   rootClassName: PropTypes.string,
   text: PropTypes.string,
   text11: PropTypes.string,
+  text31: PropTypes.string,
 }
 
 export default TripDetailCard

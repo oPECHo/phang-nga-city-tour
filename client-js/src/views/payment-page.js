@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
-import BlueNavBar1 from '../components/blue-nav-bar1'
+import NavBar from '../components/nav-bar'
 import Payment from '../components/payment'
 import './payment-page.css'
 
@@ -13,7 +13,7 @@ const PaymentPage = (props) => {
         <title>PaymentPage - Phang-Nga-City-Tour</title>
         <meta property="og:title" content="PaymentPage - Phang-Nga-City-Tour" />
       </Helmet>
-      <BlueNavBar1 rootClassName="blue-nav-bar1-root-class-name3"></BlueNavBar1>
+      <NavBar rootClassName="nav-bar-root-class-name7"></NavBar>
       <Payment rootClassName="payment-root-class-name"></Payment>
     </div>
   )

@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Search from '../components/search'
-import TransparentNavBar from '../components/transparent-nav-bar'
+import NavBar from '../components/nav-bar'
 import './home.css'
 
 const Home = (props) => {
@@ -19,7 +19,7 @@ const Home = (props) => {
       <div className="home-container2">
         <Search rootClassName="search-root-class-name1"></Search>
       </div>
-      <TransparentNavBar rootClassName="transparent-nav-bar-root-class-name"></TransparentNavBar>
+      <NavBar rootClassName="nav-bar-root-class-name5"></NavBar>
     </div>
   )
 }
