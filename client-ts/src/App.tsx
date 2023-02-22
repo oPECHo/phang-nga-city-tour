@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, } from 'react-router-dom'
 // import Homepage from './page/Home'
 import Indexpage from './page/Index'
 import LoginPage from './page/Login'
+import TripDetailPage from './page/tripDetail'
 import { ScrollToTop } from './helper'
 // import UserStatusPage from './page/UserStatus'
 // import LogoutPage from './page/Logout'
@@ -23,7 +24,8 @@ function App() {
           {/* <Route path="/detail/:id" element={<Detailpage/>}/> */}
             {/* <Route path="/detail/:id/review" element={<ReviewPage/>}/> */}
             {/* <Route path="/detail/:id/payment" element={<ProtectRoute><PaymentPage/></ProtectRoute>}/> */}
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/TripDetail" element={<TripDetailPage />} />
         {/* <Route path="/userstatus" element={<ProtectRoute><UserStatusPage /></ProtectRoute>} /> */}
         {/* <Route path="/logout" element={<LogoutPage />} /> */}
       </Routes>

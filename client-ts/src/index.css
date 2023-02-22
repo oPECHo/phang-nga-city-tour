@@ -14,6 +14,12 @@
   background-repeat: no-repeat;
   height: 100vh;
 }
+.tripDetail {
+  background-image: url('/public/เขาหลัก2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 .home-container1 {
   top: 0px;
   left: 0px;
