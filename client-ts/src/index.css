@@ -1,100 +1,13 @@
-#myDiv {
-  display: none;
-  text-align: center;
-}
-.index {
-  background-image: url('/public/james\ bond\ island\ small-1500w.png');
+body {
+  background: url("public/JamesBond.png") no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-.login {
-  background-image: url('/public/blurjamebon-1500w.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-.home-container1 {
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-  bottom: 0px;
-  height: 145px;
-  margin: auto;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.home-container2 {
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  width: var(--dl-size-size-xxlarge);
-  bottom: 0px;
-  height: 0px;
-  margin: auto;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.home-text {
-  top: 0px;
-  left: 0px;
-  color: rgb(255, 255, 255);
-  right: 0px;
-  width: fit-content;
-  height: auto;
-  margin: auto;
-  position: absolute;
-  font-size: 50px;
-  align-self: center;
-  font-style: normal;
-  font-family: Noto Serif Thai;
-  font-weight: 700;
-  line-height: 1.15;
-  text-transform: none;
-  text-decoration: none;
-}
-@media(max-width: 1200px) {
-  .home-container {
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--dl-color-gray-white);
-  }
-}
-@media(max-width: 479px) {
-  .home-text {
-    top: 13px;
-    left: 0px;
-    color: rgb(255, 255, 255);
-    right: 0px;
-    margin: auto;
-    font-size: 30px;
-    font-style: normal;
-    font-family: Noto Serif Thai;
-    font-weight: 700;
-    line-height: 1.15;
-    text-transform: none;
-    text-decoration: none;
-  }
-}
-@media (min-width: 768px) {
-  .box-container {
-    width: 50%;
-    max-width: 800px;
-  }
-  body {
-    font-size: 12px;
-  }
+  overflow: hidden;
 }
 
-@media (max-width: 480px) {
-  .box-container {
-    height: 80vh;
+
+
+@media (max-width: 768px) {
+  body {
+    background-position: center;
   }
 }
