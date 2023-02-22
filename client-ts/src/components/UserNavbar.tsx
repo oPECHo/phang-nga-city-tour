@@ -39,7 +39,7 @@ function UserNavbar() {
 
 
   return (
-    <Navbar bg="light" expand="lg" className="shadow">
+    <Navbar bg="light" expand="lg" className="shadow navbar sticky-top navbar-light bg-light" >
       <Container>
         <Navbar.Brand href="#home">
         <div className="container">
