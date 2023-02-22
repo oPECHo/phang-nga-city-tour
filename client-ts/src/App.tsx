@@ -1,33 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { ToastContainer } from 'react-toastify'
+import { BrowserRouter, Route, Routes, } from 'react-router-dom'
+// import Homepage from './page/Home'
+import Indexpage from './page/Index'
+import LoginPage from './page/Login'
+import { ScrollToTop } from './helper'
+// import UserStatusPage from './page/UserStatus'
+// import LogoutPage from './page/Logout'
+// import PaymentPage from './page/Payment'
+// import { ProtectRoute , ScrollToTop } from './helper'
+// import GenrePage from './page/Genre'
+// import Detailpage from './page/Detail'
+// import ReviewPage from './page/Review'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <BrowserRouter>
+    <ScrollToTop/>
+      <Routes>
+        <Route index element={<Indexpage />} />
+        {/* <Route path="/home" element={<Homepage />} /> */}
+          {/* <Route path="/genre/:type" element={<GenrePage/>}/> */}
+          {/* <Route path="/detail/:id" element={<Detailpage/>}/> */}
+            {/* <Route path="/detail/:id/review" element={<ReviewPage/>}/> */}
+            {/* <Route path="/detail/:id/payment" element={<ProtectRoute><PaymentPage/></ProtectRoute>}/> */}
+        <Route path="/login" element={<LoginPage />} />
+        {/* <Route path="/userstatus" element={<ProtectRoute><UserStatusPage /></ProtectRoute>} /> */}
+        {/* <Route path="/logout" element={<LogoutPage />} /> */}
+      </Routes>
+      <ToastContainer/>
+    </BrowserRouter>
   )
 }
 

@@ -1,0 +1,24 @@
+
+.flexbox {
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    display: block;
+    box-sizing: border-box;
+    width: 40%;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.content {
+    background-color:rgba(255, 255, 255, 0.9);
+    border: 2px solid black;
+    padding: 5px;
+    margin-bottom: 400px;
+    border-radius: 20px;
+}
