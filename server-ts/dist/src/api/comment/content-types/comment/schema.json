@@ -13,21 +13,27 @@
     "pluginOptions": {},
     "attributes": {
         "score": {
-            "type": "decimal",
-            "max": 5,
+            "type": "integer",
+            "max": 10,
             "min": 0
-        },
-        "users_permissions_user": {
-            "type": "relation",
-            "relation": "oneToOne",
-            "target": "plugin::users-permissions.user",
-            "inversedBy": "comment"
         },
         "Date": {
             "type": "date"
         },
         "comment": {
             "type": "text"
+        },
+        "name_tour": {
+            "type": "string"
+        },
+        "user": {
+            "type": "string"
+        },
+        "author": {
+            "type": "string"
+        },
+        "id_tour": {
+            "type": "string"
         }
     }
 }

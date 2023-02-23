@@ -1,0 +1,30 @@
+{
+    "kind": "collectionType",
+    "collectionName": "tour_dates",
+    "info": {
+        "singularName": "tour-date",
+        "pluralName": "tour-dates",
+        "displayName": "tour-date"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "first_trip": {
+            "type": "date"
+        },
+        "second_trip": {
+            "type": "date"
+        },
+        "first_trip_end": {
+            "type": "date"
+        },
+        "second_trip_end": {
+            "type": "date"
+        }
+    }
+}

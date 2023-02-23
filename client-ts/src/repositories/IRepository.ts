@@ -8,4 +8,7 @@ export interface IRepository<T> {
     getPayment?(user: string | number) : Promise<T[] | null>;
     createPayment?(data: T): Promise<T>;
     deletePayment?(id: string|number): Promise<void>;
+
+    getReview?(tour_id: string|number): Promise<T[] | null>
+    createReview?(data: T): Promise<T>;
 }

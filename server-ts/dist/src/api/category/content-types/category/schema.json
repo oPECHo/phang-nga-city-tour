@@ -19,9 +19,9 @@
                 "package"
             ]
         },
-        "location": {
+        "locations": {
             "type": "relation",
-            "relation": "oneToOne",
+            "relation": "oneToMany",
             "target": "api::location.location",
             "mappedBy": "category"
         }
