@@ -1,10 +1,7 @@
-#myDiv {
-  display: none;
-  text-align: center;
-}
-.index {
-  background-image: url('/public/james\ bond\ island\ small-1500w.png');
+body {
+  background: url("public/JamesBond.png") no-repeat center center fixed;
   background-size: cover;
+<<<<<<< HEAD
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -97,10 +94,15 @@
   body {
     font-size: 12px;
   }
+=======
+  overflow: hidden;
+>>>>>>> 693307a28e662df35c891a62853967ddc86eb0e3
 }
 
-@media (max-width: 480px) {
-  .box-container {
-    height: 80vh;
+
+
+@media (max-width: 768px) {
+  body {
+    background-position: center;
   }
 }

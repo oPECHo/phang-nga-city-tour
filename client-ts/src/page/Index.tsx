@@ -1,26 +1,23 @@
-import { useEffect } from 'react';
-import { Button, requirePropFactory } from '@mui/material';
-import { Box } from '@mui/system';
 import UserNavbar from '../components/UserNavbar';
-import '../index.css'
-import FigureImage from 'react-bootstrap/FigureImage'
-import Typography from '@mui/material/Typography/Typography';
-import { useNavigate } from 'react-router-dom';
-import Search from '../components/search'
-const Indexpage = () => {
-    const navigate = useNavigate()
+import { Link } from 'react-router-dom';
+import { Grid, Button } from '@mui/material';
+import '../index.css';
+
+function Indexpage() {
     return (
         <div className='index'>
-            <UserNavbar/>
-            <div className="home-container">
-                <div className="home-container1">
-                    <h1 className="home-text">ค้นหาทัวร์ท่องเที่ยวที่ดีที่สุดในพังงา</h1>
-                </div>
-                <div className="home-container2">
-                    <Search rootClassName="search-root-class-name1"></Search>
-                </div>
-            </div>
+            <UserNavbar />
+            <Grid container justifyContent="center" alignItems="center" style={{ height: '90vh' }}>
+                <Grid item>
+                    <a href="/login">
+                        <div className="text-center">
+                            <img  src="../../public/SearchButton.png" className="img-fluid" alt="..." />
+                        </div>
+                    </a>
+                </Grid>
+            </Grid>
         </div>
-    )
-};
-export default Indexpage
+    );
+}
+
+export default Indexpage;
