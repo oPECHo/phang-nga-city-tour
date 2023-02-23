@@ -1,15 +1,10 @@
-.login {
-  background-image: url('/public/blurjamebon-1500w.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
 .tripDetail {
   background-image: url('/public/เขาหลัก2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
+
 .home-container1 {
   top: 0px;
   left: 0px;
@@ -24,6 +19,7 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .home-container2 {
   top: 0px;
   left: 0px;
@@ -38,6 +34,7 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .home-text {
   top: 0px;
   left: 0px;
@@ -56,6 +53,7 @@
   text-transform: none;
   text-decoration: none;
 }
+
 @media(max-width: 1200px) {
   .home-container {
     align-items: center;
@@ -63,6 +61,7 @@
     background-color: var(--dl-color-gray-white);
   }
 }
+
 @media(max-width: 479px) {
   .home-text {
     top: 13px;
@@ -79,6 +78,7 @@
     text-decoration: none;
   }
 }
+
 @media (min-width: 768px) {
   .box-container {
     width: 50%;
@@ -88,8 +88,6 @@
     font-size: 12px;
   }
 }
-
-
 
 @media (max-width: 768px) {
   body {

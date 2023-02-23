@@ -4,7 +4,7 @@ import '../design/Home.css';
 
 function Indexpage() {
     return (
-        <div className='index'>
+        <div className='index Home-BG'>
             <UserNavbar />
             <Grid container justifyContent="center" alignItems="center" style={{ height: '90vh' }}>
                 <Grid item>

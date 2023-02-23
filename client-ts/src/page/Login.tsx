@@ -52,7 +52,7 @@ export default function SignInSide() {
 
 
   return (
-    <div>
+    <div className='Login-BG'>
     <UserNavbar />
       <section className="vh-100 fixed-top" style={{ zIndex: '100' }}>
         <div className="container py-5 h-100">
