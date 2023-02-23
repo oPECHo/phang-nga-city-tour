@@ -18,8 +18,7 @@ function App() {
     <BrowserRouter>
     <ScrollToTop/>
       <Routes>
-        <Route index element={<Indexpage />} />
-        {/* <Route path="/home" element={<Homepage />} /> */}
+        <Route path="/home" index element={<Indexpage />} />
           {/* <Route path="/genre/:type" element={<GenrePage/>}/> */}
           {/* <Route path="/detail/:id" element={<Detailpage/>}/> */}
             <Route path="/detail/:id/review" element={<ReviewPage/>}/>

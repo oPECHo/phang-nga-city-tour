@@ -43,7 +43,7 @@ function UserNavbar() {
       <Container>
         <Navbar.Brand href="#home">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/home">
             <img src="../../public/Logo.png" alt="" width="175" height="49" />
           </a>
         </div>
