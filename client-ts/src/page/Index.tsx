@@ -2,7 +2,6 @@ import UserNavbar from '../components/UserNavbar';
 import { Grid } from '@mui/material';
 import '../design/Home.css';
 
-
 function Indexpage() {
     return (
         <div className='index'>
@@ -11,7 +10,7 @@ function Indexpage() {
                 <Grid item>
                     <a href="/login">
                         <div className="text-center">
-                            <img  src="public/SearchButton.png" className="img-fluid" alt="..." width="75%" height="75%" />
+                            <img  src="public/SearchButton.png" className="img-fluid search-button" alt="..." width="75%" height="75%" />
                         </div>
                     </a>
                 </Grid>
