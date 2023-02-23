@@ -5,6 +5,7 @@ body{
 .card{
 	background-color: #fff;
 	border: none;
+    overflow-y: auto
 }
 
 .form-color{
