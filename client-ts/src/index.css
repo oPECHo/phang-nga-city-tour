@@ -1,9 +1,3 @@
-body {
-  background: url("public/JamesBond.png") no-repeat center center fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
 .login {
   background-image: url('/public/blurjamebon-1500w.jpg');
   background-size: cover;
