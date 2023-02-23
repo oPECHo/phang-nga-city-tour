@@ -1,6 +1,7 @@
 import UserNavbar from '../components/UserNavbar';
 import { Grid } from '@mui/material';
-import '../index.css';
+import '../design/Home.css';
+
 
 function Indexpage() {
     return (
