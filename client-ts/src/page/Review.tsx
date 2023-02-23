@@ -15,17 +15,17 @@ const ReviewPage = () => {
                 </div>
 
                 <div className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3">
-                    <img src="https://i.imgur.com/zQZSWrt.jpg" width="50" className="rounded-circle mr-2" />
+                    <img src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_960_720.png" width="50" className="rounded-circle mr-2" />
                     <input type="text" className="form-control" placeholder="Enter your comment..." />
                 </div>
 
                 <div className="mt-2">
                     <div className="d-flex flex-row p-3 gap-3">
-                    <img src="https://i.imgur.com/zQZSWrt.jpg" width="40" height="40" className="rounded-circle mr-3" />
+                    <img src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_960_720.png" width="40" height="40" className="rounded-circle mr-3" />
                     <div className="w-100">
                         <div className="d-flex justify-content-between align-items-center">
                             <div className="d-flex flex-row align-items-center">
-                            <span className="mr-2">Brian selter</span>
+                            <span className="mr-2 fw-bold">Brian selter</span>
                             </div>
                             <small>12h ago</small>
                     </div>
@@ -37,11 +37,11 @@ const ReviewPage = () => {
 
 
                 <div className="d-flex flex-row p-3 gap-3">
-                    <img src="https://i.imgur.com/3J8lTLm.jpg" width="40" height="40" className="rounded-circle mr-3" />
+                    <img src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_960_720.png" width="40" height="40" className="rounded-circle mr-3" />
                     <div className="w-100">
                         <div className="d-flex justify-content-between align-items-center">
                             <div className="d-flex flex-row align-items-center">
-                            <span className="mr-2">Seltos Majito</span>
+                            <span className="mr-2 fw-bold">Seltos Majito</span>
                             </div>
                             <small>2h ago</small>
                     </div>
@@ -52,11 +52,11 @@ const ReviewPage = () => {
                 </div>
 
                 <div className="d-flex flex-row p-3 gap-3">
-                    <img src="https://i.imgur.com/agRGhBc.jpg" width="40" height="40" className="rounded-circle mr-3" />
+                    <img src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_960_720.png" width="40" height="40" className="rounded-circle mr-3" />
                     <div className="w-100">
                         <div className="d-flex justify-content-between align-items-center">
                             <div className="d-flex flex-row align-items-center">
-                            <span className="mr-2">Maria Santola</span>
+                            <span className="mr-2 fw-bold">Maria Santola</span>
                             </div>
                             <small>12h ago</small>
                     </div>
