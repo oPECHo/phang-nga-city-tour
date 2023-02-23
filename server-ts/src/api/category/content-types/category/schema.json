@@ -17,11 +17,13 @@
       "enum": [
         "One day trip",
         "package"
-      ]
+      ],
+      "required": true,
+      "default": "One day trip"
     },
-    "locations": {
+    "location": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::location.location",
       "mappedBy": "category"
     }

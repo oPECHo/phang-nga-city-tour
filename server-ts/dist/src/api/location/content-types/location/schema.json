@@ -4,7 +4,8 @@
     "info": {
         "singularName": "location",
         "pluralName": "locations",
-        "displayName": "location"
+        "displayName": "location",
+        "description": ""
     },
     "options": {
         "draftAndPublish": true
@@ -16,14 +17,15 @@
             "required": true
         },
         "image": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
             "allowedTypes": [
                 "images",
                 "files",
                 "videos",
                 "audios"
-            ],
-            "type": "media",
-            "multiple": true
+            ]
         },
         "price": {
             "type": "decimal",
@@ -53,9 +55,9 @@
         },
         "category": {
             "type": "relation",
-            "relation": "manyToOne",
+            "relation": "oneToOne",
             "target": "api::category.category",
-            "inversedBy": "locations"
+            "inversedBy": "location"
         }
     }
 }
