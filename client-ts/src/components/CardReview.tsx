@@ -1,9 +1,7 @@
 import Card from '@mui/joy/Card';
 import Avatar from  '@mui/joy/Avatar';
 import Typography from '@mui/material/Typography/Typography';
-import UserNavbar from '../components/UserNavbar';
-import StarIcon from '@mui/icons-material/Star';
-import {Row,Col,Container, } from 'react-bootstrap';
+import {Row,Col} from 'react-bootstrap';
 import Box from '@mui/system/Box/Box';
 
 function CardReview() {
