@@ -1,7 +1,6 @@
 body {
   background: url("public/JamesBond.png") no-repeat center center fixed;
   background-size: cover;
-<<<<<<< HEAD
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -94,9 +93,6 @@ body {
   body {
     font-size: 12px;
   }
-=======
-  overflow: hidden;
->>>>>>> 693307a28e662df35c891a62853967ddc86eb0e3
 }
 
 
