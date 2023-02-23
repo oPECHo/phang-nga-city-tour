@@ -1,6 +1,5 @@
 import UserNavbar from '../components/UserNavbar';
-import { Link } from 'react-router-dom';
-import { Grid, Button } from '@mui/material';
+import { Grid } from '@mui/material';
 import '../index.css';
 
 function Indexpage() {
@@ -11,7 +10,7 @@ function Indexpage() {
                 <Grid item>
                     <a href="/login">
                         <div className="text-center">
-                            <img  src="../../public/SearchButton.png" className="img-fluid" alt="..." />
+                            <img  src="public/SearchButton.png" className="img-fluid" alt="..." width="75%" height="75%" />
                         </div>
                     </a>
                 </Grid>
