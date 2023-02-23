@@ -4,7 +4,6 @@ import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
 import { userData } from '../helper';
 
 
-
 function UserNavbar() {
   const user = userData();
   const [open, setOpen] = useState(false);
@@ -39,7 +38,7 @@ function UserNavbar() {
 
 
   return (
-    <Navbar bg="light" expand="lg" className="shadow navbar sticky-top navbar-light bg-light" >
+    <Navbar bg="light" expand="lg" className="shadow navbar sticky-top navbar-light bg-light">
       <Container>
         <Navbar.Brand href="#home">
         <div className="container">
