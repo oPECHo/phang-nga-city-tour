@@ -11,7 +11,7 @@ import { ScrollToTop } from './helper'
 // import { ProtectRoute , ScrollToTop } from './helper'
 // import GenrePage from './page/Genre'
 // import Detailpage from './page/Detail'
-// import ReviewPage from './page/Review'
+import ReviewPage from './page/Review'
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         {/* <Route path="/home" element={<Homepage />} /> */}
           {/* <Route path="/genre/:type" element={<GenrePage/>}/> */}
           {/* <Route path="/detail/:id" element={<Detailpage/>}/> */}
-            {/* <Route path="/detail/:id/review" element={<ReviewPage/>}/> */}
+            <Route path="/detail/:id/review" element={<ReviewPage/>}/>
             {/* <Route path="/detail/:id/payment" element={<ProtectRoute><PaymentPage/></ProtectRoute>}/> */}
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/TripDetail" element={<TripDetailPage />} />
