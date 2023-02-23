@@ -61,8 +61,17 @@ export default function SignInSide() {
               <div className="card" style={{ borderRadius: '1rem' }}>
                 <div className="row g-0">
                   <div className="col-md-6 col-lg-5 d-none d-md-block">
-                  <img src="public/LoginImage.png"
-                    alt="login form" className="img-fluid mx-auto object-fit-none border " style={{ borderRadius: '1rem 0 0 1rem' }} />
+                    <img
+                      src="public/JamesBond.png"
+                      alt="login form"
+                      className="img-fluid mx-auto object-fit-none border"
+                      style={{
+                        borderRadius: "1rem 0 0 1rem",
+                        objectFit: "cover",
+                        objectPosition: "center",
+                        height: "100%",
+                      }}
+                    />
                   </div>
                   <div className="col-md-6 col-lg-7 d-flex align-items-center">
                     <div className="card-body p-4 p-lg-5 text-black">
