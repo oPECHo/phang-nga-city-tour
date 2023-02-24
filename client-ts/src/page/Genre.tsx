@@ -6,6 +6,7 @@ import Tour from '../models/tour';
 import { Grid } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import Repo from '../repositories'
+import TripCard from '../components/tripCard';
 
 
 const GenrePage = () => {
@@ -54,6 +55,7 @@ const GenrePage = () => {
                 )}
               </Grid>
           </Container>
+          <div className="container py-5 h-100"><TripCard/></div>
       </div>
 
   )
