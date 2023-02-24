@@ -25,6 +25,12 @@
         },
         "second_trip_end": {
             "type": "date"
+        },
+        "locations": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::location.location",
+            "mappedBy": "tour_dates"
         }
     }
 }

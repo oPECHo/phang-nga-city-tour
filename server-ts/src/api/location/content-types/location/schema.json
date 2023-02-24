@@ -53,11 +53,17 @@
     "direction": {
       "type": "string"
     },
-    "category": {
+    "categories": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToMany",
       "target": "api::category.category",
-      "inversedBy": "location"
+      "mappedBy": "locations"
+    },
+    "tour_dates": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tour-date.tour-date",
+      "inversedBy": "locations"
     }
   }
 }
