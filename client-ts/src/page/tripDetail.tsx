@@ -1,45 +1,35 @@
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import FigureImage from 'react-bootstrap/FigureImage'
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { toast } from 'react-toastify'
-import { useNavigate } from 'react-router-dom';
-import { storeUser, userData } from '../helper';
 import '../design/botton-bar.css'
 import UserNavbar from '../components/UserNavbar';
-import tripDetailCard from '../components/tripDetailCard';
-
-const theme = createTheme();
 
 export default function SignInSide() {
 
-    return (
-        <body className='tripDetail'>
-            <ThemeProvider theme={theme}>
-                <UserNavbar />
-                <img src="เขาหลัก2.jpg" height={200} width={300} />
-                <h1>รายละเอียดแพ็คเกจ</h1>
-                <div>รายละเอียดโปรแกรม - เดินทางได้ทุกวัน ตั้งแต่ 2 ท่านขึ้นไป (เดินทางตั้งแต่ ก.ค. - ธ.ค. 66)</div>
-                <div>วันแรก - จุดชมวิวเสม็ดนางชี</div>
-                <div>พักโรงแรม - เสม็ดนางชี </div>
-                <div>บูทีควันที่สอง - จุดชมวิวบ้านหินร่ม</div>
-                <Box>
-                    <Button
-                        variant="contained"
-                        sx={{ mt: 2, mb: 2 }}>
-                        จองเลย!
-                    </Button> 
-                </Box>
-            </ThemeProvider>
-        </body>
-    );
+  return (
+    <div className=''>
+      <UserNavbar />
+      <div className='container py-5 h-100'>
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="card py-5 h-100" style={{ borderRadius: '1rem'}}>
+              <div className="card-body" style={{height:'200'}}>
+                <div className='text-center'><img src="เขาหลัก2.jpg" height="250" className="card-img-top" style={{ borderRadius: '1rem' }}/></div>
+                <h5 className="card-title">ชื่อสถานที่</h5>
+                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <div className='text-center'><a href="#" className="btn btn-primary">จองเลย!</a></div>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6">
+            <div className="card" style={{ borderRadius: '1rem', height:'100%'}}>
+              <div className="card-body">
+                <h5 className="card-title">รายละเอียดทริป</h5>
+                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" className="btn btn-primary">แสดงความคิดเห็น</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
