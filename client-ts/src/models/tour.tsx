@@ -1,11 +1,13 @@
 export default interface Tours{
     id: number;
     attributes: {
-        Title: string;
-        Longdescription: string;
+        title: string;
         price: number;
-        available_seat: number;
-        vehicle: string | null;
+        address: string;
+        number: number;
+        score: number;
+        description: string;
+        conditions: string ;
         image: {
             data: {
                 attributes: {
@@ -20,7 +22,7 @@ export default interface Tours{
         category: {
             data: {
                 attributes: {
-                    type: string;
+                    Type: string;
                 }
             }
         }
