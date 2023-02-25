@@ -24,34 +24,34 @@ function UserNavbar() {
     if (event.target.files && event.target.files.length > 0) {
       // Convert the selected file to a URL
       const url = URL.createObjectURL(event.target.files[0]);
-  
+
       // Update the image state with the URL
       setImage(url);
     }
   };
 
   const handleSave = () => {
-      // Do something with the name, email, and image values
-      console.log( `Image: ${image}`);
-      setOpen(false);
-    };
+    // Do something with the name, email, and image values
+    console.log(`Image: ${image}`);
+    setOpen(false);
+  };
 
 
   return (
     <Navbar bg="light" expand="lg" className="shadow navbar sticky-top navbar-light bg-light">
       <Container>
         <Navbar.Brand href="#home">
-        <div className="container">
-          <a className="navbar-brand" href="/home">
-            <img src="../../public/Logo.png" alt="" width="175" height="49" />
-          </a>
-        </div>
+          <div className="container">
+            <a className="navbar-brand" href="/home">
+              <img src="../../public/Logo.png" alt="" width="175" height="49" />
+            </a>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/Genre/All">ค้นหา</Nav.Link>
-            <Nav.Link href="/detail/:id/review">ทัวร์ของคุณ</Nav.Link>
+            <Nav.Link href="/Userstatus">ทัวร์ของคุณ</Nav.Link>
             <Nav.Link href="/history">ประวัติ</Nav.Link>
             <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">
               <NavDropdown.Item href="/Genre/All">ทั้งหมด</NavDropdown.Item>
@@ -61,11 +61,17 @@ function UserNavbar() {
               <NavDropdown.Item href="/Genre/Package">แพ็คเกจ</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav.Link href="/login">
-            <button type="button" className="btn btn-dark">
-              เข้าสู่ระบบ
+          <Nav className="">
+            <Nav.Link href="/login">
+              <button type="button" className="btn btn-dark" style={{ width: "100px" }}>
+                เข้าสู่ระบบ
+              </button>
+            </Nav.Link>
+            <Nav.Link href="/history"><button type="button" className="btn btn-dark" style={{ margin: '1px', width: "100px" }}>
+              โปรไฟล์
             </button>
-          </Nav.Link>  
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
