@@ -36,13 +36,17 @@ const GenrePage = () => {
         params.type === "Package" ? "แพ็คเกจ" :
             "ทั้งหมด";
 
-
+    var imgLinks = [
+        "https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp",
+        "https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp",
+        "https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
+    ]
 
     return (
         <div>
             <UserNavbar />
             <li className="divider"></li>
-                <SearchBar />
+            <SearchBar />
             <Container className="container">
                 <Row style={{ marginTop: "20px", right: "500px" }}>
                     <Col md={{ span: 6, offset: 4 }} style={{ display: "flex" }}>
@@ -70,7 +74,13 @@ const GenrePage = () => {
                     )}
                 </Grid>
             </Container>
-            <div className="container py-5 h-100"><TripCard /></div>
+            <div className="container py-5 h-100">
+                <div className="row row-cols-1 row-cols-md-4 g-4">
+                    <TripCard imgLink={imgLinks[0]} />
+                    <TripCard imgLink={imgLinks[1]} />
+                    <TripCard imgLink={imgLinks[2]} />
+                </div>
+            </div>
         </div>
 
     )
