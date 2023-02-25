@@ -2,7 +2,7 @@ export default interface Review {
     id : number;
     attributes : {
         user: string;
-        tour_name: string;
+        name_tour: string;
         author: string;
         score: number;
         avatar : string;

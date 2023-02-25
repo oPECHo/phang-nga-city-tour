@@ -21,6 +21,7 @@ function ReviewSection(props: Props) {
                     <div className="d-flex justify-content-between align-items-center">
                     <div className="d-flex flex-row align-items-center">
                         <span className="mr-2 fw-bold">{reviewData?.user}</span>
+                        <span className="ms-1 fw-light">({reviewData?.name_tour})</span>
                     </div>
                     <small>{reviewData?.Date}</small>
                     </div>
