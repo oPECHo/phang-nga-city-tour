@@ -18,22 +18,22 @@ import SearchPage from './page/search'
 function App() {
   return (
     <BrowserRouter>
-    <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
         <Route index element={<Indexpage />} />
         <Route path="/home" element={<Indexpage />} />
-          {<Route path="/genre/:type" element={<GenrePage/>}/>}
-          {/* <Route path="/detail/:id" element={<Detailpage/>}/> */}
-            <Route path="/detail/:id/review" element={<ReviewPage/>}/>
-            {/* <Route path="/detail/:id/payment" element={<ProtectRoute><PaymentPage/></ProtectRoute>}/> */}
+        {<Route path="/genre/:type" element={<GenrePage />} />}
+        {/* <Route path="/detail/:id" element={<Detailpage/>}/> */}
+        <Route path="/detail/:id/review" element={<ReviewPage />} />
+        {/* <Route path="/detail/:id/payment" element={<ProtectRoute><PaymentPage/></ProtectRoute>}/> */}
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/TripDetail" element={<TripDetailPage />} />
         {/* <Route path="/userstatus" element={<ProtectRoute><UserStatusPage /></ProtectRoute>} /> */}
         {/* <Route path="/logout" element={<LogoutPage />} /> */}
-        <Route path="/search" element={<SearchPage />}/>
-        <Route path="/history" element={<HistoryPage />}/>
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/history" element={<HistoryPage />} />
       </Routes>
-      <ToastContainer/>
+      <ToastContainer />
     </BrowserRouter>
   )
 }
