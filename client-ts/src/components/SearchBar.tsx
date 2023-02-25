@@ -9,13 +9,12 @@ const SearchBar = () => {
         <div className="col-md-6">
           <form className="d-flex">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">ค้นหา</button>
           </form>
         </div>
         <div className="col-md-6">
           <div className="text-end">
             <div className="dropdown">
-              <button className="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              <button className="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <span>หมวดหมู่</span>
                 <i className="fa fa-caret-down"></i>
               </button>
