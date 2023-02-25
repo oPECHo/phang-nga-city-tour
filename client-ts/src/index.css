@@ -1,3 +1,7 @@
+body{
+	background-color: #eee;
+}
+
 .tripDetail {
   background-image: url('/public/เขาหลัก2.jpg');
   background-size: cover;
