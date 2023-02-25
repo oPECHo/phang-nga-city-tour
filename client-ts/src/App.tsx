@@ -13,6 +13,7 @@ import GenrePage from './page/Genre'
 // import Detailpage from './page/Detail'
 import ReviewPage from './page/Review'
 import HistoryPage from './page/history'
+import ProfilePage from './page/profilePage'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         {/* <Route path="/userstatus" element={<ProtectRoute><UserStatusPage /></ProtectRoute>} /> */}
         {/* <Route path="/logout" element={<LogoutPage />} /> */}
         <Route path="/history" element={<HistoryPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
       <ToastContainer />
     </BrowserRouter>
