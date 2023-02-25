@@ -52,7 +52,7 @@ function UserNavbar() {
           <Nav className="me-auto">
             <Nav.Link href="/Genre/All">ค้นหา</Nav.Link>
             <Nav.Link href="/detail/:id/review">ทัวร์ของคุณ</Nav.Link>
-            <Nav.Link href="#history">ประวัติ</Nav.Link>
+            <Nav.Link href="/history">ประวัติ</Nav.Link>
             <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">
               <NavDropdown.Item href="/Genre/One%20day%20trip">ทริปวันเดียว</NavDropdown.Item>
               <NavDropdown.Divider />
