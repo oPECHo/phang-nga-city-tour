@@ -14,7 +14,7 @@ const CardTour = (props:Props) => {
   const navigate = useNavigate();
   const item = props.Tours.attributes
 
-  const tourimg = `http://localhost:1337${item.image.data.attributes.formats.thumbnail.url}`
+  const touring = `http://localhost:1337${item.image.data.attributes.formats.thumbnail.url}`
 
   return (
     <>
