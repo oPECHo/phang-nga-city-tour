@@ -5,7 +5,7 @@ import Indexpage from './page/Index'
 import LoginPage from './page/Login'
 import TripDetailPage from './page/tripDetail'
 import { ScrollToTop } from './helper'
-// import UserStatusPage from './page/UserStatus'
+import UserStatusPage from './page/Userstatus'
 // import LogoutPage from './page/Logout'
 // import PaymentPage from './page/Payment'
 // import { ProtectRoute , ScrollToTop } from './helper'
@@ -29,7 +29,7 @@ function App() {
         {/* <Route path="/detail/:id/payment" element={<ProtectRoute><PaymentPage/></ProtectRoute>}/> */}
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/TripDetail" element={<TripDetailPage />} />
-        {/* <Route path="/userstatus" element={<ProtectRoute><UserStatusPage /></ProtectRoute>} /> */}
+        {<Route path="/userstatus" element={<UserStatusPage />} /> }
         {/* <Route path="/logout" element={<LogoutPage />} /> */}
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/profile" element={<ProfilePage />} />
