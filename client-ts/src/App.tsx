@@ -13,6 +13,7 @@ import GenrePage from './page/Genre'
 // import Detailpage from './page/Detail'
 import ReviewPage from './page/Review'
 import HistoryPage from './page/history'
+import SearchPage from './page/search'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/TripDetail" element={<TripDetailPage />} />
         {/* <Route path="/userstatus" element={<ProtectRoute><UserStatusPage /></ProtectRoute>} /> */}
         {/* <Route path="/logout" element={<LogoutPage />} /> */}
+        <Route path="/search" element={<SearchPage />}/>
         <Route path="/history" element={<HistoryPage />}/>
       </Routes>
       <ToastContainer/>

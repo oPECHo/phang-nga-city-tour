@@ -20,7 +20,7 @@ const CardTour = (props:Props) => {
     <>
       <Card variant="outlined" sx={{ width: 250,backgroundColor: 'white' }}>
       <Typography level="h2" fontSize="xl" fontWeight="xl" color='primary' sx={{ mb: 0.5 }}>
-        {item.Title}
+        {item.title}
       </Typography>
       
       <AspectRatio minHeight="100px" maxHeight="150px" sx={{ my: 2 }}>

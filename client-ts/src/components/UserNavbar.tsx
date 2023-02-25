@@ -50,7 +50,7 @@ function UserNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#userTour">ค้นหา</Nav.Link>
+            <Nav.Link href="/search">ค้นหา</Nav.Link>
             <Nav.Link href="/detail/:id/review">ทัวร์ของคุณ</Nav.Link>
             <Nav.Link href="#history">ประวัติ</Nav.Link>
             <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">

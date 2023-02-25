@@ -1,7 +1,7 @@
 import '../design/botton-bar.css'
 import UserNavbar from '../components/UserNavbar';
 
-export default function SignInSide() {
+export default function TripDetail() {
 
   return (
     <div className=''>
