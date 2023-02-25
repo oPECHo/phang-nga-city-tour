@@ -14,7 +14,7 @@ const SearchBar = () => {
         <div className="col-md-6">
           <div className="text-end">
             <div className="dropdown">
-              <button className="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              <button className="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" style={{margin: '10px'}}>
                 <span>หมวดหมู่</span>
                 <i className="fa fa-caret-down"></i>
               </button>
