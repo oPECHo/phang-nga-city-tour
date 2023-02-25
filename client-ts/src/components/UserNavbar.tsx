@@ -54,6 +54,8 @@ function UserNavbar() {
             <Nav.Link href="/detail/:id/review">ทัวร์ของคุณ</Nav.Link>
             <Nav.Link href="/history">ประวัติ</Nav.Link>
             <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/Genre/All">ทั้งหมด</NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item href="/Genre/One%20day%20trip">ทริปวันเดียว</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/Genre/Package">แพ็คเกจ</NavDropdown.Item>
