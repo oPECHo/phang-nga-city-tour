@@ -57,6 +57,7 @@ const GenrePage = () => {
                             fontSize: '17px',
                             fontWeight: "normal",
                             textAlign: "center",
+                            border: "1px solid rgba(0, 0, 0, 0.25)"
                         }}>
                         {headtitle}
                     </Col>
