@@ -1,6 +1,9 @@
+import { ReactNode } from "react";
+
 export default interface Tours{
     id: number;
     attributes: {
+        available_seat: ReactNode;
         title: string;
         price: number;
         address: string;
