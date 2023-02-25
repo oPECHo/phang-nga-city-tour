@@ -48,7 +48,7 @@ const GenrePage = () => {
                     <Col md={{ span: 6, offset: 4 }} style={{ display: "flex" }}>
                     </Col>
                 </Row>
-                <Row className="mx-auto" style={{ marginBottom: '15px', marginTop: '15px' }}>
+                <Row className="mx-auto" style={{ marginBottom: '5px', marginTop: '5px' }}>
                     <Col xs={12} md={3} className="mx-auto"
                         style={{
                             backgroundColor: "whitesmoke",
