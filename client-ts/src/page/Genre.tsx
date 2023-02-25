@@ -42,14 +42,14 @@ const GenrePage = () => {
         <div>
             <UserNavbar />
             <li className="divider"></li>
-            <SearchBar />
+                <SearchBar />
             <Container className="container">
                 <Row style={{ marginTop: "20px", right: "500px" }}>
                     <Col md={{ span: 6, offset: 4 }} style={{ display: "flex" }}>
                     </Col>
                 </Row>
-                <Row style={{ marginBottom: '15px' }}>
-                    <Col xs={12} md={3}
+                <Row className="mx-auto" style={{ marginBottom: '15px', marginTop: '15px' }}>
+                    <Col xs={12} md={3} className="mx-auto"
                         style={{
                             backgroundColor: "whitesmoke",
                             borderRadius: "12px",
