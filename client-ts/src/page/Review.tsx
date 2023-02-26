@@ -42,7 +42,7 @@ const ReviewPage = () => {
                             </div>
 
                             <div className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3">
-                                <img src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_960_720.png" width="50" className="rounded-circle mr-2" />
+                                <img src="../../public/IdleProfile.png" width="50" className="rounded-circle mr-2" />
                                 <input type="text" className="form-control" placeholder="Enter your comment..." />
                             </div>
 
