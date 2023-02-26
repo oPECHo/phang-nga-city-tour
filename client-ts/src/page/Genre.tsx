@@ -1,13 +1,15 @@
-import UserNavbar from '../components/UserNavbar';
 import { Row, Col, Container, } from 'react-bootstrap';
-import CardTour from '../components/CardTour';
 import { useEffect, useState } from 'react';
-import Tour from '../models/tour';
-import { Grid } from '@mui/material';
 import { useParams } from 'react-router-dom';
+
+import { Grid } from '@mui/material';
 import Repo from '../repositories'
-import TripCard from '../components/tripCard';
+import Tour from '../models/tour';
+
+import UserNavbar from '../components/UserNavbar';
 import SearchBar from '../components/SearchBar';
+import TourCard from '../components/TourCard';
+
 
 
 const GenrePage = () => {
@@ -36,11 +38,6 @@ const GenrePage = () => {
         params.type === "Package" ? "แพ็คเกจ" :
             "ทั้งหมด";
 
-    var imgLinks = [
-        "https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp",
-        "https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp",
-        "https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
-    ]
 
     return (
         <div>
@@ -66,21 +63,10 @@ const GenrePage = () => {
                         {headtitle}
                     </Col>
                 </Row>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 4, md: 4, lg: 4, xl: 4 }}>
                     {data.map((item, index) =>
-                        <Grid item xs={2} sm={4} md={4} lg={3} xl={2} key={index}>
-                            <CardTour Tours={item} />
-                        </Grid>
+                        <TourCard Tours={item} />
                     )}
-                </Grid>
             </Container>
-            <div className="container py-5 h-100">
-                <div className="row row-cols-1 row-cols-md-4 g-4">
-                    <TripCard imgLink={imgLinks[0]} />
-                    <TripCard imgLink={imgLinks[1]} />
-                    <TripCard imgLink={imgLinks[2]} />
-                </div>
-            </div>
         </div>
 
     )
