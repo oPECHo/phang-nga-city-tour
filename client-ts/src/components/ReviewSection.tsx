@@ -12,7 +12,7 @@ function ReviewSection(props: Props) {
             <div className="mt-2">
                 <div className="d-flex flex-row p-3 gap-3">
                 <img
-                    src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_960_720.png"
+                    src="../../public/IdleProfile.png"
                     width="40"
                     height="40"
                     className="rounded-circle mr-3"
