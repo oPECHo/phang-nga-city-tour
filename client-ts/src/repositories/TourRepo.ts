@@ -8,7 +8,7 @@ import { userData } from "../helper";
 const user = userData()
 
 export class TourRepository implements IRepository<Tours>{
-    urlPrefix = "http://localhost:1337/api/location?populate=*"
+    urlPrefix = "http://localhost:1337/api/locations?populate=*"
     token = user.jwt
 
     async getAll(): Promise<Tours[] | null> {
@@ -30,7 +30,7 @@ export class TourRepository implements IRepository<Tours>{
     }
 
     async getCategory(type: string): Promise<Tours[] | null> {
-        const resp = await fetch(`${this.urlPrefix}&filters[category][type][$eq]=${type}`)
+        const resp = await fetch(`${this.urlPrefix}&filters[categories][type][$eq]=${type}`)
         const data = await resp.json()
         return data.data
     }
