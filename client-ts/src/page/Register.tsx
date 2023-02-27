@@ -82,7 +82,7 @@ export default function Register() {
 
                                                 <div className="d-flex align-items-center mb-3 pb-1">
                                                     <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
-                                                    <span className="h1 fw-bold mb-0 mx-auto">Sign into your account</span>
+                                                    <span className="h1 fw-bold mb-0 mx-auto">Create an account</span>
                                                 </div>
 
                                                 <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}></h5>
@@ -110,6 +110,9 @@ export default function Register() {
                                                 <div className="pt-1 mb-4">
                                                     <button className="btn btn-dark btn-lg btn-block" type="button">Register</button>
                                                 </div>
+
+                                                <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Already have an account? <a href="/Login"
+                                                    style={{ color: '#393f81' }}>Login here</a></p>
                                             </form>
 
                                         </div>
