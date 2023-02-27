@@ -1,9 +1,6 @@
-import { ReactNode } from "react";
-
-export default interface Tours {
+export default interface Tour {
     id: number;
     attributes: {
-        available_seat: number;
         title: string;
         price: number;
         address: string;
@@ -11,33 +8,47 @@ export default interface Tours {
         score: number;
         description: string;
         conditions: string;
+        direction: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt: string;
         image: {
-            data: {
-                attributes: {
-                    formats: {
-                        thumbnail: {
-                            url: string;
+            data: [
+                {
+                    id: number;
+                    attributes: {
+                        name: string;
+                        alternativeText: string | null;
+                        caption: string | null;
+                        width: number;
+                        height: number;
+                        formats: {
+                            thumbnail: {
+                                name: string;
+                                hash: string;
+                                ext: string;
+                                mime: string;
+                                path: string | null;
+                                width: number;
+                                height: number;
+                                size: number;
+                                url: string;
+                            }
                         };
-                    };
-                };
-            };
-        };
-        category: {
-            data: {
-                attributes: {
-                    type: string;
-                };
-            };
-        };
-        tour_date: {
-            data: {
-                attributes: {
-                    first_trip: string;
-                    second_trip: string;
-                    first_trip_end: string | null;
-                    second_trip_end: string | null;
-                };
-            } | null;
+                        hash: string;
+                        ext: string;
+                        mime: string;
+                        size: number;
+                        url: string;
+                        previewUrl: string | null;
+                        provider: string;
+                        provider_metadata: any | null;
+                        createdAt: string;
+                        updatedAt: string;
+                    }
+                }
+            ]
         };
     };
 }
+

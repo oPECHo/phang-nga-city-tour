@@ -16,10 +16,10 @@ interface Props {
 const TourCard = (props: Props) => {
   const navigate = useNavigate();
   const item = props.Tours.attributes;
-  const image = item.image.data.attributes?.formats.thumbnail.url;
+  const image = item.image.data[0].attributes.formats.thumbnail.url;
   const thumbnail = `http://localhost:1337${image}`;
 
-  console.log(item);
+
 
   return (
     <Card variant="outlined" sx={{ width: '100%', height: '100%' }}>
