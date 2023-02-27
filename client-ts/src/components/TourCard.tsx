@@ -22,7 +22,7 @@ const TourCard = (props: Props) => {
 
 
   return (
-    <Card variant="outlined" sx={{ width: '100%', height: '100%' }}>
+    <Card variant="outlined" sx={{ width: '100%', height: '100%', borderColor: 'rgba(0, 0, 0, 0.25)' }}> 
       <Typography level="h2" fontSize="md" sx={{ mb: 0.5 }}>
         {item.title}
       </Typography>
