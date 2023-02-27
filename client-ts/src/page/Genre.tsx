@@ -63,9 +63,13 @@ const GenrePage = () => {
                         {headtitle}
                     </Col>
                 </Row>
-                    {data.map((item, index) =>
-                        <TourCard Tours={item} />
+                <Grid container spacing={{ xs: 2, md: 4 }} columns={{ xs: 2, sm: 8, md: 12, lg: 12, xl: 10}} sx={{ p: 5 }}>
+                    {data.map((item) =>
+                        <Grid xs={2.5} sx={{ p: 0.5 }}>
+                            <TourCard Tours={item} />
+                        </Grid>
                     )}
+                </Grid> 
             </Container>
         </div>
 
