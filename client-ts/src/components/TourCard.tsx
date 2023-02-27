@@ -9,9 +9,6 @@ import Typography from '@mui/joy/Typography';
 
 import Tour from '../models/tour';
 
-// import BookmarkAdd from '@mui/icons-material/BookmarkAddOutlined';
-// import IconButton from '@mui/joy/IconButton';
-
 interface Props {
   Tours: Tour;
 }
@@ -19,32 +16,19 @@ interface Props {
 const TourCard = (props: Props) => {
   const navigate = useNavigate();
   const item = props.Tours.attributes;
-  const image = item.image.data.attributes.formats.thumbnail.url;
+  const image = item.image.data.attributes?.formats.thumbnail.url;
   const thumbnail = `http://localhost:1337${image}`;
 
   console.log(item);
 
   return (
-    <Card variant="outlined" sx={{ width: 320 }}>
+    <Card variant="outlined" sx={{ width: '100%', height: '100%' }}>
       <Typography level="h2" fontSize="md" sx={{ mb: 0.5 }}>
         {item.title}
       </Typography>
       <Typography level="body2">April 24 to May 02, 2021</Typography>
-      {/* <IconButton
-        aria-label="bookmark Bahamas Islands"
-        variant="plain"
-        color="neutral"
-        size="sm"
-        sx={{ position: 'absolute', top: '0.5rem', right: '0.5rem' }}
-      >
-        <BookmarkAdd />
-      </IconButton> */}
       <AspectRatio minHeight="120px" maxHeight="200px" sx={{ my: 2 }}>
-        <img
-          src={thumbnail}
-          loading="lazy"
-          alt=""
-        />
+        <img src={thumbnail} loading="lazy" alt="" />
       </AspectRatio>
       <Box sx={{ display: 'flex' }}>
         <div>
@@ -66,6 +50,6 @@ const TourCard = (props: Props) => {
       </Box>
     </Card>
   );
-}
+};
 
 export default TourCard;
