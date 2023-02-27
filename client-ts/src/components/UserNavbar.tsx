@@ -67,7 +67,7 @@ function UserNavbar() {
                 เข้าสู่ระบบ
               </button>
             </Nav.Link>
-            <Nav.Link href="/history"><button type="button" className="btn btn-dark" style={{ margin: '1px', width: "100px" }}>
+            <Nav.Link href="/profile"><button type="button" className="btn btn-dark" style={{ margin: '1px', width: "100px" }}>
               โปรไฟล์
             </button>
             </Nav.Link>
