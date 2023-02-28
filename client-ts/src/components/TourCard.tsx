@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { StarRating } from 'star-rating-react-ts'
 
 import Tour from '../models/tour';
 import { AspectRatio } from '@mui/joy';
