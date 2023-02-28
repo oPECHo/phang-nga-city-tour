@@ -1,13 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import AspectRatio from '@mui/joy/AspectRatio';
-import Box from '@mui/joy/Box';
-import Button from '@mui/joy/Button';
-import Card from '@mui/joy/Card';
-import Typography from '@mui/joy/Typography';
+import { StarRating } from 'star-rating-react-ts'
 
 import Tour from '../models/tour';
+import { AspectRatio } from '@mui/joy';
+
+import '../design/TourCard.css'
+import { Rating } from '@mui/material';
 
 interface Props {
   Tours: Tour;
@@ -16,40 +15,41 @@ interface Props {
 const TourCard = (props: Props) => {
   const navigate = useNavigate();
   const item = props.Tours.attributes;
+  const score = item.score;
   const image = item.image.data[0].attributes.formats.thumbnail.url;
   const thumbnail = `http://localhost:1337${image}`;
 
 
-
   return (
-    <Card variant="outlined" sx={{ width: '100%', height: '100%', borderColor: 'rgba(0, 0, 0, 0.25)' }}> 
-      <Typography level="h2" fontSize="md" sx={{ mb: 0.5 }}>
-        {item.title}
-      </Typography>
-      <Typography level="body2">April 24 to May 02, 2021</Typography>
-      <AspectRatio minHeight="120px" maxHeight="200px" sx={{ my: 2 }}>
-        <img src={thumbnail} loading="lazy" alt="" />
-      </AspectRatio>
-      <Box sx={{ display: 'flex' }}>
-        <div>
-          <Typography level="body3">ราคาต่อท่าน:</Typography>
-          <Typography fontSize="lg" fontWeight="lg">
-            {item.price} บาท
-          </Typography>
+    <div className="container">
+      <section className="mx-auto my-5" style={{ maxWidth: '23rem' }}>
+        <div className="card">
+          <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <AspectRatio objectFit="fill" >
+              <img src={thumbnail} loading="lazy" alt=""  />
+              <div className="overlay" onClick={() => navigate(`/TripDetail/${props.Tours.id}`)} >
+                <p className="text" >รายละเอียดเพิ่มเติม</p>
+              </div>
+            </AspectRatio>
+          </div>
+          <div className="card-body">
+            <h5 className="card-title font-weight-bold">
+              <a>{item.title}</a>
+            </h5>
+            <ul className="list-unstyled list-inline mb-0">
+              <div className="parent-element mx-auto" style={{ display: 'flex', alignItems: 'center' }}>
+                <Rating name="read-only mx-auto" value={score} readOnly /> - ({item.number} ท่าน)
+              </div>
+            </ul>
+            <hr className="my-4" />
+            <h6 className="mx-auto">
+              <p className="mb-2">ราคา {item.price} บาท/ท่าน</p>
+            </h6>
+          </div>
         </div>
-        <Button
-          onClick={() => navigate(`/detail/${props.Tours.id}`)}
-          variant="solid"
-          size="sm"
-          color="primary"
-          aria-label="Explore Bahamas Islands"
-          sx={{ ml: 'auto', fontWeight: 600 }}
-        >
-          รายละเอียด
-        </Button>
-      </Box>
-    </Card>
-  );
+      </section>
+    </div>
+  );  
 };
 
 export default TourCard;
