@@ -11,7 +11,6 @@ import UserStatusPage from './page/Userstatus'
 // import PaymentPage from './page/Payment'
 // import { ProtectRoute , ScrollToTop } from './helper'
 import GenrePage from './page/Genre'
-// import Detailpage from './page/Detail'
 import ReviewPage from './page/Review'
 import HistoryPage from './page/history'
 import ProfilePage from './page/profilePage'
@@ -26,7 +25,7 @@ function App() {
         <Route index element={<Indexpage />} />
         <Route path="/home" element={<Indexpage />} />
         {<Route path="/genre/:type" element={<GenrePage />} />}
-        {/* <Route path="/detail/:id" element={<Detailpage/>}/> */}
+        {<Route path="/TripDetailPage/:id" element={<TripDetailPage/>}/>}
         <Route path="/detail/:id/review" element={<ReviewPage />} />
         {/* <Route path="/detail/:id/payment" element={<ProtectRoute><PaymentPage/></ProtectRoute>}/> */}
         <Route path="/Login" element={<LoginPage />} />
