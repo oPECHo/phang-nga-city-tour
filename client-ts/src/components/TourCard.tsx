@@ -26,7 +26,7 @@ const TourCard = (props: Props) => {
           <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
             <AspectRatio objectFit="fill" >
               <img src={thumbnail} loading="lazy" alt=""  />
-              <div className="overlay" onClick={() => navigate(`/TripDetail/${props.Tours.id}`)} >
+              <div className="overlay" onClick={() => navigate(`/TripDetailPage/${props.Tours.id}`)} >
                 <p className="text" >รายละเอียดเพิ่มเติม</p>
               </div>
             </AspectRatio>
