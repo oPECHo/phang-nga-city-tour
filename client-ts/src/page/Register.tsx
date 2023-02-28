@@ -56,7 +56,7 @@ export default function Register() {
     return (
         <div className='Login-BG'>
             <UserNavbar />
-            <section className="vh-100 fixed-top" style={{ zIndex: '100' }}>
+            <section className="vh-100 fixed-top">
                 <div className="container py-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col col-xl-10">
@@ -88,33 +88,55 @@ export default function Register() {
                                                 <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}></h5>
 
                                                 <div className="form-outline mb-4">
-                                                    <input type="email" id="form2Example17" className="form-control form-control-lg" />
-                                                    <label className="form-label" htmlFor="form2Example17">Username</label>
+                                                    <input
+                                                        type="email" id="form2Example17"
+                                                        className="form-control form-control-lg"
+                                                        placeholder="Username"
+                                                    />
                                                 </div>
 
                                                 <div className="form-outline mb-4">
-                                                    <input type="email" id="form2Example17" className="form-control form-control-lg" />
-                                                    <label className="form-label" htmlFor="form2Example17">Email address</label>
+                                                    <input
+                                                        type="email"
+                                                        id="form2Example17"
+                                                        className="form-control form-control-lg"
+                                                        placeholder="Email"
+                                                    />
                                                 </div>
 
                                                 <div className="form-outline mb-4">
-                                                    <input type="password" id="form2Example27" className="form-control form-control-lg" />
-                                                    <label className="form-label" htmlFor="form2Example27">Password</label>
+                                                    <input
+                                                        type="password"
+                                                        id="form2Example27"
+                                                        className="form-control form-control-lg"
+                                                        placeholder="Password"
+                                                    />
                                                 </div>
 
                                                 <div className="form-outline mb-4">
-                                                    <input type="password" id="form2Example27" className="form-control form-control-lg" />
-                                                    <label className="form-label" htmlFor="form2Example27">Confirm Password</label>
+                                                    <input
+                                                        type="password"
+                                                        id="form2Example27"
+                                                        className="form-control form-control-lg"
+                                                        placeholder="Confirm Password"
+                                                    />
                                                 </div>
 
-                                                <div className="pt-1 mb-4">
-                                                    <button className="btn btn-dark btn-lg btn-block" type="button">Register</button>
+                                                <div className="row justify-content-md-center">
+                                                    <p className="col-4" style={{ color: '#393f81' }}>
+                                                        Already have an account? 
+                                                        <br/>
+                                                        <a href="/Login" style={{ color: '#393f81' }}>
+                                                            Login here
+                                                        </a>
+                                                    </p>
+                                                    <p className="col-4"></p>
+                                                    <button className="btn btn-dark btn-lg btn-block col-4" type="button">
+                                                        Register
+                                                    </button>
                                                 </div>
 
-                                                <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>Already have an account? <a href="/Login"
-                                                    style={{ color: '#393f81' }}>Login here</a></p>
                                             </form>
-
                                         </div>
                                     </div>
                                 </div>
