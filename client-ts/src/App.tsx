@@ -26,7 +26,7 @@ function App() {
         <Route path="/home" element={<Indexpage />} />
         {<Route path="/genre/:type" element={<GenrePage />} />}
         {<Route path="/TripDetailPage/:id" element={<TripDetailPage/>}/>}
-        <Route path="/detail/:id/review" element={<ReviewPage />} />
+        <Route path="/TripDetailPage/:id/review" element={<ReviewPage />} />
         {/* <Route path="/detail/:id/payment" element={<ProtectRoute><PaymentPage/></ProtectRoute>}/> */}
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/Register" element={<RegisterPage />} />
