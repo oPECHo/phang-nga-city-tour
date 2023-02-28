@@ -25,7 +25,8 @@
     "react-markdown": "^8.0.5",
     "react-router-dom": "^6.8.1",
     "react-sticky": "^6.0.3",
-    "react-toastify": "^9.1.1"
+    "react-toastify": "^9.1.1",
+    "star-rating-react-ts": "^1.0.7"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
