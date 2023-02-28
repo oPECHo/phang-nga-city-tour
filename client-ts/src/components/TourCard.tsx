@@ -38,7 +38,7 @@ const TourCard = (props: Props) => {
           </Typography>
         </div>
         <Button
-          onClick={() => navigate(`/detail/${props.Tours.id}`)}
+          onClick={() => navigate(`/TripDetailPage/${props.Tours.id}`)}
           variant="solid"
           size="sm"
           color="primary"
