@@ -42,7 +42,7 @@ function Cardhistory() {
                                             <b>23/02/2566</b>
                                         </Box>
                                         <Box sx={{ display: 'flex', justifyContent: 'right' }}>
-                                            <Link href="/detail/1/review">
+                                            <Link href="/detail/:id/review">
                                                 <Button variant="contained" color="primary" size="large" sx={{marginTop:"0px"}}>Comment</Button>
                                             </Link>
                                         </Box>
