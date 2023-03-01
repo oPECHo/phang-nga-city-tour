@@ -75,7 +75,7 @@ import { Height } from '@mui/icons-material';
 function Carduserstatus() {
   return (
     <div className="container py-5 h-100">
-      <div className="card mb-3" style={{ width: "40%" }}>
+      <div className="card mb-3" style={{ width: "35%" }}>
         <div className="row g-0">
           <div className="col-md-4" style={{ width: "100%" }}>
             <img
@@ -87,8 +87,9 @@ function Carduserstatus() {
           </div>
           <div className="col-md-8 d-flex flex-column justify-content-center">
             <div className="card-body">
-            <h5 className="card-title" style={{ fontSize: "1rem", marginBottom: "1rem" }}> ชื่อสถานที่ </h5>
-            <p className="card-text" style={{ marginTop: "1rem", fontSize: "1rem" }}> สถานะการจอง </p>
+            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold", marginBottom: "0.5rem" }}>ชื่อสถานที่: หมู่เกาะสมิลัน</h5>
+          <p className="card-text" style={{ fontSize: "1rem", color: "#555" }}>สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>ชำระเงินแล้ว</span></p>
+
             </div>
           </div>
         </div>
