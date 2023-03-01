@@ -29,30 +29,30 @@ const TripDetail = () => {
   const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
 
   return (
-    <div className="">
+    <div className="Login-BG">
       <UserNavbar />
       <div className="container py-5">
-        <div className="card rounded-3">
-          <div className="card-body p-5">
+        <div className="card rounded-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
+          <div className="card-body p-5" >
             <div className="row">
               <div className="col-sm-6">
                 <div className="text-center mb-4">
                   <img src={thumbnail} height="60%" width="45%" className="card-img-top rounded-3" />
                 </div>
-                <h5 className="card-title">{data?.title}</h5>
-                <p className="card-text">{data?.address}</p>
+                <h5 className="card-title" style={{color:'white'}}>{data?.title}</h5>
+                <p className="card-text" style={{color:'white'}}>{data?.address}</p>
                 <div className="text-center">
-                  <a href="#" className="btn btn-primary">จองเลย!</a>
+                  <a href="#" className="btn btn-primary" >จองเลย!</a>
                 </div>
               </div>
               <div className="col-sm-6">
                 <div>
-                  <h5 className="card-title" style={{fontSize: '18px',fontVariant:'common-ligatures',marginTop:'20px'}}>รายละเอียดทริป</h5>
-                  <p className="card-text" style={{ fontSize: '15px'}}>{data?.description}</p>
+                  <h5 className="card-title" style={{fontSize: '18px',fontVariant:'common-ligatures',marginTop:'20px',color:'white'}}>รายละเอียดทริป</h5>
+                  <p className="card-text" style={{ fontSize: '15px',color:'white'}}>{data?.description}</p>
                 </div>
                 <div>
-                  <h5 className="card-title" style={{fontSize: '18px',fontVariant:'common-ligatures',marginTop:'20px'}}>เงื่อนไข</h5>
-                  <p className="card-text" style={{ fontSize: '15px'}}>{data?.conditions}</p>
+                  <h5 className="card-title" style={{fontSize: '18px',fontVariant:'common-ligatures',marginTop:'20px',color:'white'}}>เงื่อนไข</h5>
+                  <p className="card-text" style={{ fontSize: '15px',color:'white'}}>{data?.conditions}</p>
                 </div>
                 <div className="text-center mt-4">
                   <a href="/TripDetailPage/${props.Tours.id}/review" className="btn btn-primary">แสดงความคิดเห็น</a>

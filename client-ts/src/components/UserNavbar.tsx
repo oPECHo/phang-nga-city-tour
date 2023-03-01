@@ -1,41 +1,13 @@
-import React, { useState } from 'react';
-import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
+import { useState } from 'react';
+import { Navbar, Nav, NavDropdown, Container, Button, Col, Row } from 'react-bootstrap';
 
 import { userData } from '../helper';
+import { Avatar, Box, Dialog, DialogActions, DialogContent, IconButton } from '@mui/material';
 
 
 function UserNavbar() {
   const user = userData();
-  const [open, setOpen] = useState(false);
-  const [image, setImage] = useState('');
-  const [showPopup, setShowPopup] = useState(false);
-
-
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // Update the image state with the selected file
-    if (event.target.files && event.target.files.length > 0) {
-      // Convert the selected file to a URL
-      const url = URL.createObjectURL(event.target.files[0]);
-
-      // Update the image state with the URL
-      setImage(url);
-    }
-  };
-
-  const handleSave = () => {
-    // Do something with the name, email, and image values
-    console.log(`Image: ${image}`);
-    setOpen(false);
-  };
-
+  const [popup, setPopup] = useState(false);
 
   return (
     <Navbar bg="light" expand="lg" className="shadow navbar sticky-top navbar-light bg-light">
@@ -61,20 +33,64 @@ function UserNavbar() {
               <NavDropdown.Item href="/Genre/Package">แพ็คเกจ</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav className="">
-            <Nav.Link href="/login">
-              <button type="button" className="btn btn-dark" style={{ width: "100px" }}>
-                เข้าสู่ระบบ
-              </button>
-            </Nav.Link>
-            <Nav.Link href="/profile"><button type="button" className="btn btn-dark" style={{ margin: '1px', width: "100px" }}>
-              โปรไฟล์
-            </button>
-            </Nav.Link>
-          </Nav>
+          {!user && (
+            <Nav className="grid-d">
+              <Nav.Link href="/Login">
+                <button type="button" className="btn btn-dark" style={{ width: "100px" }}>
+                  เข้าสู่ระบบ
+                </button>
+              </Nav.Link>
+              <Nav.Link href="/Register">
+                <button type="button" className="btn btn-dark" style={{ width: "100px" }}>
+                  ลงทะเบียน
+                </button>
+              </Nav.Link>
+            </Nav>
+          )}
+          {user && (
+            <div>
+              <Button variant="contained" onClick={() => setPopup(true)}>
+                {user.username}
+              </Button>
+              <IconButton sx={{ mr: 1 }} onClick={() => setPopup(true)}>
+                <Avatar src='../../public/IdleProfile.png' />
+              </IconButton>
+
+              <Dialog
+                open={popup}
+                onClose={() => setPopup(false)}
+                maxWidth='sm'
+              >
+                <DialogContent>
+                  <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+                    <Avatar sx={{ width: 128, height: 128 }} src='../../public/IdleProfile.png' />
+                  </Box>
+                  <Row className="text-center">
+                    <Col>
+                      <div className="card" style={{ width: '18rem' }}>
+                        <ul className="list-group list-group-flush">
+                          <li className="list-group-item"></li>
+                          <li className="list-group-item">Username : {user.username}</li>
+                          <li className="list-group-item">Email : {user.email}</li>
+                          <li className="list-group-item"></li>
+                        </ul>
+                      </div>
+                    </Col>
+                  </Row>
+                </DialogContent>
+
+                <DialogActions>
+                  <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                    <Button href='/Logout' size="sm" variant="btn btn-outline-danger">Logout</Button>
+                  </Box>
+                </DialogActions>
+
+              </Dialog>
+            </div>
+          )}
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar >
   );
 }
 
