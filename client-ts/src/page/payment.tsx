@@ -1,7 +1,32 @@
 import { bgcolor, borderRadius, positions } from '@mui/system';
 import UserNavbar from '../components/UserNavbar';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import Tour from '../models/tour';
+import Repo from '../repositories'
 
-export default function PaymentPage() {
+const PaymentPage = () => {
+    const [tourdata,setTourData] = useState<Tour[]>([]);
+    const navigate = useNavigate();
+    const params = useParams();
+
+    const fetchData = async () => {
+      try {
+          const res = await Repo.Tourdata.getTourById(params.id as string);
+          if(res) {
+              setTourData(res)
+          }
+      } catch (error) {
+          console.log(error)
+      }
+    }
+
+  useEffect(() => {
+      fetchData()
+  }, [params.id])
+  const data = tourdata.length > 0 ? tourdata[0].attributes : null;
+  const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
+
 
     return (
         <div className=''>
@@ -56,10 +81,10 @@ export default function PaymentPage() {
                                     <div className="col-xl-5">
                                         <div className="p-3">
                                             <h2 className="fw-bold">จุดชมวิวเสม็ดนางชี</h2>
-                                            <span>วันที่</span><span className='mx-2'>01/11/66 - 03/11/66</span>
+                                            <span>วันที่</span><span className='mx-2'>เริ่มต้น {data?.start} สิ้นสุด {data?.end}</span>
                                             <div className="form-outline">
                                                 <label className="form-label">จำนวนคน</label>
-                                                <input className="form-control" style={{ height: '30px', width: "30px", borderRadius: "5px" }} />
+                                                <input className="form-control" style={{ height: '30px', width: "50px", borderRadius: "5px" }} />
                                             </div>
                                             <div className="d-flex justify-content-between mt-2">
                                                 <div>686.00 บาท/ท่าน</div>
@@ -102,3 +127,5 @@ export default function PaymentPage() {
         </div>
     );
 };
+
+export default PaymentPage;

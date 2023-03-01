@@ -8,6 +8,8 @@ export default interface Tour {
         score: number;
         description: string;
         conditions: string;
+        start: string;
+        end : string;
         image: {
             data: [
                 {
