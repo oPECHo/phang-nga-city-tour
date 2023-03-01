@@ -27,6 +27,9 @@ const TripDetail = () => {
     
   const data = tourdata.length > 0 ? tourdata[0].attributes : null;
   const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
+  const LinkToPayment = () => {
+    navigate(`/TripDetailPage/${params.id}/payment`)
+  } 
 
   return (
     <div className="Login-BG">
@@ -42,7 +45,7 @@ const TripDetail = () => {
                 <h5 className="card-title" style={{color:'white'}}>{data?.title}</h5>
                 <p className="card-text" style={{color:'white'}}>{data?.address}</p>
                 <div className="text-center">
-                  <a href="#" className="btn btn-primary" >จองเลย!</a>
+                  <div className="btn btn-primary" onClick={LinkToPayment} >จองเลย!</div>
                 </div>
               </div>
               <div className="col-sm-6">
