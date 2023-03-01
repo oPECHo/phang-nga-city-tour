@@ -73,7 +73,7 @@ export default function RegisterPage() {
 
                                             <div className="d-flex align-items-center mb-3 pb-1">
                                                 <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
-                                                <span className="h1 fw-bold mb-0 mx-auto">Create an account</span>
+                                                <span className="h1 fw-bold mb-0 mx-auto">สร้างบัญชี</span>
                                             </div>
 
                                             <form noValidate onSubmit={handleSignUp}>
@@ -118,15 +118,15 @@ export default function RegisterPage() {
                                                 </div>
                                                 <div className="row justify-content-md-center">
                                                     <p className="col-4" style={{ color: '#393f81' }}>
-                                                        Already have an account?
+                                                        มีบัญชีอยู่แล้ว?
                                                         <br />
                                                         <a href="/Login" style={{ color: '#393f81' }}>
-                                                            Login here
+                                                            เข้าสู่ระบบที่นี่
                                                         </a>
                                                     </p>
                                                     <p className="col-4"></p>
                                                     <button className="btn btn-dark btn-lg btn-block col-4" type="submit">
-                                                        Register
+                                                        ลงทะเบียน
                                                     </button>
                                                 </div>
                                             </form>

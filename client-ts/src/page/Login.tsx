@@ -80,7 +80,7 @@ export default function Login() {
 
                       <div className="d-flex align-items-center mb-3 pb-1">
                         <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
-                        <span className="h1 fw-bold mb-0 mx-auto">Sign into your account</span>
+                        <span className="h1 fw-bold mb-0 mx-auto">เข้าสู่บัญชีของคุณ</span>
                       </div>
 
                       <form noValidate onSubmit={handleLogin} >
@@ -113,15 +113,15 @@ export default function Login() {
 
                         <div className="row justify-content-md-center">
                           <p className="col-4" style={{ color: '#393f81' }}>
-                            Don't have an account?
+                            ยังไม่มีบัญชี?
                             <br />
                             <a href="/Register" style={{ color: '#393f81' }}>
-                              Register here
+                              ลงทะเบียนที่นี่
                             </a>
                           </p>
                           <p className="col-4"></p>
                           <button className="btn btn-dark btn-lg btn-block col-4" type="submit">
-                            Login
+                            เข้าสู่ระบบ
                           </button>
                         </div>
 
