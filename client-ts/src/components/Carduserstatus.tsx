@@ -73,24 +73,30 @@ import { Height } from '@mui/icons-material';
 
 // export default Cardhistory;
 function Carduserstatus() {
-    return(
-      <div className="container py-5 h-100">
-        <div className="card mb-3" style={{ width: "100%", height: "35%" }}>
-          <div className="row g-0">
-            <div className="col-md-4" style={{ width: "35%", height: "100%"}}>
-              <img src="https://youimg1.tripcdn.com/target/100w1f000001gw9byC44A_D_1180_558.jpg" className="img-fluid rounded-start h-100"/>
-            </div>
-          <div className="col-md-7 d-flex flex-column justify-content-right">
+  return (
+    <div className="container py-5 h-100">
+      <div className="card mb-3" style={{ width: "40%" }}>
+        <div className="row g-0">
+          <div className="col-md-4" style={{ width: "100%" }}>
+            <img
+              src="https://youimg1.tripcdn.com/target/100w1f000001gw9byC44A_D_1180_558.jpg"
+              className="img-fluid rounded-start"
+              alt="place"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+          <div className="col-md-8 d-flex flex-column justify-content-center">
             <div className="card-body">
-             <h5 className="card-title">ชื่อสถานที่</h5>
-              <p className="card-text">รายละเอียดทัวร์</p>
-              <p className="card-text" style={{ marginTop:"110px", fontSize:"15px"}} >สถานะการจอง</p>
-            </div>
+            <h5 className="card-title" style={{ fontSize: "1rem", marginBottom: "1rem" }}> ชื่อสถานที่ </h5>
+            <p className="card-text" style={{ marginTop: "1rem", fontSize: "1rem" }}> สถานะการจอง </p>
             </div>
           </div>
         </div>
       </div>
-    )
+    </div>
+  
+  );
 }
 
 export default Carduserstatus;
+
