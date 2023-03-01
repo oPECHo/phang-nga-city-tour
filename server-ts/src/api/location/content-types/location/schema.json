@@ -58,6 +58,12 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "locations"
+    },
+    "start": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
     }
   }
 }
