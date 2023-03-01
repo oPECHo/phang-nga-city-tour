@@ -58,12 +58,6 @@
             "relation": "manyToMany",
             "target": "api::category.category",
             "mappedBy": "locations"
-        },
-        "tour_dates": {
-            "type": "relation",
-            "relation": "manyToMany",
-            "target": "api::tour-date.tour-date",
-            "inversedBy": "locations"
         }
     }
 }
