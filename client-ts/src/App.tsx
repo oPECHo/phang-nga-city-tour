@@ -15,6 +15,7 @@ import GenrePage from './page/Genre'
 import ReviewPage from './page/Review'
 import HistoryPage from './page/history'
 import ProfilePage from './page/profilePage'
+import PaymentPage from './page/payment'
 
 
 
@@ -37,6 +38,7 @@ function App() {
         {/* <Route path="/logout" element={<LogoutPage />} /> */}
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/payment" element={<PaymentPage />} />
       </Routes>
       <ToastContainer />
     </BrowserRouter>
