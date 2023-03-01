@@ -37,7 +37,7 @@ const TourCard = (props: Props) => {
             </h5>
             <ul className="list-unstyled list-inline mb-0">
               <div className="parent-element mx-auto" style={{ display: 'flex', alignItems: 'center' }}>
-                <Rating name="read-only mx-auto" value={score} readOnly /> - ({item.number} ท่าน)
+                <Rating name="read-only mx-auto" value={score} readOnly />( {item.number} ท่าน )
               </div>
             </ul>
             <hr className="my-4" />

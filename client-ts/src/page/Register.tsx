@@ -2,33 +2,26 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
-import { storeUser, userData } from '../helper';
+import { userData } from '../helper';
 
 import "../design/Login.css"
 import UserNavbar from '../components/UserNavbar';
 
-const initialUser = { identifier: '', password: '' };
+const initialUser = { username: '', email: '', password: '' };
 
-export default function Register() {
+export default function RegisterPage() {
     const [user, setUser] = useState(initialUser)
     const navigate = useNavigate();
 
-    const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSignUp = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(user);
-        const url = "http://localhost:1337/api/auth/local"
+        const url = "http://localhost:1337/api/auth/local/register";
         try {
-            if (user.identifier && user.password) {
-                const { data } = await axios.post(url, user)
-                console.log(data)
-                if (data.jwt) {
-                    storeUser(data)
-                    toast.success('Login successful', {
-                        hideProgressBar: true
-                    })
-                    setUser(initialUser)
-                    navigate('/')
-                }
+            if (user.email && user.password && user.username) {
+                const res = await axios.post(url, user)
+                console.log(res.data)
+                navigate('/login', { replace: true })
             }
         } catch (err) {
             toast.error("Invalid email or password", {
@@ -78,64 +71,64 @@ export default function Register() {
                                     <div className="col-md-6 col-lg-7 d-flex align-items-center">
                                         <div className="card-body p-4 p-lg-5 text-black">
 
-                                            <form>
+                                            <div className="d-flex align-items-center mb-3 pb-1">
+                                                <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
+                                                <span className="h1 fw-bold mb-0 mx-auto">Create an account</span>
+                                            </div>
 
-                                                <div className="d-flex align-items-center mb-3 pb-1">
-                                                    <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
-                                                    <span className="h1 fw-bold mb-0 mx-auto">Create an account</span>
-                                                </div>
-
-                                                <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}></h5>
-
-                                                <div className="form-outline mb-4">
-                                                    <input
-                                                        type="email" id="form2Example17"
-                                                        className="form-control form-control-lg"
-                                                        placeholder="Username"
-                                                    />
-                                                </div>
-
+                                            <form noValidate onSubmit={handleSignUp}>
                                                 <div className="form-outline mb-4">
                                                     <input
                                                         type="email"
-                                                        id="form2Example17"
+                                                        className="form-control form-control-lg"
+                                                        placeholder="Username"
+                                                        name="username"
+                                                        id="username"
+                                                        required
+                                                        autoFocus
+                                                        autoComplete="username"
+                                                        onChange={handleChange}
+                                                    />
+                                                </div>
+                                                <div className="form-outline mb-4">
+                                                    <input
+                                                        type="email"
                                                         className="form-control form-control-lg"
                                                         placeholder="Email"
+                                                        name="email"
+                                                        id="email"
+                                                        required
+                                                        autoFocus
+                                                        autoComplete="email"
+                                                        onChange={handleChange}
                                                     />
                                                 </div>
-
                                                 <div className="form-outline mb-4">
                                                     <input
                                                         type="password"
-                                                        id="form2Example27"
                                                         className="form-control form-control-lg"
                                                         placeholder="Password"
+                                                        name="password"
+                                                        id="password"
+                                                        required
+                                                        autoFocus
+                                                        autoComplete="password"
+                                                        onChange={handleChange}
                                                     />
                                                 </div>
-
-                                                <div className="form-outline mb-4">
-                                                    <input
-                                                        type="password"
-                                                        id="form2Example27"
-                                                        className="form-control form-control-lg"
-                                                        placeholder="Confirm Password"
-                                                    />
-                                                </div>
-
                                                 <div className="row justify-content-md-center">
                                                     <p className="col-4" style={{ color: '#393f81' }}>
-                                                        Already have an account? 
-                                                        <br/>
+                                                        Already have an account?
+                                                        <br />
                                                         <a href="/Login" style={{ color: '#393f81' }}>
                                                             Login here
                                                         </a>
                                                     </p>
                                                     <p className="col-4"></p>
-                                                    <button className="btn btn-dark btn-lg btn-block col-4" type="button">
+                                                    <button className="btn btn-dark btn-lg btn-block col-4" type="submit">
                                                         Register
                                                     </button>
                                                 </div>
-
                                             </form>
                                         </div>
                                     </div>

@@ -1,11 +1,12 @@
-import React ,{ useEffect } from "react"
+import { useEffect } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
 export const storeUser = (data:any) => {
     localStorage.setItem(
-        'user', 
+        'user',
         JSON.stringify({
             username: data.user.username,
+            email: data.user.email,
             admin: data.user.admin,
             jwt: data.jwt,
         })
@@ -22,8 +23,8 @@ export const userData = () => {
 
 type Props = {
     children: JSX.Element
-  }
-  
+}
+
 export const ProtectRoute = ({children}: Props) => {
     const navigate = useNavigate()
     const data = userData()

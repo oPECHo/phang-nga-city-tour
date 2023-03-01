@@ -78,13 +78,12 @@ export default function Login() {
                   <div className="col-md-6 col-lg-7 d-flex align-items-center">
                     <div className="card-body p-4 p-lg-5 text-black">
 
-                      <form>
-                        <div className="d-flex align-items-center mb-3 pb-1">
-                          <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
-                          <span className="h1 fw-bold mb-0 mx-auto">Sign into your account</span>
-                        </div>
+                      <div className="d-flex align-items-center mb-3 pb-1">
+                        <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
+                        <span className="h1 fw-bold mb-0 mx-auto">Sign into your account</span>
+                      </div>
 
-                        <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}></h5>
+                      <form noValidate onSubmit={handleLogin} >
 
                         <div className="form-outline mb-4">
                           <input
@@ -92,6 +91,10 @@ export default function Login() {
                             id="form2Example17"
                             className="form-control form-control-lg"
                             placeholder="Email"
+                            name="identifier"
+                            autoComplete="email"
+                            required
+                            onChange={handleChange}
                           />
                         </div>
 
@@ -101,6 +104,10 @@ export default function Login() {
                             id="form2Example27"
                             className="form-control form-control-lg"
                             placeholder="Password"
+                            name="password"
+                            autoComplete="current-password"
+                            required
+                            onChange={handleChange}
                           />
                         </div>
 
@@ -113,7 +120,7 @@ export default function Login() {
                             </a>
                           </p>
                           <p className="col-4"></p>
-                          <button className="btn btn-dark btn-lg btn-block col-4" type="button">
+                          <button className="btn btn-dark btn-lg btn-block col-4" type="submit">
                             Login
                           </button>
                         </div>
