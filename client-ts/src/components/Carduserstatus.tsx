@@ -73,24 +73,28 @@ import { Height } from '@mui/icons-material';
 
 // export default Cardhistory;
 function Carduserstatus() {
-    return(
-      <div className="container py-5 h-100">
-        <div className="card mb-3" style={{ width: "100%", height: "35%" }}>
-          <div className="row g-0">
-            <div className="col-md-4" style={{ width: "35%", height: "100%"}}>
-              <img src="https://youimg1.tripcdn.com/target/100w1f000001gw9byC44A_D_1180_558.jpg" className="img-fluid rounded-start h-100"/>
-            </div>
-          <div className="col-md-7 d-flex flex-column justify-content-right">
-            <div className="card-body">
-             <h5 className="card-title">ชื่อสถานที่</h5>
-              <p className="card-text">รายละเอียดทัวร์</p>
-              <p className="card-text" style={{ marginTop:"110px", fontSize:"15px"}} >สถานะการจอง</p>
-            </div>
+  return (
+    <div>    
+      <section id="gallery">
+        <div className="container my-5">
+          <div className="row">
+            <div className="col-lg-4 mb-4">
+              <div className="card">
+                <img src="https://www.touronthai.com/gallery/photo/3799/24881.jpg" alt="" className="card-img-top"/>
+                <div className="card-body">
+                  <h5 className="card-title">จุดชมวิวเสม็ดนางชี</h5>
+                  <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>ชำระเงินแล้ว</span></p>
+                  <a href="/TripDetailPage/${props.Tours.id}/review" className="btn btn-outline-success btn-sm" style={{ marginLeft: "0.1rem" }}>Comment</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    )
+        </div>       
+      </section>
+    </div>
+  );
 }
 
 export default Carduserstatus;
+
+
