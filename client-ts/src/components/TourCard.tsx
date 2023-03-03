@@ -42,7 +42,7 @@ const TourCard = (props: Props) => {
             </ul>
             <hr className="my-4" />
             <h6 className="mx-auto">
-              <p className="mb-2">ราคา {item.price} บาท/ท่าน</p>
+              <p className="mb-2">ราคา {item.price.toLocaleString('en-US')} บาท/ท่าน</p>
             </h6>
           </div>
         </div>

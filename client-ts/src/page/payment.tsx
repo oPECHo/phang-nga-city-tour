@@ -7,7 +7,7 @@ import Repo from '../repositories'
 
 const PaymentPage = () => {
     const [tourdata,setTourData] = useState<Tour[]>([]);
-    const navigate = useNavigate();
+    const [quantity,setQuantity] = useState(1)
     const params = useParams();
 
     const fetchData = async () => {
@@ -26,7 +26,7 @@ const PaymentPage = () => {
   }, [params.id])
   const data = tourdata.length > 0 ? tourdata[0].attributes : null;
   const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
-
+  const total_price = data?.price as number *quantity;
 
     return (
         <div className=''>
@@ -84,13 +84,19 @@ const PaymentPage = () => {
                                             <span>วันที่</span><span className='mx-2'>เริ่มต้น {data?.start} สิ้นสุด {data?.end}</span>
                                             <div className="form-outline">
                                                 <label className="form-label">จำนวนคน</label>
-                                                <input className="form-control" style={{ height: '30px', width: "50px", borderRadius: "5px" }} />
+                                                <input className="form-control" style={{ height: '30px', width: "70px", borderRadius: "5px" }} 
+                                                       type = "number" 
+                                                       min = "1"
+                                                       max = {data?.number}
+                                                       value = {quantity}
+                                                       onChange = {(e) => setQuantity(parseInt(e.target.value))}
+                                                />
                                             </div>
                                             <div className="d-flex justify-content-between mt-2">
-                                                <div>686.00 บาท/ท่าน</div>
+                                                <div> {data?.price.toLocaleString('en-US')} บาท/ท่าน</div>
                                             </div>
                                         </div>
-                                        <div className='fw-bold mx-3'>รวมทั้งหมด 686.00 บาท</div>
+                                        <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
                                         <div className="btn btn-success btn-lg mx-3 my-3" data-bs-toggle="modal" data-bs-target="#myModal" style={{ width: "100px" }}>จองเลย</div>
                                         <div className='p-2' style={{ color: "red" }}>หมายเหตุ: คุณที่มีเวลา 1
                                             วันในการชำระค่าจองหลังจากนั้นจะถูกยกเลิกการจอง
