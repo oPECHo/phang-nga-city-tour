@@ -39,7 +39,7 @@ const PaymentPage = () => {
                                 <div className="row">
                                     <div className="col-xl-6">
                                         <div className='card-body text-center'>
-                                            <img src="เขาหลัก2.jpg" alt="Avatar" className="img-fluid" style={{ height: '200px', borderRadius: "1rem" }} /></div>
+                                            <img src= {thumbnail} alt="Avatar" className="img-fluid" style={{ height: '200px', borderRadius: "1rem" }} /></div>
                                         <h5 className='fw-bold mx-3'>เลือกวิธีชำระเงิน</h5>
 
                                         <div className='card-body text-center'>
@@ -53,7 +53,7 @@ const PaymentPage = () => {
                                                         </div>
                                                         <div className="rounded border d-flex w-100 p-3 align-items-center">
                                                             <p className="mb-0">
-                                                                <img className='mx-1' src="scb.jpg" style={{height:"20px", borderRadius:"3px"}} /> SCB
+                                                                <img className='mx-1' src="../../public/scb.jpg" style={{height:"20px", borderRadius:"3px"}} /> SCB
                                                             </p>
                                                             <div className="ms-auto">************3456</div>
                                                         </div>
@@ -67,7 +67,7 @@ const PaymentPage = () => {
                                                         </div>
                                                         <div className="rounded border d-flex w-100 p-3 align-items-center">
                                                             <p className="mb-0">
-                                                            <img className='mx-1' src="promptpay.jpg" style={{height:"20px", borderRadius:"3px"}} /> promptpay
+                                                            <img className='mx-1' src="../../public/promptpay.jpg" style={{height:"20px", borderRadius:"3px"}} /> promptpay
                                                             </p>
                                                             <div className="ms-auto">************1038</div>
                                                         </div>
