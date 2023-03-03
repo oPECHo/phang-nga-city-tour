@@ -113,8 +113,11 @@ const PaymentPage = () => {
 
                                                     <div className="modal-body">
                                                         <div className="row d-flex justify-content-center align-items-center">
-                                                            <img src="QR.png" style={{ height: "200px", width: "200px" }} />
+                                                            <img src="../../QR.png" style={{ height: "200px", width: "200px" }} />
                                                         </div>
+                                                        <div>ช่องทางการติดต่อ</div>
+                                                        <div>Line ID : @PHANG NGA</div>
+                                                        <div>Facebook : www.facebook.com/PHANG NGA</div>
                                                     </div>
 
                                                     <div className="modal-footer">
