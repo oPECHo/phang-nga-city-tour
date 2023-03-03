@@ -44,12 +44,9 @@ const TripDetail = () => {
                 </div>
                 <h5 className="card-title" style={{color:'white'}}>{data?.title}</h5>
                 <p className="card-text" style={{color:'white'}}>{data?.address}</p>
-                <div className="text-center">
-                  <div className="btn btn-primary" onClick={LinkToPayment} >จองเลย!</div>
-                </div>
               </div>
-              <div className="col-sm-6">
-                <div>
+              <div className="col-sm-6" style={{ display: 'flex', flexDirection: 'column' }}>
+                <div style={{ marginBottom: '20px' }}>
                   <h5 className="card-title" style={{fontSize: '18px',fontVariant:'common-ligatures',marginTop:'20px',color:'white'}}>รายละเอียดทริป</h5>
                   <p className="card-text" style={{ fontSize: '15px',color:'white'}}>{data?.description}</p>
                 </div>
@@ -57,8 +54,17 @@ const TripDetail = () => {
                   <h5 className="card-title" style={{fontSize: '18px',fontVariant:'common-ligatures',marginTop:'20px',color:'white'}}>เงื่อนไข</h5>
                   <p className="card-text" style={{ fontSize: '15px',color:'white'}}>{data?.conditions}</p>
                 </div>
-                <div className="text-center mt-4">
-                  <a href="/TripDetailPage/${props.Tours.id}/review" className="btn btn-primary">แสดงความคิดเห็น</a>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="text-center">
+                  <div className="btn btn-primary" style={{marginTop: '20px'}} onClick={LinkToPayment}>จองเลย!</div>
+                </div>
+              </div>
+              <div className="col-sm-6">
+                <div className="text-center mt-4" style={{ position: 'relative' }}>
+                  <a href={'/TripDetailPage/${props.Tours.id}/review'} className="btn btn-primary" style={{marginTop: '0px'}}>แสดงความคิดเห็น</a>
                 </div>
               </div>
             </div>
@@ -67,9 +73,7 @@ const TripDetail = () => {
       </div>
     </div>
   );
-}
-  
-
+}   
 export default TripDetail;
 
 
