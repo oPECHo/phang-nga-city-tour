@@ -1,10 +1,11 @@
 export default interface Postreview {
     data: {
-        // tour_id: number;
-        // tour_name: string;
-        // // author: string;
-        // score: number;
+        tour_id: number;
+        tour_name: string;
+        author: string;
+        user: string;
+        score: number;
         comment: string;
-        date: string;
+        Date: string
     }
 }

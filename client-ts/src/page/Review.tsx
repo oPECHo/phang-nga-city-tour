@@ -8,10 +8,12 @@ import Review from '../models/review';
 import Repo from '../repositories'
 import "../design/Review.css"
 
+import { userData } from '../helper';
 
 const ReviewPage = () => {
     const [reviews, setReviews] = useState<Review[]>([]);
     const [tourdata, setTourdata] = useState<Tours[]>([]);
+    const user = userData();
     const params = useParams();
 
     const fetchData = async () => {
@@ -40,15 +42,14 @@ const ReviewPage = () => {
                             <div className="p-3">
                                 <h6>Comments</h6>
                             </div>
-
-                            <div className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3">
-                                <img src="../../public/IdleProfile.png" width="50" className="rounded-circle mr-2" />
-                                <input type="text" className="form-control" placeholder="Enter your comment..." />
+                            
+                            {user && (
+                            <div>
+                                <CommentSection tourdata={tourdata[0]} user={{
+                                    username: ''
+                                }} />
                             </div>
-
-                            {/* <div>
-                                <CommentSection tourdata={tourdata[0]} />
-                            </div> */}
+                            )}
 
                             <div>
                                 {reviews.map((item) =>
