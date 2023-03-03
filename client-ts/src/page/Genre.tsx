@@ -42,7 +42,7 @@ const GenrePage = () => {
     return (
         <div>
             <UserNavbar />
-            <li className="divider"></li>
+            <div style={{ marginTop: "30px"}}></div>
             <SearchBar />
             <Container className="container">
                 <Row style={{ marginTop: "20px", right: "500px" }}>
