@@ -5,7 +5,6 @@ interface Props {
     reviewData: Review
 }
 
-
 function ReviewSection(props: Props) {
     const reviewData = props.reviewData ? props.reviewData.attributes : null
 

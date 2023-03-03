@@ -7,6 +7,7 @@ import Postreview from '../models/postreview';
 import Tours from '../models/tour';
 
 import { userData } from '../helper';
+import { useLocation } from 'react-router-dom';
 
 interface Props {
     tourdata : Tours
@@ -18,9 +19,7 @@ interface Props {
 function CommentSection(props: Props) {
     const [commentText, setCommentText] = useState('');
     const [scoreReview, setScoreReview] = useState(1);
-    const tour_data = props.tourdata ? props.tourdata : null
     const username = userData();
-    const user = props.user
 
     const handleCommentText = (e : ChangeEvent<HTMLInputElement>) => {
         setCommentText(e.target.value);
@@ -47,10 +46,14 @@ function CommentSection(props: Props) {
     const today = new Date();
     const formattedDate = format(today, 'yyyy-MM-dd');
 
+    const location = useLocation();
+    const tourId = new URLSearchParams(location.search).get('tour_id');
+    const tourName = new URLSearchParams(location.search).get('tour_name');
+
     const newReview : Postreview = {
         data: {
-            tour_id : tour_data?.id as number,
-            tour_name: tour_data?.attributes.title as string,
+            id_tour : tourId as string,
+            name_tour: tourName as string,
             author: username.username,
             user: username.username,
             comment : commentText,

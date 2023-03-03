@@ -17,8 +17,11 @@ const TripDetail = () => {
     navigate(`/TripDetailPage/${params.id}/payment`)
   }
   const LinkToComment = () => {
-    navigate(`/TripDetailPage/${params.id}/review`)
+    const tourId = params.id;
+    const tourName = data?.title;
+    navigate(`/TripDetailPage/${tourId}/review?tour_id=${tourId}&tour_name=${tourName}`);
   }
+  
 
   const fetchData = async () => {
     try {
