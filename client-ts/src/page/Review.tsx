@@ -20,7 +20,8 @@ const ReviewPage = () => {
         try {
             const res = await Repo.Reviewdata.getReview(params.id as string);
             if (res) {
-                setReviews(res)
+                const filteredReviews = res.filter((review) => review.attributes.id_tour === params.id);
+                setReviews(filteredReviews)
             }
         } catch (error) {
             console.log(error)

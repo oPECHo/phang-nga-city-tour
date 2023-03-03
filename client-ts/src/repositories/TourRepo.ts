@@ -8,6 +8,9 @@ import { userData } from "../helper";
 const user = userData()
 
 export class TourRepository implements IRepository<Tours>{
+    getTour(id: string | undefined) {
+        throw new Error('Method not implemented.');
+    }
     urlPrefix = "http://localhost:1337/api/locations?populate=*"
     token = user.jwt
 

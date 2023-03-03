@@ -10,7 +10,7 @@ function ReviewSection(props: Props) {
 
     return (
         <div>
-            <div className="mt-2">
+            <div className="mt-1">
                 <div className="d-flex flex-row p-3 gap-3">
                 <img
                     src="../../public/IdleProfile.png"
