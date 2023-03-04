@@ -34,7 +34,7 @@ const GenrePage = () => {
     useEffect(() => {
         fetchData()
     }, [params.type])
-    const headtitle = params.type === "One day trip" ? "ทริปวันเดียว" :
+    const headtitle = params.type === "One-day-trip" ? "ทริปวันเดียว" :
         params.type === "Package" ? "แพ็คเกจ" :
             "ทั้งหมด";
 

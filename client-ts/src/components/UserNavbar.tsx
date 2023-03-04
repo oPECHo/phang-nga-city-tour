@@ -28,7 +28,7 @@ function UserNavbar() {
             <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">
               <NavDropdown.Item href="/Genre/All">ทั้งหมด</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Genre/One%20day%20trip">ทริปวันเดียว</NavDropdown.Item>
+              <NavDropdown.Item href="/Genre/One-day-trip">ทริปวันเดียว</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/Genre/Package">แพ็คเกจ</NavDropdown.Item>
             </NavDropdown>
