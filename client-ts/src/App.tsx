@@ -10,7 +10,6 @@ import UserStatusPage from './page/Userstatus'
 import GenrePage from './page/Genre'
 import ReviewPage from './page/Review'
 import HistoryPage from './page/history'
-import ProfilePage from './page/profilePage'
 import PaymentPage from './page/payment'
 
 
@@ -32,7 +31,6 @@ function App() {
         <Route path="/TripDetail" element={<TripDetailPage />} />
         <Route path="/userstatus" element={<LoginRoute><UserStatusPage /></LoginRoute>} />
         <Route path="/history" element={<HistoryPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/payment" element={<PaymentPage />} />
       </Routes>
       <ToastContainer />
