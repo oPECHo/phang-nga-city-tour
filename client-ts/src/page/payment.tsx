@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Tour from '../models/tour';
 import Repo from '../repositories';
 import qrcode from 'qrcode';
+import PaymentSection from '../components/paymentSection';
 
 const PaymentPage = () => {
   const [tourdata, setTourData] = useState<Tour[]>([]);
@@ -92,7 +93,7 @@ const PaymentPage = () => {
 
                                     <div className="col-xl-5">
                                         <div className="p-3">
-                                            <h2 className="fw-bold">จุดชมวิวเสม็ดนางชี</h2>
+                                            <h2 className="fw-bold">{data?.title}</h2>
                                             <span>วันที่เดินทาง</span>
                                             <input
                                                 className="form-control"
@@ -116,7 +117,7 @@ const PaymentPage = () => {
                                             </div>
                                         </div>
                                         <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
-                                        <div className="btn btn-success btn-lg mx-3 my-3" data-bs-toggle="modal" data-bs-target="#myModal" style={{ width: "100px" }}>จองเลย</div>
+                                        <PaymentSection tourdata={tourdata[0]}/>
                                         <div className='p-2' style={{ color: "red" }}>หมายเหตุ: คุณที่มีเวลา 1
                                             วันในการชำระค่าจองหลังจากนั้นจะถูกยกเลิกการจอง
                                         </div>
