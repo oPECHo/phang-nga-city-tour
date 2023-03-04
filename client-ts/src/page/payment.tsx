@@ -115,7 +115,7 @@ const PaymentPage = () => {
                                             </div>
                                         </div>
                                         <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
-                                        <div className="btn btn-success btn-lg mx-3 my-3" data-bs-toggle="modal" data-bs-target="#myModal" style={{ width: "100px" }}>จองเลย</div>
+                                        <div className="btn btn-success btn-lg mx-3 my-3" data-bs-toggle="modal" data-bs-target="#myModal" style={{ width: "100px", whiteSpace: "nowrap"  }}>จองเลย</div>
                                         <div className='p-2' style={{ color: "red" }}>หมายเหตุ: คุณที่มีเวลา 1
                                             วันในการชำระค่าจองหลังจากนั้นจะถูกยกเลิกการจอง
                                         </div>
