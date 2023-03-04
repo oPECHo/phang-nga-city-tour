@@ -52,7 +52,11 @@ const TripDetail = () => {
                   <img src={thumbnail} height="60%" width="45%" className="card-img-top rounded-3" />
                 </div>
                 <h5 className="card-title" style={{ color: 'white' }}>{data?.title}</h5>
-                <p className="card-text" style={{ color: 'white' }}>{data?.address}</p>
+                <div>
+                    <p className="card-text" style={{ color: 'white', marginBottom: '0.5em' }}>{data?.address}</p>
+                    <span style={{ color: 'white', marginRight: '0.5em' }}>Direction Link :</span>
+                    <a href={data?.direction} className="card-text" style={{ color: 'skyblue' }} target="_blank" onClick={(event) => { (event.target as HTMLAnchorElement).style.color = '#FF66FF' }}>{data?.direction}</a>
+                </div>
               </div>
               <div className="col-sm-6" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ marginBottom: '20px' }}>
