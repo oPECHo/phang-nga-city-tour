@@ -98,10 +98,13 @@ const PaymentPage = () => {
                                                 <label className="form-label">จำนวนคน</label>
                                                 <input className="form-control" style={{ height: '30px', width: "70px", borderRadius: "5px" }} 
                                                        type = "number" 
-                                                       min = "1"
-                                                       max = {data?.number}
                                                        value = {quantity}
-                                                       onChange = {(e) => setQuantity(parseInt(e.target.value))}
+                                                       onChange={(e) => {
+                                                        const newValue = parseInt(e.target.value);
+                                                        if (!isNaN(newValue) && newValue >= 1 && (data?.number ? newValue <= data.number : true)) {
+                                                          setQuantity(newValue);
+                                                        }
+                                                      }}
                                                 />
                                             </div>
                                             <div className="d-flex justify-content-between mt-2">
