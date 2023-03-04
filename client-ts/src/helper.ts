@@ -25,7 +25,7 @@ type Props = {
     children: JSX.Element
 }
 
-export const ProtectRoute = ({children}: Props) => {
+export const LoginRoute = ({children}: Props) => {
     const navigate = useNavigate()
     const data = userData()
 

@@ -120,7 +120,7 @@ export default function Login() {
                             </a>
                           </p>
                           <p className="col-4"></p>
-                          <button className="btn btn-dark btn-lg btn-block col-4" type="submit">
+                          <button className="btn btn-dark btn-lg btn-block col-4" type="submit" >
                             เข้าสู่ระบบ
                           </button>
                         </div>

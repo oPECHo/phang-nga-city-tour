@@ -28,7 +28,7 @@ function UserNavbar() {
             <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">
               <NavDropdown.Item href="/Genre/All">ทั้งหมด</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Genre/One%20day%20trip">ทริปวันเดียว</NavDropdown.Item>
+              <NavDropdown.Item href="/Genre/One-day-trip">ทริปวันเดียว</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/Genre/Package">แพ็คเกจ</NavDropdown.Item>
             </NavDropdown>
@@ -36,12 +36,12 @@ function UserNavbar() {
           {!user && (
             <Nav className="grid-d">
               <Nav.Link href="/Login">
-                <button type="button" className="btn btn-dark" style={{ width: "100px" }}>
+                <button type="button" className="btn btn-dark" style={{ width: "100px", whiteSpace: "nowrap" }}>
                   เข้าสู่ระบบ
                 </button>
               </Nav.Link>
               <Nav.Link href="/Register">
-                <button type="button" className="btn btn-dark" style={{ width: "100px" }}>
+                <button type="button" className="btn btn-dark" style={{ width: "100px", whiteSpace: "nowrap" }}>
                   ลงทะเบียน
                 </button>
               </Nav.Link>
@@ -53,7 +53,7 @@ function UserNavbar() {
                 {user.username}
               </Button>
               <IconButton sx={{ mr: 1 }} onClick={() => setPopup(true)}>
-                <Avatar src='../../public/IdleProfile.png' />
+                <Avatar src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp' />
               </IconButton>
 
               <Dialog
@@ -63,7 +63,7 @@ function UserNavbar() {
               >
                 <DialogContent>
                   <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
-                    <Avatar sx={{ width: 128, height: 128 }} src='../../public/IdleProfile.png' />
+                    <Avatar sx={{ width: 128, height: 128 }} src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp' />
                   </Box>
                   <Row className="text-center">
                     <Col>

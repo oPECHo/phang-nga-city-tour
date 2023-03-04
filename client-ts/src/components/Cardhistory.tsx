@@ -1,8 +1,3 @@
-import { Box } from '@mui/system';
-import Card from "@mui/joy/Card/Card";
-import { Row, Col, Container } from "react-bootstrap";
-import { Button, Link } from '@mui/material';
-import AspectRatio from '@mui/joy/AspectRatio';
 import '../design/history.css'
 function Cardhistory() {
   return (

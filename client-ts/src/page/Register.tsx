@@ -18,12 +18,13 @@ export default function RegisterPage() {
         console.log(user);
         const url = "http://localhost:1337/api/auth/local/register";
         try {
-            if (user.email && user.password && user.username) {
+            if (user.username && user.email && user.password) {
                 const res = await axios.post(url, user)
                 console.log(res.data)
                 navigate('/login', { replace: true })
             }
         } catch (err) {
+            console.log(err);
             toast.error("Invalid email or password", {
                 hideProgressBar: true
             })
