@@ -36,12 +36,12 @@ function UserNavbar() {
           {!user && (
             <Nav className="grid-d">
               <Nav.Link href="/Login">
-                <button type="button" className="btn btn-dark" style={{ width: "100px" }}>
+                <button type="button" className="btn btn-dark" style={{ width: "100px", whiteSpace: "nowrap" }}>
                   เข้าสู่ระบบ
                 </button>
               </Nav.Link>
               <Nav.Link href="/Register">
-                <button type="button" className="btn btn-dark" style={{ width: "100px" }}>
+                <button type="button" className="btn btn-dark" style={{ width: "100px", whiteSpace: "nowrap" }}>
                   ลงทะเบียน
                 </button>
               </Nav.Link>
@@ -53,7 +53,7 @@ function UserNavbar() {
                 {user.username}
               </Button>
               <IconButton sx={{ mr: 1 }} onClick={() => setPopup(true)}>
-                <Avatar src='../../public/IdleProfile.png' />
+                <Avatar src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp' />
               </IconButton>
 
               <Dialog

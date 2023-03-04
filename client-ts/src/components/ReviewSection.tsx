@@ -13,7 +13,7 @@ function ReviewSection(props: Props) {
             <div className="mt-1">
                 <div className="d-flex flex-row p-3 gap-3">
                 <img
-                    src="../../public/IdleProfile.png"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                     width="40"
                     height="40"
                     className="rounded-circle mr-3"

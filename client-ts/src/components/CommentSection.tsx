@@ -64,7 +64,7 @@ function CommentSection(props: Props) {
 
     return (
         <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3" onSubmit={handleSubmit}>
-            <img src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_960_720.png" width="50" className="rounded-circle mr-2" />
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" width="50" className="rounded-circle mr-2" />
             <Rating
                 name="score"
                 value={scoreReview}
