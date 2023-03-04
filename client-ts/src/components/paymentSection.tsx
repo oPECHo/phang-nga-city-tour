@@ -28,10 +28,9 @@ function PaymentSection(props: Props) {
         <div className="btn btn-success btn-lg mx-3 my-3"
             data-bs-toggle="modal"
             data-bs-target="#myModal"
-            style={{ width: "100px" }}
+            style={{ width: "100px" , whiteSpace: "nowrap" }}
             onClick={Booked}>
             จองเลย!
-
         </div>
     );
 }
