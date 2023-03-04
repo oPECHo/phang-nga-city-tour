@@ -53,7 +53,7 @@ function UserNavbar() {
                 {user.username}
               </Button>
               <IconButton sx={{ mr: 1 }} onClick={() => setPopup(true)}>
-                <Avatar src='../../public/IdleProfile.png' />
+                <Avatar src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp' />
               </IconButton>
 
               <Dialog
