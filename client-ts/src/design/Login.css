@@ -1,6 +1,7 @@
 .Login-BG {
-    background-image: url('../../public/BlurJamesBond.png');
+    background-image: url("../../public/BlurJamesBond.png");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    background-attachment: fixed;
+    min-height: 100vh;
 }

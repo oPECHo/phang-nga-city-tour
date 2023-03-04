@@ -1,11 +1,10 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Tour from '../models/tour';
 import { AspectRatio } from '@mui/joy';
+import { Rating } from '@mui/material';
 
 import '../design/TourCard.css'
-import { Rating } from '@mui/material';
 
 interface Props {
   Tours: Tour;

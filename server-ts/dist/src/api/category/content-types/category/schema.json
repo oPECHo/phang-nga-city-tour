@@ -21,7 +21,7 @@
         "Type": {
             "type": "enumeration",
             "enum": [
-                "One day trip",
+                "One-day-trip",
                 "Package"
             ]
         }
