@@ -32,7 +32,7 @@ const SearchBar = ({ onChange }: SearchBarProps) => {
             </button>
             <ul className="dropdown-menu dropdown-menu-end" id="dropdownMenu" data-bs-popper="static">
               <li><a className="dropdown-item" href="/Genre/All">ทั้งหมด</a></li>
-              <li><a className="dropdown-item" href="/Genre/One%20day%20trip">ทริปวันเดียว</a></li>
+              <li><a className="dropdown-item" href="/Genre/One-day-trip">ทริปวันเดียว</a></li>
               <li><a className="dropdown-item" href="/Genre/Package">แพ็คเกจ</a></li>
             </ul>
           </div>
