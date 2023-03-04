@@ -93,7 +93,11 @@ const PaymentPage = () => {
                                     <div className="col-xl-5">
                                         <div className="p-3">
                                             <h2 className="fw-bold">จุดชมวิวเสม็ดนางชี</h2>
-                                            <span>วันที่</span><span className='mx-2'>เริ่มต้น {data?.start} สิ้นสุด {data?.end}</span>
+                                            <span>วันที่เดินทาง</span>
+                                            <input
+                                                className="form-control"
+                                                type="date"
+                                            />
                                             <div className="form-outline">
                                                 <label className="form-label">จำนวนคน</label>
                                                 <input className="form-control" style={{ height: '30px', width: "70px", borderRadius: "5px" }} 
