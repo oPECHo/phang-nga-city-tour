@@ -28,7 +28,7 @@ function UserNavbar() {
             <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">
               <NavDropdown.Item href="/Genre/All">ทั้งหมด</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Genre/One%20day%20trip">ทริปวันเดียว</NavDropdown.Item>
+              <NavDropdown.Item href="/Genre/One-day-trip">ทริปวันเดียว</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/Genre/Package">แพ็คเกจ</NavDropdown.Item>
             </NavDropdown>
@@ -63,7 +63,7 @@ function UserNavbar() {
               >
                 <DialogContent>
                   <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
-                    <Avatar sx={{ width: 128, height: 128 }} src='../../public/IdleProfile.png' />
+                    <Avatar sx={{ width: 128, height: 128 }} src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp' />
                   </Box>
                   <Row className="text-center">
                     <Col>

@@ -3,31 +3,43 @@ import UserNavbar from '../components/UserNavbar';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Tour from '../models/tour';
-import Repo from '../repositories'
+import Repo from '../repositories';
+import qrcode from 'qrcode';
 
 const PaymentPage = () => {
-    const [tourdata,setTourData] = useState<Tour[]>([]);
-    const [quantity,setQuantity] = useState(1)
-    const params = useParams();
+  const [tourdata, setTourData] = useState<Tour[]>([]);
+  const [qrCode, setQrCode] = useState<string>('');
+  const [quantity, setQuantity] = useState(1);
+  const params = useParams();
 
-    const fetchData = async () => {
-      try {
-          const res = await Repo.Tourdata.getTourById(params.id as string);
-          if(res) {
-              setTourData(res)
-          }
-      } catch (error) {
-          console.log(error)
+  const fetchData = async () => {
+    try {
+      const res = await Repo.Tourdata.getTourById(params.id as string);
+      if (res) {
+        setTourData(res);
       }
+    } catch (error) {
+      console.log(error);
     }
+  };
 
   useEffect(() => {
-      fetchData()
-  }, [params.id])
+    fetchData();
+  }, [params.id]);
   const data = tourdata.length > 0 ? tourdata[0].attributes : null;
   const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
-  const total_price = data?.price as number *quantity;
+  const total_price = data?.price as number * quantity;
 
+  useEffect(() => {
+    qrcode.toDataURL(total_price.toString(), (err, url) => {
+      if (err) {
+        console.log(err);
+      } else {
+        setQrCode(url);
+      }
+    });
+  }, [total_price]);
+  
     return (
         <div className=''>
             <UserNavbar />
@@ -81,15 +93,22 @@ const PaymentPage = () => {
                                     <div className="col-xl-5">
                                         <div className="p-3">
                                             <h2 className="fw-bold">จุดชมวิวเสม็ดนางชี</h2>
-                                            <span>วันที่</span><span className='mx-2'>เริ่มต้น {data?.start} สิ้นสุด {data?.end}</span>
+                                            <span>วันที่เดินทาง</span>
+                                            <input
+                                                className="form-control"
+                                                type="date"
+                                            />
                                             <div className="form-outline">
                                                 <label className="form-label">จำนวนคน</label>
                                                 <input className="form-control" style={{ height: '30px', width: "70px", borderRadius: "5px" }} 
                                                        type = "number" 
-                                                       min = "1"
-                                                       max = {data?.number}
                                                        value = {quantity}
-                                                       onChange = {(e) => setQuantity(parseInt(e.target.value))}
+                                                       onChange={(e) => {
+                                                        const newValue = parseInt(e.target.value);
+                                                        if (!isNaN(newValue) && newValue >= 1 && (data?.number ? newValue <= data.number : true)) {
+                                                          setQuantity(newValue);
+                                                        }
+                                                      }}
                                                 />
                                             </div>
                                             <div className="d-flex justify-content-between mt-2">
@@ -113,8 +132,10 @@ const PaymentPage = () => {
 
                                                     <div className="modal-body">
                                                         <div className="row d-flex justify-content-center align-items-center">
-                                                            <img src="../../QR.png" style={{ height: "200px", width: "200px" }} />
+                                                            <img src={qrCode} style={{ height: "200px", width: "200px" }} />
+                                                            <h5><b><div>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div></b></h5>
                                                         </div>
+                                                        
                                                         <div>ช่องทางการติดต่อ</div>
                                                         <div>Line ID : @PHANG NGA</div>
                                                         <div>Facebook : www.facebook.com/PHANG NGA</div>

@@ -30,9 +30,9 @@ const GenrePage = () => {
     };
 
     useEffect(() => {
-        fetchData();
-    }, [params.type]);
-
+        fetchData()
+    }, [params.type])
+    
     const headtitle =
         params.type === 'One day trip'
             ? 'ทริปวันเดียว'
