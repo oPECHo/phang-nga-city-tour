@@ -1,7 +1,7 @@
 import UserNavbar from '../components/UserNavbar';
 import CardUserStatus from '../components/Carduserstatus';
 
-const HistoryPage = () => {
+const UserStatusPage = () => {
     return (
         <div>
             <UserNavbar/>
@@ -10,4 +10,4 @@ const HistoryPage = () => {
     )
 }
 
-export default HistoryPage
+export default UserStatusPage

@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "status": {
-      "type": "boolean",
-      "required": false
-    },
     "user": {
       "type": "string"
     },
@@ -38,6 +34,9 @@
       "type": "string"
     },
     "tour_type": {
+      "type": "string"
+    },
+    "status": {
       "type": "string"
     }
   }
