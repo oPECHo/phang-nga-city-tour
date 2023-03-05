@@ -14,7 +14,7 @@ const TourCard = (props: Props) => {
   const navigate = useNavigate();
   const item = props.Tours.attributes;
   const score = item.score;
-  const image = item.image.data[0].attributes.formats.thumbnail.url;
+  const image = item.image.data[0].attributes.url;
   const thumbnail = `http://localhost:1337${image}`;
 
 
