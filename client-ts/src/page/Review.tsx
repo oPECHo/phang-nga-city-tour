@@ -13,8 +13,11 @@ import { userData } from '../helper';
 const ReviewPage = () => {
     const [reviews, setReviews] = useState<Review[]>([]);
     const [tourdata, setTourdata] = useState<Tours[]>([]);
+
     const user = userData();
     const params = useParams();
+
+    const data = tourdata.length > 0 ? tourdata[0].attributes : null;
 
     const fetchData = async () => {
         try {
@@ -22,6 +25,10 @@ const ReviewPage = () => {
             if (res) {
                 const filteredReviews = res.filter((review) => review.attributes.id_tour === params.id);
                 setReviews(filteredReviews)
+            }
+            const tourRes = await Repo.Tourdata.getTourById(params.id as string);
+            if (tourRes) {
+                setTourdata(tourRes)
             }
         } catch (error) {
             console.log(error)
@@ -40,16 +47,21 @@ const ReviewPage = () => {
                 <div className="row height d-flex justify-content-center align-items-center">
                     <div className="col-md-7">
                         <div className="card">
-                            <div className="p-3">
-                                <h6>Comments</h6>
+                            <div className="d-flex justify-content-between align-items-center p-3">
+                                <div>
+                                    <h6>Comments</h6>
+                                </div>
+                                <div>
+                                    <h6>{data?.title}</h6>
+                                </div>
                             </div>
-                            
+
                             {user && (
-                            <div>
-                                <CommentSection tourdata={tourdata[0]} user={{
-                                    username: ''
-                                }} />
-                            </div>
+                                <div>
+                                    <CommentSection tourdata={tourdata[0]} user={{
+                                        username: ''
+                                    }} />
+                                </div>
                             )}
 
                             <div>
