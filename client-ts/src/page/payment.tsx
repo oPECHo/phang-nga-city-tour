@@ -41,7 +41,7 @@ const PaymentPage = () => {
     }, [total_price]);
 
     return (
-        <div className=''>
+        <div>
             <UserNavbar />
             <section className="vh-100" >
                 <div className="container py-5">
