@@ -1,13 +1,18 @@
 import Repo from '../repositories';
 import PaymentStatus from '../models/paymentStatus';
 import Tours from '../models/tour';
-import { useLocation } from 'react-router-dom';
+import { userData } from '../helper';
 
 interface Props {
     tourdata : Tours
+    user : {
+        username : string
+    }
 }
 
 function PaymentSection(props: Props) {
+
+    const username = userData();
 
     const Booked = async () => {
         await Repo.Paymentdata.createPayment(newPaymentStatus)
@@ -20,7 +25,8 @@ function PaymentSection(props: Props) {
     const newPaymentStatus: PaymentStatus = {
         data: {
             tour_name: tourName as string,
-            status: 'จองแล้ว'
+            status: 'จองแล้ว',
+            user: username.username
         }
     }
 

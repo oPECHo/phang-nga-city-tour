@@ -5,12 +5,14 @@ import Tour from '../models/tour';
 import Repo from '../repositories';
 import qrcode from 'qrcode';
 import PaymentSection from '../components/paymentSection';
+import { userData } from '../helper';
 
 const PaymentPage = () => {
     const [tourdata, setTourData] = useState<Tour[]>([]);
     const [qrCode, setQrCode] = useState<string>('');
     const [quantity, setQuantity] = useState(1);
     const params = useParams();
+    const user = userData();
 
     const fetchData = async () => {
         try {
@@ -116,7 +118,7 @@ const PaymentPage = () => {
                                             </div>
                                         </div>
                                         <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
-                                        <PaymentSection tourdata={tourdata[0]}/>
+                                        <div>{user && ( <PaymentSection tourdata={tourdata[0]} user={{username: ""}}/> )}</div>
                                         <div className='p-2' style={{ color: "red" }}>หมายเหตุ: คุณที่มีเวลา 1
                                             วันในการชำระค่าจองหลังจากนั้นจะถูกยกเลิกการจอง
                                         </div>
