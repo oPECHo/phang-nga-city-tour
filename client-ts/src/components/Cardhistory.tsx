@@ -11,6 +11,7 @@ function Cardhistory(props: Props) {
     const tour = reviewData?.tour_name;
     const status = reviewData?.status;
     const tourId = reviewData?.tour_id;
+    const Datetour = reviewData?.tour_start;
     const navigate = useNavigate();
 
     const LinkToComment = () => {
@@ -25,6 +26,8 @@ function Cardhistory(props: Props) {
                     <h5 className="card-title">{tour}</h5>
                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
                         สถานะการจอง: <span style={{ color: "#FF5C5C", fontWeight: "bold" }}>{status}</span></p>
+                    <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}> 
+                        เริ่มเดินทางวันที่: <span style={{ fontWeight: "bold" }}>{Datetour}</span></p>
                     <a onClick={LinkToComment} className="btn btn-outline-success btn-sm float-end" style={{ marginLeft: "0.1rem" }}>แสดงความคิดเห็น</a>
                 </div>
             </div>
