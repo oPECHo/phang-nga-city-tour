@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import PaymentStatus from "../models/paymentStatus";
 import qrcode from 'qrcode';
+import Repo from '../repositories'
+import { useParams } from "react-router-dom";
 
 interface Props {
     statusData: PaymentStatus,
+}
+function setTourData(res: import("../models/tour").default[]) {
+    throw new Error("Function not implemented.");
 }
 
 function CardUserStatus(props: Props) {
@@ -14,7 +19,23 @@ function CardUserStatus(props: Props) {
     const quantity = reviewData?.quantity;
     const total_price = reviewData?.total_price;
 
+    const params = useParams();
     const [qrCode, setQrCode] = useState<string>('');
+
+    const fetchData = async () => {
+        try {
+            const res = await Repo.Tourdata.getTourById(params.id as string);
+            if (res) {
+                setTourData(res);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, [params.id]);
 
     useEffect(() => {
         qrcode.toDataURL(total_price.toString(), (err, url) => {
@@ -42,7 +63,6 @@ function CardUserStatus(props: Props) {
                     </p>
                     <a className="btn btn-outline-danger btn-sm"
                         style={{ marginRight: "0.1rem" }}>ยกเลิกการจอง</a>
-
                     <button  className="btn btn-link btn-sm float-end"
                         data-bs-toggle="modal"
                         data-bs-target={`#myModal${reviewData.tour_id}`}
@@ -70,7 +90,6 @@ function CardUserStatus(props: Props) {
                                     </b>
                                 </h5>
                             </div>
-
                             <div>ช่องทางการติดต่อ</div>
                             <div>Line ID : @PHANG NGA</div>
                             <div>Facebook : www.facebook.com/PHANG NGA</div>
@@ -88,3 +107,4 @@ function CardUserStatus(props: Props) {
 }
 
 export default CardUserStatus;
+
