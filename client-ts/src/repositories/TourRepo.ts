@@ -1,16 +1,13 @@
 import axios from "axios";
 //import payment from "../models/payment";
 import Tours from "../models/tour";
-//import Tourseat from "../models/tourseat";
+import numberTour from "../models/numberTour";
 import { IRepository } from "./IRepository";
 import { userData } from "../helper";
 
 const user = userData()
 
-export class TourRepository implements IRepository<Tours>{
-    getTour(id: string | undefined) {
-        throw new Error('Method not implemented.');
-    }
+export class TourRepository implements IRepository<Tours | numberTour>{
     urlPrefix = "http://localhost:1337/api/locations?populate=*"
     token = user.jwt
 
@@ -39,16 +36,17 @@ export class TourRepository implements IRepository<Tours>{
     }
 
 
-    // async updateTour(id: string | number, data: Tourseat): Promise<Tourseat> {
-    //     const resp = await fetch(`http://localhost:1337/api/user-tours/${id}`, {
-    //         method: "PUT",
-    //         headers: { 
-    //             "Authorization": `Bearer ${this.token}`,
-    //             "Accept": "application/json",
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //     const data_res = await resp.json();
-    //     return data_res
+    async updateTour(id: string | number, data: numberTour): Promise<numberTour> {
+         const resp = await fetch(`http://localhost:1337/api/locations/${id}`, {
+             method: "PUT",
+             headers: { 
+                 "Authorization": `Bearer ${this.token}`,
+                 "Accept": "application/json",
+                 "Content-Type": "application/json"
+             },
+             body: JSON.stringify(data)
+         })
+         const data_res = await resp.json();
+         return data_res
     }
+}
