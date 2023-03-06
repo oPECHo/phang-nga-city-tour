@@ -1,16 +1,24 @@
 import { useEffect, useState } from "react";
 import PaymentStatus from "../models/paymentStatus";
 import Repo from '../repositories';
+import { userData } from '../helper';
 
-function CardUserStatus() {
+interface Props {
+    user : {
+        username : string
+    }
+}
+
+function CardUserStatus(props: Props) {
     const [paymentStatus,setPaymentStatus] = useState<PaymentStatus[]>([]);
+    const username = userData();
 
     const fetchData = async () => {
         try {
-            const res = await Repo.Paymentdata.getPayment();
+            const res = await Repo.Paymentdata.getByUserName(username.username as string);
             if(res) {
                 setPaymentStatus(res)
-                console.log(res)
+                console.log()
             }
         } catch (error) {
             console.log(error)
