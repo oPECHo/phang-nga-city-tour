@@ -1,11 +1,20 @@
 import { IRepository } from "./IRepository"
 import paymentStatus from "../models/paymentStatus";
+import { userData } from "../helper";
+
+const user = userData()
 
 export class PaymentRepository implements IRepository<paymentStatus>{
     urlPrefix = "http://localhost:1337/api/payment-statuses?populate=*"
+    token = user.jwt
 
     async getPayment(): Promise<paymentStatus[] | null> {
-        const res = await fetch(`${this.urlPrefix}`);
+        const res = await fetch(`${this.urlPrefix}`,{
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${this.token}`
+            }
+        });
         const data = await res.json()
         return data.data
     }
@@ -13,7 +22,8 @@ export class PaymentRepository implements IRepository<paymentStatus>{
     async createPayment(data: paymentStatus): Promise<paymentStatus> {
         const resp = await fetch(`${this.urlPrefix}`, {
             method: "POST",
-            headers: { 
+            headers: {
+                "Authorization": `Bearer ${this.token}`, 
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             },
