@@ -7,35 +7,17 @@ import { useParams } from "react-router-dom";
 interface Props {
     statusData: PaymentStatus,
 }
-function setTourData(res: import("../models/tour").default[]) {
-    throw new Error("Function not implemented.");
-}
 
 function CardUserStatus(props: Props) {
     const reviewData = props.statusData ? props.statusData.attributes : null;
+    const start = reviewData?.tour_start;
     const image = reviewData?.image_url;
     const tour = reviewData?.tour_name;
     const status = reviewData?.status;
     const quantity = reviewData?.quantity;
     const total_price = reviewData?.total_price;
 
-    const params = useParams();
     const [qrCode, setQrCode] = useState<string>('');
-
-    const fetchData = async () => {
-        try {
-            const res = await Repo.Tourdata.getTourById(params.id as string);
-            if (res) {
-                setTourData(res);
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    useEffect(() => {
-        fetchData();
-    }, [params.id]);
 
     useEffect(() => {
         qrcode.toDataURL(total_price.toString(), (err, url) => {
@@ -60,9 +42,13 @@ function CardUserStatus(props: Props) {
                         จำนวน: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{quantity}</span><span> ท่าน</span>
                         <br></br>
                         สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>{status}</span>
+                        <br></br>
+                        เริ่มเดินทางวันที่: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{start}</span>
                     </p>
-                    <a className="btn btn-outline-danger btn-sm"
-                        style={{ marginRight: "0.1rem" }}>ยกเลิกการจอง</a>
+                    <button className="btn btn-outline-danger btn-sm"
+                        style={{ marginRight: "0.1rem" }}>
+                        ยกเลิกการจอง
+                    </button>
                     <button  className="btn btn-link btn-sm float-end"
                         data-bs-toggle="modal"
                         data-bs-target={`#myModal${reviewData.tour_id}`}

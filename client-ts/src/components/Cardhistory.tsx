@@ -27,7 +27,7 @@ function Cardhistory(props: Props) {
                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
                         สถานะการจอง: <span style={{ color: "#FF5C5C", fontWeight: "bold" }}>{status}</span>
                         <br></br>
-                        เริ่มเดินทางวันที่: <span style={{ fontWeight: "bold" }}>{Datetour}</span>
+                        เริ่มเดินทางวันที่: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{Datetour}</span>
                     </p>
                     <a onClick={LinkToComment} className="btn btn-outline-success btn-sm float-end" style={{ marginLeft: "0.1rem" }}>แสดงความคิดเห็น</a>
                 </div>
