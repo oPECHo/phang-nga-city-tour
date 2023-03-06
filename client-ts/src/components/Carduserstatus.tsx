@@ -33,9 +33,8 @@ function CardUserStatus(props: Props) {
                     <h5 className="card-title">{tour}</h5>
                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
                         สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>{status}</span></p>
-                    <a href="/TripDetailPage/${props.Tours.id}/review"
-                        className="btn btn-outline-success btn-sm"
-                        style={{ marginRight: "0.1rem" }}>comment</a>
+                    <a  className="btn btn-outline-danger btn-sm"
+                        style={{ marginRight: "0.1rem" }}>ยกเลิกการจอง</a>
                     <a href="/TripDetailPage/${props.Tours.id}/review"
                         className="btn btn-link btn-sm float-end"
                         data-bs-toggle="modal"
