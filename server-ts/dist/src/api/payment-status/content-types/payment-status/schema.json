@@ -38,6 +38,9 @@
         },
         "status": {
             "type": "string"
+        },
+        "tour_id": {
+            "type": "string"
         }
     }
 }

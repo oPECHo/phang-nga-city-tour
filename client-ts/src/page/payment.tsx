@@ -16,11 +16,14 @@ const PaymentPage = () => {
     const user = userData();
 
     const data = tourdata.length > 0 ? tourdata[0].attributes : null;
+    const dataID = tourdata.length > 0 ? tourdata[0] : null;
+
     const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
     const total_price = data?.price as number * quantity;
 
     const tourType = data?.categories.data[0].attributes.Type
     const tourName = data?.title
+    const tourID = dataID?.id.toString();
 
     const fetchData = async () => {
         try {
@@ -54,9 +57,11 @@ const PaymentPage = () => {
     }
 
     const newPayment: PaymentStatus = {
+        attributes: null,
         data: {
             tour_name: tourName as string,
             tour_type: tourType as string,
+            tour_id: tourID as string,
             status: 'จองแล้ว',
             user: user.username,
             image_url: thumbnail,
