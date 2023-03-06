@@ -11,9 +11,10 @@ const UserStatusPage = () => {
 
     const fetchData = async () => {
         try {
-            const res = await Repo.Paymentdata.getPayment();
+            const res = await Repo.Paymentdata.getByUserName(user.username);
             if (res) {
-                setPaymentStatus(res);
+                const filteredData = res.filter((item) => item.attributes.status === 'จองแล้ว');
+                setPaymentStatus(filteredData);
             }
         } catch (error) {
             console.error('Error fetching payment data:', error);

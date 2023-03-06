@@ -30,7 +30,7 @@ function App() {
         <Route path="/Register" element={<RegisterPage />} />
         <Route path="/TripDetail" element={<TripDetailPage />} />
         <Route path="/userstatus" element={<LoginRoute><UserStatusPage /></LoginRoute>} />
-        <Route path="/history" element={<HistoryPage />} />
+        <Route path="/history" element={<LoginRoute><HistoryPage /></LoginRoute>} />
         <Route path="/payment" element={<PaymentPage />} />
       </Routes>
       <ToastContainer />

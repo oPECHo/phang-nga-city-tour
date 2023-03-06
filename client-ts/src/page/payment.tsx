@@ -7,15 +7,8 @@ import qrcode from 'qrcode';
 import { userData } from '../helper';
 import PaymentStatus from '../models/paymentStatus';
 
-interface Props {
-    status: PaymentStatus
-    tourdata: Tour
-    user: {
-        username: string
-    }
-}
 
-const PaymentPage = (props: Props) => {
+const PaymentPage = () => {
     const [tourdata, setTourData] = useState<Tour[]>([]);
     const [qrCode, setQrCode] = useState<string>('');
     const [quantity, setQuantity] = useState(1);
