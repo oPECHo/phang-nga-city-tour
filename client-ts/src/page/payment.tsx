@@ -6,6 +6,7 @@ import Repo from '../repositories';
 import qrcode from 'qrcode';
 import { userData } from '../helper';
 import PaymentStatus from '../models/paymentStatus';
+import numberTour from '../models/numberTour';
 
 
 const PaymentPage = () => {
@@ -24,7 +25,7 @@ const PaymentPage = () => {
 
     const tourType = data?.categories.data[0].attributes.Type
     const tourName = data?.title
-    const tourID = dataID?.id.toString();
+    const tourID = dataID?.id.toString() || 0;
 
     const fetchData = async () => {
         try {
@@ -54,6 +55,7 @@ const PaymentPage = () => {
     const Booked = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         await Repo.Paymentdata.createPayment(newPayment)
+        await Repo.Tourdata.updateTour(tourID,updatenumber)
         console.log("Booked!")
         console.log(daytime)
     }
@@ -67,7 +69,7 @@ const PaymentPage = () => {
         data: {
             tour_name: tourName as string,
             tour_type: tourType as string,
-            tour_id: tourID as string,
+            tour_id: tourID,
             tour_start: daytime,
             status: 'จองแล้ว',
             user: user.username,
@@ -76,6 +78,15 @@ const PaymentPage = () => {
             quantity: quantity
         }
     }
+
+    const number = data?.number as number - quantity
+
+    const updatenumber : numberTour = {
+        data: {
+            number: number
+        }
+    }
+
 
     return (
         <div>
