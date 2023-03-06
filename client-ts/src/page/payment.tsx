@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 import Tour from '../models/tour';
 import Repo from '../repositories';
 import qrcode from 'qrcode';
-import PaymentSection from '../components/paymentSection';
 import { userData } from '../helper';
 import PaymentStatus from '../models/paymentStatus';
 
@@ -63,7 +62,7 @@ const PaymentPage = (props: Props) => {
     }
 
     const newPayment: PaymentStatus = {
-        data: {
+        attributes: {
             tour_name: tourName as string,
             tour_type: tourType as string,
             status: 'จองแล้ว',

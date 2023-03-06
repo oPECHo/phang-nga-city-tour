@@ -1,5 +1,5 @@
 export default interface PaymentStatus {
-    data: {
+    attributes: {
         tour_name: string,
         tour_type: string,
         status: string,
