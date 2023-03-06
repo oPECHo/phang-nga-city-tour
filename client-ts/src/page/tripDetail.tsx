@@ -18,8 +18,7 @@ const TripDetail = () => {
   }
   const LinkToComment = () => {
     const tourId = params.id;
-    const tourName = data?.title;
-    navigate(`/TripDetailPage/${tourId}/review?tour_id=${tourId}&tour_name=${tourName}`);
+    navigate(`/TripDetailPage/${tourId}/review`);
   }
   
 
