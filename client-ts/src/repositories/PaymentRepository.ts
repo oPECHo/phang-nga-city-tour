@@ -6,6 +6,7 @@ const user = userData()
 
 export class PaymentRepository implements IRepository<paymentStatus>{
     urlPrefix = "http://localhost:1337/api/payment-statuses?populate=*"
+    deletePrefix = "http://localhost:1337/api/payment-statuses"
     token = user.jwt
 
     async getPayment(): Promise<paymentStatus[] | null> {
@@ -34,7 +35,7 @@ export class PaymentRepository implements IRepository<paymentStatus>{
     }
 
     async deletePayment(id: string | number): Promise<void> {
-        const resp = await fetch(`${this.urlPrefix}/${id}`, {
+        const resp = await fetch(`${this.deletePrefix}/${id}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${this.token}`,

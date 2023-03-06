@@ -19,6 +19,16 @@ function CardUserStatus(props: Props) {
 
     const [qrCode, setQrCode] = useState<string>('');
 
+    const cancelPayment = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (window.confirm("คุณแน่ใจหรือไม่ว่าต้องการยกเลิกทัวร์ของคุณ")) {
+            await Repo.Paymentdata.deletePayment(props.statusData.id);
+            console.log("Deleted!");
+            window.location.reload();
+        }
+    };
+
+
     useEffect(() => {
         qrcode.toDataURL(total_price.toString(), (err, url) => {
             if (err) {
@@ -28,7 +38,7 @@ function CardUserStatus(props: Props) {
             }
         });
     }, [total_price]);
-    
+
 
     return (
         <div className="col-md-4 mb-4">
@@ -45,16 +55,19 @@ function CardUserStatus(props: Props) {
                         <br></br>
                         เริ่มเดินทางวันที่: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{start}</span>
                     </p>
-                    <button className="btn btn-outline-danger btn-sm"
-                        style={{ marginRight: "0.1rem" }}>
-                        ยกเลิกการจอง
-                    </button>
-                    <button  className="btn btn-link btn-sm float-end"
-                        data-bs-toggle="modal"
-                        data-bs-target={`#myModal${reviewData.tour_id}`}
-                        style={{ marginLeft: "auto", marginRight: "0.1rem" }}>
-                        ยังไม่ได้ชำระเงิน?
-                    </button>
+                    <form className="" onSubmit={cancelPayment}>
+                        <button className="btn btn-outline-danger btn-sm"
+                            type="submit"
+                            style={{ marginRight: "0.1rem" }}>
+                            ยกเลิกการจอง
+                        </button>
+                        <div className="btn btn-link btn-sm float-end"
+                            data-bs-toggle="modal"
+                            data-bs-target={`#myModal${reviewData.tour_id}`}
+                            style={{ marginLeft: "auto", marginRight: "0.1rem" }}>
+                            ยังไม่ได้ชำระเงิน?
+                        </div>
+                    </form>
                 </div>
             </div>
 

@@ -65,6 +65,7 @@ const PaymentPage = () => {
     };
 
     const newPayment: PaymentStatus = {
+        id: null,
         attributes: null,
         data: {
             tour_name: tourName as string,

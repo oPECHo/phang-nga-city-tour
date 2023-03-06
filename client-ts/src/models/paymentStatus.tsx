@@ -1,5 +1,6 @@
 export default interface PaymentStatus {
-    attributes: any
+    id: any,
+    attributes: any,
     data: {
         tour_name: string,
         tour_type: string,
@@ -9,6 +10,6 @@ export default interface PaymentStatus {
         user: string,
         image_url: string,
         total_price: number,
-        quantity: number
+        quantity: number,
     }
 }
