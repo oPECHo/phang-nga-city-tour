@@ -1,3 +1,4 @@
+import { useNavigate, useParams } from 'react-router-dom';
 import PaymentStatus from "../models/paymentStatus";
 
 interface Props {
@@ -9,6 +10,12 @@ function Cardhistory(props: Props) {
     const image = reviewData?.image_url;
     const tour = reviewData?.tour_name;
     const status = reviewData?.status;
+    const tourId = reviewData?.tour_id;
+    const navigate = useNavigate();
+
+    const LinkToComment = () => {
+        navigate(`/TripDetailPage/${tourId}/review?tour_id=${tourId}&tour_name=${tour}`);
+    }
 
     return (
         <div className="col-md-4 mb-4">
@@ -18,7 +25,7 @@ function Cardhistory(props: Props) {
                     <h5 className="card-title">{tour}</h5>
                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
                         สถานะการจอง: <span style={{ color: "#FF5C5C", fontWeight: "bold" }}>{status}</span></p>
-                    <a href="/TripDetailPage/${props.Tours.id}/review" className="btn btn-outline-success btn-sm float-end" style={{ marginLeft: "0.1rem" }}>แสดงความคิดเห็น</a>
+                    <a onClick={LinkToComment} className="btn btn-outline-success btn-sm float-end" style={{ marginLeft: "0.1rem" }}>แสดงความคิดเห็น</a>
                 </div>
             </div>
         </div>
