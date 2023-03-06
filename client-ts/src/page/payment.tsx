@@ -73,7 +73,7 @@ const PaymentPage = () => {
             user: user.username,
             image_url: thumbnail,
             total_price: total_price,
-            quantity: quantity 
+            quantity: quantity
         }
     }
 
@@ -137,12 +137,14 @@ const PaymentPage = () => {
                                                 type="date"
                                                 value={daytime?.toISOString().slice(0, 10)}
                                                 onChange={handleDaytimeChange}
+                                                required
                                             />
                                             <div className="form-outline">
                                                 <label className="form-label">จำนวนคน</label>
                                                 <input className="form-control" style={{ height: '30px', width: "70px", borderRadius: "5px" }}
                                                     type="number"
                                                     value={quantity}
+                                                    required
                                                     onChange={(e) => {
                                                         const newValue = parseInt(e.target.value);
                                                         if (!isNaN(newValue) && newValue >= 1 && (data?.number ? newValue <= data.number : true)) {
@@ -156,13 +158,19 @@ const PaymentPage = () => {
                                             </div>
                                         </div>
                                         <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
-                                        
+
                                         <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3" onSubmit={Booked}>
-                                            <button className="btn btn-success btn-lg mx-3 my-3"
+                                            <button className="btn btn-success btn-lg"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#myModal"
-                                                style={{ width: "100px", whiteSpace: "nowrap" }}
+                                                style={{ width: "100%", whiteSpace: "nowrap" }}
                                                 type="submit"
+                                                disabled={daytime === null}
+                                                onClick={() => {
+                                                    if (daytime === null) {
+                                                        window.alert("Please select a date.");
+                                                    }
+                                                }}
                                             >
                                                 จองเลย!
                                             </button>
