@@ -18,7 +18,7 @@ function Cardhistory(props: Props) {
                     <h5 className="card-title">{tour}</h5>
                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
                         สถานะการจอง: <span style={{ color: "#FF5C5C", fontWeight: "bold" }}>{status}</span></p>
-                    <a href="/TripDetailPage/${props.Tours.id}/review" className="btn btn-outline-success btn-sm" style={{ marginLeft: "0.1rem" }}>comment</a>
+                    <a href="/TripDetailPage/${props.Tours.id}/review" className="btn btn-outline-success btn-sm float-end" style={{ marginLeft: "0.1rem" }}>แสดงความคิดเห็น</a>
                 </div>
             </div>
         </div>
