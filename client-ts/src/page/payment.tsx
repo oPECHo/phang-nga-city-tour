@@ -12,6 +12,7 @@ const PaymentPage = () => {
     const [tourdata, setTourData] = useState<Tour[]>([]);
     const [qrCode, setQrCode] = useState<string>('');
     const [quantity, setQuantity] = useState(1);
+    const [daytime, setDaytime] = useState<Date | null>(null);
     const params = useParams();
     const user = userData();
 
@@ -54,7 +55,12 @@ const PaymentPage = () => {
         e.preventDefault();
         await Repo.Paymentdata.createPayment(newPayment)
         console.log("Booked!")
+        console.log(daytime)
     }
+    const handleDaytimeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const selectedDate = new Date(event.target.value);
+        setDaytime(selectedDate);
+    };
 
     const newPayment: PaymentStatus = {
         attributes: null,
@@ -62,6 +68,7 @@ const PaymentPage = () => {
             tour_name: tourName as string,
             tour_type: tourType as string,
             tour_id: tourID as string,
+            tour_start: daytime,
             status: 'จองแล้ว',
             user: user.username,
             image_url: thumbnail,
@@ -125,8 +132,11 @@ const PaymentPage = () => {
                                             <h2 className="fw-bold">{data?.title}</h2>
                                             <span>วันที่เดินทาง</span>
                                             <input
+                                                id="daytime"
                                                 className="form-control"
                                                 type="date"
+                                                value={daytime?.toISOString().slice(0, 10)}
+                                                onChange={handleDaytimeChange}
                                             />
                                             <div className="form-outline">
                                                 <label className="form-label">จำนวนคน</label>

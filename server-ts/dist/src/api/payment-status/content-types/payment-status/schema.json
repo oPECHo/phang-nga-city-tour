@@ -21,9 +21,6 @@
         "tour_start": {
             "type": "date"
         },
-        "tour_end": {
-            "type": "date"
-        },
         "quantity": {
             "type": "integer"
         },
