@@ -48,6 +48,16 @@ export default interface Tour {
                 }
             ]
         };
+        categories: {
+            data: [
+                {
+                    id: number,
+                    attributes: {
+                        Type: string;
+                    }
+                }
+            ]
+        }
     };
 }
 

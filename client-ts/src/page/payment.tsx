@@ -6,13 +6,29 @@ import Repo from '../repositories';
 import qrcode from 'qrcode';
 import PaymentSection from '../components/paymentSection';
 import { userData } from '../helper';
+import PaymentStatus from '../models/paymentStatus';
 
-const PaymentPage = () => {
+interface Props {
+    status: PaymentStatus
+    tourdata: Tour
+    user: {
+        username: string
+    }
+}
+
+const PaymentPage = (props: Props) => {
     const [tourdata, setTourData] = useState<Tour[]>([]);
     const [qrCode, setQrCode] = useState<string>('');
     const [quantity, setQuantity] = useState(1);
     const params = useParams();
     const user = userData();
+
+    const data = tourdata.length > 0 ? tourdata[0].attributes : null;
+    const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
+    const total_price = data?.price as number * quantity;
+
+    const tourType = data?.categories.data[0].attributes.Type
+    const tourName = data?.title
 
     const fetchData = async () => {
         try {
@@ -28,9 +44,6 @@ const PaymentPage = () => {
     useEffect(() => {
         fetchData();
     }, [params.id]);
-    const data = tourdata.length > 0 ? tourdata[0].attributes : null;
-    const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
-    const total_price = data?.price as number * quantity;
 
     useEffect(() => {
         qrcode.toDataURL(total_price.toString(), (err, url) => {
@@ -41,6 +54,25 @@ const PaymentPage = () => {
             }
         });
     }, [total_price]);
+
+    const Booked = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        await Repo.Paymentdata.createPayment(newPayment)
+        console.log(props)
+        console.log("Done!")
+    }
+
+    const newPayment: PaymentStatus = {
+        data: {
+            tour_name: tourName as string,
+            tour_type: tourType as string,
+            status: 'จองแล้ว',
+            user: user.username,
+            image_url: thumbnail,
+            total_price: total_price,
+            quantity: quantity 
+        }
+    }
 
     return (
         <div>
@@ -118,7 +150,18 @@ const PaymentPage = () => {
                                             </div>
                                         </div>
                                         <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
-                                        <div>{user && ( <PaymentSection tourdata={tourdata[0]} user={{username: ""}} image={thumbnail}/> )}</div>
+                                        
+                                        <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3" onSubmit={Booked}>
+                                            <button className="btn btn-success btn-lg mx-3 my-3"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#myModal"
+                                                style={{ width: "100px", whiteSpace: "nowrap" }}
+                                                type="submit"
+                                            >
+                                                จองเลย!
+                                            </button>
+                                        </form >
+
                                         <div className='p-2' style={{ color: "red" }}>หมายเหตุ: คุณที่มีเวลา 1
                                             วันในการชำระค่าจองหลังจากนั้นจะถูกยกเลิกการจอง
                                         </div>

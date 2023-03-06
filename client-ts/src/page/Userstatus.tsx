@@ -15,7 +15,7 @@ const UserStatusPage = () => {
                 {user &&
                     <div>
                         {paymentStatus.map((item) =>
-                            <CardUserStatus user={{ username: "" }} status={item} />
+                            <CardUserStatus status={item} />
                         )}
                     </div>
                 }
