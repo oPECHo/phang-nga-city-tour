@@ -5,7 +5,6 @@ import PaymentStatus from '../models/paymentStatus';
 import Repo from '../repositories';
 import { userData } from '../helper';
 
-
 const UserStatusPage = () => {
     const [paymentStatus, setPaymentStatus] = useState<PaymentStatus[]>([]);
     const user = userData();
@@ -16,7 +15,6 @@ const UserStatusPage = () => {
             if (res) {
                 setPaymentStatus(res);
             }
-
         } catch (error) {
             console.error('Error fetching payment data:', error);
         }
@@ -26,18 +24,15 @@ const UserStatusPage = () => {
         fetchData();
     }, []);
 
-
     return (
         <div>
             <UserNavbar />
-            <div>
-                {user && (
-                    <div>
-                        {paymentStatus.map((item) => (
-                            <CardUserStatus statusData={item} />
-                        ))}
-                    </div>
-                )}
+            <div className="container my-5">
+                <div className="row">
+                    {user && paymentStatus.map((item) => (
+                        <CardUserStatus statusData={item} />
+                    ))}
+                </div>
             </div>
         </div>
     );

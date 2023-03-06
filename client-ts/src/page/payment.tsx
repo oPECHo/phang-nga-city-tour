@@ -57,12 +57,11 @@ const PaymentPage = (props: Props) => {
     const Booked = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         await Repo.Paymentdata.createPayment(newPayment)
-        console.log(props)
-        console.log("Done!")
+        console.log("Booked!")
     }
 
     const newPayment: PaymentStatus = {
-        attributes: {
+        data: {
             tour_name: tourName as string,
             tour_type: tourType as string,
             status: 'จองแล้ว',
