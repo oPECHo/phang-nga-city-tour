@@ -1,18 +1,14 @@
-import { useEffect, useState } from "react";
 import PaymentStatus from "../models/paymentStatus";
-import Repo from '../repositories';
-import { userData } from '../helper';
 
 interface Props {
-    status : PaymentStatus
+    statusData: PaymentStatus
 }
 
 function CardUserStatus(props: Props) {
-    const statusData = props.status.data;
-    
-    const image = statusData.image_url;
-    const tour = statusData.tour_name;
-    const status = statusData.status;
+    const reviewData = props.statusData ? props.statusData.attributes : null
+    const image  = reviewData?.image_url;
+    const tour = reviewData?.tour_name;
+    const status = reviewData?.status;
 
     return (
         <div>
