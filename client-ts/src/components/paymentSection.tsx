@@ -8,6 +8,7 @@ interface Props {
     user : {
         username : string
     }
+    image: string
 }
 
 function PaymentSection(props: Props) {
@@ -26,7 +27,8 @@ function PaymentSection(props: Props) {
         data: {
             tour_name: tourName as string,
             status: 'จองแล้ว',
-            user: username.username
+            user: username.username,
+            image_url: props.image,
         }
     }
 

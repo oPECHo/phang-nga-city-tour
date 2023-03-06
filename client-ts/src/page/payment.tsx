@@ -118,7 +118,7 @@ const PaymentPage = () => {
                                             </div>
                                         </div>
                                         <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
-                                        <div>{user && ( <PaymentSection tourdata={tourdata[0]} user={{username: ""}}/> )}</div>
+                                        <div>{user && ( <PaymentSection tourdata={tourdata[0]} user={{username: ""}} image={thumbnail}/> )}</div>
                                         <div className='p-2' style={{ color: "red" }}>หมายเหตุ: คุณที่มีเวลา 1
                                             วันในการชำระค่าจองหลังจากนั้นจะถูกยกเลิกการจอง
                                         </div>

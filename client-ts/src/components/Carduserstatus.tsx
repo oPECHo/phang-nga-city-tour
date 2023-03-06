@@ -18,7 +18,7 @@ function CardUserStatus(props: Props) {
             const res = await Repo.Paymentdata.getByUserName(username.username as string);
             if(res) {
                 setPaymentStatus(res)
-                console.log()
+                console.log(res)
             }
         } catch (error) {
             console.log(error)
@@ -30,7 +30,7 @@ function CardUserStatus(props: Props) {
     },[])
 
 
-    const data = paymentStatus.length > 0 ? paymentStatus[0].attributes : null;
+    const data = paymentStatus.length > 0 ? paymentStatus[1].attributes : null;
 
     return (
         <div>
@@ -39,7 +39,7 @@ function CardUserStatus(props: Props) {
                     <div className="row">
                         <div className="col-lg-4 mb-4">
                             <div className="card">
-                                <img src="https://www.touronthai.com/gallery/photo/3799/24881.jpg" alt="" className="card-img-top" />
+                                <img src={data.image_url}alt="" className="card-img-top" />
                                 <div className="card-body">
                                     <h5 className="card-title">{data?.tour_name}</h5>
                                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>
