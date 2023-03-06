@@ -4,13 +4,15 @@ import Repo from '../repositories';
 import { userData } from '../helper';
 
 interface Props {
+    status : PaymentStatus
     user : {
         username : string
     }
 }
 
 function CardUserStatus(props: Props) {
-    const [paymentStatus,setPaymentStatus] = useState<PaymentStatus[]>([]);
+    const [paymentStatus, setPaymentStatus] = useState<PaymentStatus[]>([]);
+    const statusData = props.status.data;
     const username = userData();
 
     const fetchData = async () => {
@@ -29,9 +31,6 @@ function CardUserStatus(props: Props) {
         fetchData()
     },[])
 
-
-    const data = paymentStatus.length > 0 ? paymentStatus[1].attributes : null;
-
     return (
         <div>
             <section id="gallery">
@@ -39,11 +38,11 @@ function CardUserStatus(props: Props) {
                     <div className="row">
                         <div className="col-lg-4 mb-4">
                             <div className="card">
-                                <img src={data.image_url}alt="" className="card-img-top" />
+                                <img src={statusData?.image_url}alt="" className="card-img-top" />
                                 <div className="card-body">
-                                    <h5 className="card-title">{data?.tour_name}</h5>
+                                    <h5 className="card-title">{statusData?.tour_name}</h5>
                                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>
-                                        {data?.status}
+                                        {statusData?.status}
                                     </span></p>
                                     <a href="/TripDetailPage/${props.Tours.id}/review" className="btn btn-outline-success btn-sm" style={{ marginLeft: "0.1rem" }}>comment</a>
                                 </div>
@@ -57,5 +56,3 @@ function CardUserStatus(props: Props) {
 }
 
 export default CardUserStatus;
-
-
