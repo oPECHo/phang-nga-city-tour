@@ -196,7 +196,7 @@ const PaymentPage = () => {
                                                 <div className="modal-content">
 
                                                     <div className="modal-header">
-                                                        <h4 className="modal-title">thai QR payment</h4>
+                                                        <h4 className="modal-title">Thai QR Payment</h4>
                                                         <button type="button" className="btn-close mx-2" data-bs-dismiss="modal"></button>
                                                     </div>
 
