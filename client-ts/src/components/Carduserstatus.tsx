@@ -3,17 +3,18 @@ import PaymentStatus from "../models/paymentStatus";
 import qrcode from 'qrcode';
 
 interface Props {
-    statusData: PaymentStatus
+    statusData: PaymentStatus,
 }
 
 function CardUserStatus(props: Props) {
-    const reviewData = props.statusData ? props.statusData.attributes : null ;
+    const reviewData = props.statusData ? props.statusData.attributes : null;
     const image = reviewData?.image_url;
     const tour = reviewData?.tour_name;
     const status = reviewData?.status;
+    const quantity = reviewData?.quantity;
+    const total_price = reviewData?.total_price;
 
     const [qrCode, setQrCode] = useState<string>('');
-    const total_price = reviewData?.total_price as number;
 
     useEffect(() => {
         qrcode.toDataURL(total_price.toString(), (err, url) => {
@@ -24,6 +25,7 @@ function CardUserStatus(props: Props) {
             }
         });
     }, [total_price]);
+    
 
     return (
         <div className="col-md-4 mb-4">
@@ -32,17 +34,25 @@ function CardUserStatus(props: Props) {
                 <div className="card-body">
                     <h5 className="card-title">{tour}</h5>
                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
-                        สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>{status}</span></p>
-                    <a  className="btn btn-outline-danger btn-sm"
+                        ราคา: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{total_price.toLocaleString('en-US')}</span><span> บาท</span>
+                        <br></br>
+                        จำนวน: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{quantity}</span><span> ท่าน</span>
+                        <br></br>
+                        สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>{status}</span>
+                    </p>
+                    <a className="btn btn-outline-danger btn-sm"
                         style={{ marginRight: "0.1rem" }}>ยกเลิกการจอง</a>
-                    <a href="/TripDetailPage/${props.Tours.id}/review"
-                        className="btn btn-link btn-sm float-end"
+
+                    <button  className="btn btn-link btn-sm float-end"
                         data-bs-toggle="modal"
-                        data-bs-target="#myModal"
-                        style={{ marginLeft: "auto", marginRight: "0.1rem" }}>ยังไม่ได้ชำระเงิน?</a>
+                        data-bs-target={`#myModal${reviewData.tour_id}`}
+                        style={{ marginLeft: "auto", marginRight: "0.1rem" }}>
+                        ยังไม่ได้ชำระเงิน?
+                    </button>
                 </div>
             </div>
-            <div className="modal" id="myModal">
+
+            <div className="modal fade" id={`myModal${reviewData.tour_id}`}>
                 <div className="modal-dialog">
                     <div className="modal-content">
 
@@ -54,7 +64,11 @@ function CardUserStatus(props: Props) {
                         <div className="modal-body">
                             <div className="row d-flex justify-content-center align-items-center">
                                 <img src={qrCode} style={{ height: "200px", width: "200px" }} />
-                                <h5><b><div>รวมทั้งหมด {total_price?.toLocaleString('en-US')} บาท</div></b></h5>
+                                <h5>
+                                    <b>
+                                        <div>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
+                                    </b>
+                                </h5>
                             </div>
 
                             <div>ช่องทางการติดต่อ</div>
@@ -68,6 +82,7 @@ function CardUserStatus(props: Props) {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }
