@@ -4,7 +4,7 @@ export default interface PaymentStatus {
         tour_name: string,
         tour_type: string,
         tour_start: Date | null,
-        tour_id: string,
+        tour_id: string | number,
         status: string,
         user: string,
         image_url: string,
