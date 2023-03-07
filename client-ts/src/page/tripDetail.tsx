@@ -61,11 +61,11 @@ const TripDetail = () => {
               <div className="col-sm-6" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ marginBottom: '20px' }}>
                   <h5 className="card-title" style={{ fontSize: '18px', fontVariant: 'common-ligatures', marginTop: '20px', color: 'white' }}>รายละเอียดทริป</h5>
-                  <p className="card-text" style={{ fontSize: '15px', color: 'white' }}>{data?.description}</p>
+                  <p className="card-text" style={{ fontSize: '15px', color: 'white' }}>{data?.description?.split('\n').map((line, index) => <div key={index}>{line}</div>)}</p>
                 </div>
                 <div>
                   <h5 className="card-title" style={{ fontSize: '18px', fontVariant: 'common-ligatures', marginTop: '20px', color: 'white' }}>เงื่อนไข</h5>
-                  <p className="card-text" style={{ fontSize: '15px', color: 'white' }}>{data?.conditions}</p>
+                  <p className="card-text" style={{ fontSize: '15px', color: 'white' }}>{data?.conditions?.split('\n').map((line, index) => <div key={index}>{line}</div>)}</p>
                 </div>
               </div>
             </div>
