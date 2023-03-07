@@ -1,0 +1,15 @@
+.Home-BG {
+    background-image: url('../../public/JamesBond.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.search-button {
+    transition: all 0.5s ease-in-out;
+}
+
+.search-button:hover {
+    transform: scale(1.1);
+}

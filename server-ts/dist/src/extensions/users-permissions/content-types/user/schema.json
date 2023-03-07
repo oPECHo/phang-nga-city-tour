@@ -65,12 +65,6 @@
         },
         "admin": {
             "type": "boolean"
-        },
-        "comment": {
-            "type": "relation",
-            "relation": "oneToOne",
-            "target": "api::comment.comment",
-            "inversedBy": "users_permissions_user"
         }
     }
 }

@@ -4,20 +4,46 @@
   "info": {
     "singularName": "payment-status",
     "pluralName": "payment-statuses",
-    "displayName": "Payment_status"
+    "displayName": "Payment_status",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+    "user": {
+      "type": "string"
+    },
+    "tour_name": {
+      "type": "string"
+    },
+    "tour_start": {
+      "type": "date"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "total_price": {
+      "type": "integer"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "tour_type": {
+      "type": "string"
     },
     "status": {
-      "type": "boolean"
+      "type": "string"
+    },
+    "tour_id": {
+      "type": "string"
+    },
+    "tour_left": {
+      "type": "string"
+    },
+    "tour_end": {
+      "type": "date"
     }
   }
 }

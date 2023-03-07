@@ -12,18 +12,18 @@
     },
     "pluginOptions": {},
     "attributes": {
+        "locations": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::location.location",
+            "inversedBy": "categories"
+        },
         "Type": {
             "type": "enumeration",
             "enum": [
-                "One day trip",
-                "package"
+                "One-day-trip",
+                "Package"
             ]
-        },
-        "location": {
-            "type": "relation",
-            "relation": "oneToOne",
-            "target": "api::location.location",
-            "mappedBy": "category"
         }
     }
 }
