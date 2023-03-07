@@ -27,15 +27,21 @@ const HistoryPage = () => {
     }, []);
 
     return (
-        <div>
+        <div style={{ position: "relative", minHeight: "100vh" }}>
             <UserNavbar />
-            <div className="container my-5">
-                <div className="row">
-                    {user && paymentStatus.map((item) => (
-                        <Cardhistory statusData={item} />
-                    ))}
+            {user && paymentStatus.length > 0 ? (
+                <div className="container my-5">
+                    <div className="row">
+                        {paymentStatus.map((item) => (
+                            <Cardhistory statusData={item} />
+                        ))}
+                    </div>
                 </div>
-            </div>
+            ) : (
+                <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "white", opacity: 0.5, display: "flex", justifyContent: "center", alignItems: "center" }}>
+                    <h1>.. คุณยังไม่มีประวัติการท่องเที่ยว ..</h1>
+                </div>
+            )}
         </div>
     );
 };
