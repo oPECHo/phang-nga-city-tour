@@ -153,6 +153,7 @@ const PaymentPage = () => {
                                                 value={daytime?.toISOString().slice(0, 10)}
                                                 onChange={handleDaytimeChange}
                                                 required
+                                                min={new Date().toISOString().slice(0, 10)}
                                             />
                                             <div className="form-outline">
                                                 <label className="form-label">จำนวนคน</label>
