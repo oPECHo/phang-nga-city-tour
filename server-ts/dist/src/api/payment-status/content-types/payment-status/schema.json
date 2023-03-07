@@ -41,6 +41,9 @@
         },
         "tour_left": {
             "type": "string"
+        },
+        "tour_end": {
+            "type": "date"
         }
     }
 }
