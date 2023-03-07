@@ -9,8 +9,8 @@ export default interface Tour {
         description: string;
         conditions: string;
         direction : string;
-        start: string;
-        end : string;
+        start: Date;
+        end : Date;
         image: {
             data: [
                 {
