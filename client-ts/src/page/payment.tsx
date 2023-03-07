@@ -1,6 +1,6 @@
 import UserNavbar from '../components/UserNavbar';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Tour from '../models/tour';
 import Repo from '../repositories';
 import qrcode from 'qrcode';
@@ -14,6 +14,8 @@ const PaymentPage = () => {
     const [qrCode, setQrCode] = useState<string>('');
     const [quantity, setQuantity] = useState(1);
     const [daytime, setDaytime] = useState<Date | null>(null);
+    
+    const navigate = useNavigate();
     const params = useParams();
     const user = userData();
 
@@ -58,6 +60,7 @@ const PaymentPage = () => {
         await Repo.Tourdata.updateTour(tourID, updatenumber)
         console.log("Booked!")
         console.log(daytime)
+        navigate(`/userstatus`)
     }
     const handleDaytimeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const selectedDate = new Date(event.target.value);
@@ -65,7 +68,7 @@ const PaymentPage = () => {
     };
 
     const tourLeft = data?.number as number - quantity
-    const updatenumber : numberTour = {
+    const updatenumber: numberTour = {
         data: {
             number: tourLeft,
         }
@@ -171,18 +174,13 @@ const PaymentPage = () => {
                                         </div>
                                         <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
 
-                                        <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3" onSubmit={Booked}>
+                                        <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3">
                                             <button className="btn btn-success btn-lg"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#myModal"
                                                 style={{ width: "100%", whiteSpace: "nowrap" }}
-                                                type="submit"
+                                                type="button"
                                                 disabled={daytime === null}
-                                                onClick={() => {
-                                                    if (daytime === null) {
-                                                        window.alert("Please select a date.");
-                                                    }
-                                                }}
                                             >
                                                 จองเลย!
                                             </button>
@@ -212,9 +210,17 @@ const PaymentPage = () => {
                                                         <div>Facebook : www.facebook.com/PHANG NGA</div>
                                                     </div>
 
-                                                    <div className="modal-footer">
-                                                        <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                                    </div>
+                                                    <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3" onSubmit={Booked}>
+                                                        <button className="btn btn-success btn-lg"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#myModal"
+                                                            style={{ width: "100%", whiteSpace: "nowrap" }}
+                                                            type="submit"
+                                                            disabled={daytime === null}
+                                                        >
+                                                            ยืนยันการจอง!
+                                                        </button>
+                                                    </form >
                                                 </div>
                                             </div>
                                         </div>
