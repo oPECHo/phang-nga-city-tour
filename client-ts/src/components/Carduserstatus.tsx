@@ -39,13 +39,14 @@ function CardUserStatus(props: Props) {
             window.location.reload();
         }
     };
-
+    const text_qrcode = 'ราคาที่ต้องจ่ายทั้งหมด ' + total_price.toLocaleString('en-US') + ' บาท'
     useEffect(() => {
-        qrcode.toDataURL(total_price.toString(), (err, url) => {
+        qrcode.toDataURL(text_qrcode.toString(), (err, url) => {
             if (err) {
                 console.log(err);
             } else {
                 setQrCode(url);
+                console.log(text_qrcode)
             }
         });
     }, [total_price]);
