@@ -1,0 +1,47 @@
+version: '3'
+services:
+  demo_mysql:
+    container_name: demo-mysql
+    image: mysql/mysql-server
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: demo
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - 127.0.0.1:3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    restart: always
+    networks:
+      - demo
+
+  app:
+    build:
+      context: ./my-server
+    container_name: demo-app
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      DATABASE_CLIENT: mysql
+      DATABASE_HOST: demo_mysql
+      DATABASE_PORT: 3306
+      DATABASE_NAME: demo
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: secret
+      APP_KEYS: mysecret1234              # important!
+      JWT_SECRET: myjwtsecret             # important!
+      ADMIN_JWT_SECRET: myadminjwtsecret  # important!
+      API_TOKEN_SALT: apitokensalt        # important!
+    volumes:
+      - ./app:/srv/app
+    ports:
+      - 127.0.0.1:8000:1337
+    depends_on:
+      - demo_mysql
+    networks:
+      - demo
+networks:
+  demo:
