@@ -6,6 +6,7 @@ export default interface PaymentStatus {
         tour_type: string,
         tour_start: Date | null,
         tour_id: string | number,
+        tour_left: string,
         status: string,
         user: string,
         image_url: string,

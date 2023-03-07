@@ -55,7 +55,7 @@ const PaymentPage = () => {
     const Booked = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         await Repo.Paymentdata.createPayment(newPayment)
-        await Repo.Tourdata.updateTour(tourID,updatenumber)
+        await Repo.Tourdata.updateTour(tourID, updatenumber)
         console.log("Booked!")
         console.log(daytime)
     }
@@ -64,6 +64,13 @@ const PaymentPage = () => {
         setDaytime(selectedDate);
     };
 
+    const tourLeft = data?.number as number - quantity
+    const updatenumber : numberTour = {
+        data: {
+            number: tourLeft,
+        }
+    }
+
     const newPayment: PaymentStatus = {
         id: null,
         attributes: null,
@@ -71,20 +78,13 @@ const PaymentPage = () => {
             tour_name: tourName as string,
             tour_type: tourType as string,
             tour_id: tourID,
+            tour_left: tourLeft.toString(),
             tour_start: daytime,
             status: 'จองแล้ว',
             user: user.username,
             image_url: thumbnail,
             total_price: total_price,
             quantity: quantity
-        }
-    }
-
-    const number = data?.number as number - quantity
-
-    const updatenumber : numberTour = {
-        data: {
-            number: number
         }
     }
 

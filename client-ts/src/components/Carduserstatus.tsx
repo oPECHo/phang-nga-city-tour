@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PaymentStatus from "../models/paymentStatus";
 import qrcode from 'qrcode';
 import Repo from '../repositories'
-import { useParams } from "react-router-dom";
+import numberTour from "../models/numberTour";
 
 interface Props {
     statusData: PaymentStatus,
@@ -10,6 +10,7 @@ interface Props {
 
 function CardUserStatus(props: Props) {
     const reviewData = props.statusData ? props.statusData.attributes : null;
+    const tourId = reviewData?.tour_id;
     const start = reviewData?.tour_start;
     const image = reviewData?.image_url;
     const tour = reviewData?.tour_name;
@@ -19,15 +20,23 @@ function CardUserStatus(props: Props) {
 
     const [qrCode, setQrCode] = useState<string>('');
 
+    const tourLeft = Number(reviewData?.tour_left);
+    const tourPlus = tourLeft + quantity as number;
+    const updatenumber : numberTour = {
+        data: {
+            number: tourPlus,
+        }
+    }
+
     const cancelPayment = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (window.confirm("คุณแน่ใจหรือไม่ว่าต้องการยกเลิกทัวร์ของคุณ")) {
             await Repo.Paymentdata.deletePayment(props.statusData.id);
+            await Repo.Tourdata.updateTour(tourId, updatenumber)
             console.log("Deleted!");
             window.location.reload();
         }
     };
-
 
     useEffect(() => {
         qrcode.toDataURL(total_price.toString(), (err, url) => {

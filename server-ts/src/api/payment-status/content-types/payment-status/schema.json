@@ -38,6 +38,9 @@
     },
     "tour_id": {
       "type": "string"
+    },
+    "tour_left": {
+      "type": "string"
     }
   }
 }
