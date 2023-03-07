@@ -8,6 +8,7 @@ interface Props {
 function Cardhistory(props: Props) {
     const reviewData = props.statusData ? props.statusData.attributes : null;
     const image = reviewData?.image_url;
+    const tourType = reviewData?.tour_type;
     const tour = reviewData?.tour_name;
     const status = reviewData?.status;
     const tourId = reviewData?.tour_id;
@@ -23,7 +24,7 @@ function Cardhistory(props: Props) {
             <div className="card">
                 <img src={image} alt="" className="card-img-top" />
                 <div className="card-body">
-                    <h5 className="card-title">{tour}</h5>
+                    <h5 className="card-title">{tour} ({tourType})</h5>
                     <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
                         สถานะการจอง: <span style={{ color: "#FF5C5C", fontWeight: "bold" }}>{status}</span>
                         <br></br>

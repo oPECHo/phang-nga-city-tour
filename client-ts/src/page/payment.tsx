@@ -14,7 +14,7 @@ const PaymentPage = () => {
     const [qrCode, setQrCode] = useState<string>('');
     const [quantity, setQuantity] = useState(1);
     const [daytime, setDaytime] = useState<Date | null>(null);
-    
+
     const navigate = useNavigate();
     const params = useParams();
     const user = userData();
@@ -25,9 +25,11 @@ const PaymentPage = () => {
     const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
     const total_price = data?.price as number * quantity;
 
-    const tourType = data?.categories.data[0].attributes.Type
-    const tourName = data?.title
+    const tourType = data?.categories.data[0].attributes.Type;
     const tourID = dataID?.id.toString() || 0;
+    const tourStart = data?.start;
+    const tourEnd = data?.end;
+    const tourName = data?.title;
 
     const fetchData = async () => {
         try {
@@ -54,14 +56,24 @@ const PaymentPage = () => {
         });
     }, [total_price]);
 
-    const Booked = async (e: React.FormEvent<HTMLFormElement>) => {
+    const BookedODT = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        await Repo.Paymentdata.createPayment(newPayment)
+        await Repo.Paymentdata.createPayment(newPaymentODT)
         await Repo.Tourdata.updateTour(tourID, updatenumber)
         console.log("Booked!")
         console.log(daytime)
         navigate(`/userstatus`)
     }
+
+    const BookedPack = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        await Repo.Paymentdata.createPayment(newPaymentPack)
+        await Repo.Tourdata.updateTour(tourID, updatenumber)
+        console.log("Booked!")
+        console.log(daytime)
+        navigate(`/userstatus`)
+    }
+
     const handleDaytimeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const selectedDate = new Date(event.target.value);
         setDaytime(selectedDate);
@@ -74,7 +86,7 @@ const PaymentPage = () => {
         }
     }
 
-    const newPayment: PaymentStatus = {
+    const newPaymentODT: PaymentStatus = {
         id: null,
         attributes: null,
         data: {
@@ -82,13 +94,39 @@ const PaymentPage = () => {
             tour_type: tourType as string,
             tour_id: tourID,
             tour_left: tourLeft.toString(),
-            tour_start: daytime,
+            tour_start: daytime as Date,
+            tour_end: null,
             status: 'จองแล้ว',
             user: user.username,
             image_url: thumbnail,
             total_price: total_price,
             quantity: quantity
         }
+    }
+
+    const newPaymentPack: PaymentStatus = {
+        id: null,
+        attributes: null,
+        data: {
+            tour_name: tourName as string,
+            tour_type: tourType as string,
+            tour_id: tourID,
+            tour_left: tourLeft.toString(),
+            tour_start: tourStart as Date,
+            tour_end: tourEnd as Date,
+            status: 'จองแล้ว',
+            user: user.username,
+            image_url: thumbnail,
+            total_price: total_price,
+            quantity: quantity
+        }
+    }
+
+    function getTomorrow() {
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+        return tomorrow;
     }
 
 
@@ -146,16 +184,41 @@ const PaymentPage = () => {
                                         <div className="p-3">
                                             <h2 className="fw-bold">{data?.title}</h2>
                                             <span>วันที่เดินทาง</span>
-                                            <input
-                                                id="daytime"
-                                                className="form-control"
-                                                type="date"
-                                                value={daytime?.toISOString().slice(0, 10)}
-                                                onChange={handleDaytimeChange}
-                                                required
-                                                min={new Date().toISOString().slice(0, 10)}
-                                            />
+                                            {tourType === 'Package' ? (
+                                                <div>
+                                                    <input
+                                                        id="daytime"
+                                                        className="form-control"
+                                                        type="date"
+                                                        value={tourStart?.toString().slice(0, 10)}
+                                                        disabled={tourType === 'Package'}
+                                                        required
+                                                    />
+                                                    <br />
+                                                    <span>วันสิ้นสุด</span>
+                                                    <input
+                                                        id="daytime"
+                                                        className="form-control"
+                                                        type="date"
+                                                        value={tourEnd?.toString().slice(0, 10)}
+                                                        disabled={tourType === 'Package'}
+                                                        required
+                                                    />
+                                                </div>
+                                            ) : (
+                                                <input
+                                                    id="daytime"
+                                                    className="form-control"
+                                                    type="date"
+                                                    value={daytime?.toISOString().slice(0, 10)}
+                                                    onChange={handleDaytimeChange}
+                                                    required
+                                                    min={getTomorrow().toISOString().slice(0, 10)}
+                                                    onKeyDown={(e) => e.preventDefault()}
+                                                />
+                                            )}
                                             <div className="form-outline">
+                                                <br />
                                                 <label className="form-label">จำนวนคน</label>
                                                 <input className="form-control" style={{ height: '30px', width: "70px", borderRadius: "5px" }}
                                                     type="number"
@@ -176,15 +239,26 @@ const PaymentPage = () => {
                                         <div className='fw-bold mx-3'>รวมทั้งหมด {total_price.toLocaleString('en-US')} บาท</div>
 
                                         <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3">
-                                            <button className="btn btn-success btn-lg"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#myModal"
-                                                style={{ width: "100%", whiteSpace: "nowrap" }}
-                                                type="button"
-                                                disabled={daytime === null}
-                                            >
-                                                จองเลย!
-                                            </button>
+                                            {tourType === 'Package' ? (
+                                                <button className="btn btn-success btn-lg"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#myModal"
+                                                    style={{ width: "100%", whiteSpace: "nowrap" }}
+                                                    type="button"
+                                                >
+                                                    จองเลย!
+                                                </button>
+                                            ) : (
+                                                <button className="btn btn-success btn-lg"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#myModal"
+                                                    style={{ width: "100%", whiteSpace: "nowrap" }}
+                                                    type="button"
+                                                    disabled={daytime === null}
+                                                >
+                                                    จองเลย!
+                                                </button>
+                                            )}
                                         </form >
 
                                         <div className='p-2' style={{ color: "red" }}>หมายเหตุ: คุณที่มีเวลา 1
@@ -210,18 +284,29 @@ const PaymentPage = () => {
                                                         <div>Line ID : @PHANG NGA</div>
                                                         <div>Facebook : www.facebook.com/PHANG NGA</div>
                                                     </div>
-
-                                                    <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3" onSubmit={Booked}>
-                                                        <button className="btn btn-success btn-lg"
-                                                            data-bs-toggle="modal"
-                                                            data-bs-target="#myModal"
-                                                            style={{ width: "100%", whiteSpace: "nowrap" }}
-                                                            type="submit"
-                                                            disabled={daytime === null}
-                                                        >
-                                                            ยืนยันการจอง!
-                                                        </button>
-                                                    </form >
+                                                    {tourType === 'Package' ? (
+                                                        <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3" onSubmit={BookedPack}>
+                                                            <button className="btn btn-success btn-lg"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#myModal"
+                                                                style={{ width: "100%", whiteSpace: "nowrap" }}
+                                                                type="submit"
+                                                            >
+                                                                ยืนยันการจอง Package!
+                                                            </button>
+                                                        </form >
+                                                    ) : (
+                                                        <form className="mt-3 d-flex flex-row align-items-center p-3 form-color gap-3" onSubmit={BookedODT}>
+                                                            <button className="btn btn-success btn-lg"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#myModal"
+                                                                style={{ width: "100%", whiteSpace: "nowrap" }}
+                                                                type="submit"
+                                                            >
+                                                                ยืนยันการจอง OneDayTrip!
+                                                            </button>
+                                                        </form >
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>

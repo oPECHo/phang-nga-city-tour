@@ -11,8 +11,10 @@ interface Props {
 function CardUserStatus(props: Props) {
     const reviewData = props.statusData ? props.statusData.attributes : null;
     const tourId = reviewData?.tour_id;
-    const start = reviewData?.tour_start;
+    const start = reviewData?.tour_start as string;
+    const end = reviewData?.tour_end as string;
     const image = reviewData?.image_url;
+    const tourType = reviewData?.tour_type;
     const tour = reviewData?.tour_name;
     const status = reviewData?.status;
     const quantity = reviewData?.quantity;
@@ -22,7 +24,7 @@ function CardUserStatus(props: Props) {
 
     const tourLeft = Number(reviewData?.tour_left);
     const tourPlus = tourLeft + quantity as number;
-    const updatenumber : numberTour = {
+    const updatenumber: numberTour = {
         data: {
             number: tourPlus,
         }
@@ -54,16 +56,30 @@ function CardUserStatus(props: Props) {
             <div className="card">
                 <img src={image} alt="" className="card-img-top" />
                 <div className="card-body">
-                    <h5 className="card-title">{tour}</h5>
-                    <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
-                        ราคา: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{total_price.toLocaleString('en-US')}</span><span> บาท</span>
-                        <br></br>
-                        จำนวน: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{quantity}</span><span> ท่าน</span>
-                        <br></br>
-                        สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>{status}</span>
-                        <br></br>
-                        เริ่มเดินทางวันที่: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{start}</span>
-                    </p>
+                    <h5 className="card-title">{tour} ({tourType})</h5>
+                    {tourType === 'Package' ? (
+                        <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
+                            เริ่มเดินทางวันที่: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{start}</span>
+                            <br />
+                            สิ้นสุดวันที่: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{end}</span>
+                            <br />
+                            ราคา: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{total_price.toLocaleString('en-US')}</span><span> บาท</span>
+                            <br />
+                            จำนวน: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{quantity}</span><span> ท่าน</span>
+                            <br />
+                            สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>{status}</span>
+                        </p>
+                    ) : (
+                        <p className="card-text" style={{ fontSize: "1rem", color: "#555", fontWeight: "bold" }}>
+                            เริ่มเดินทางวันที่: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{start}</span>
+                            <br />
+                            ราคา: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{total_price.toLocaleString('en-US')}</span><span> บาท</span>
+                            <br />
+                            จำนวน: <span style={{ color: "#2971e6", fontWeight: "bold" }}>{quantity}</span><span> ท่าน</span>
+                            <br />
+                            สถานะการจอง: <span style={{ color: "#28a745", fontWeight: "bold" }}>{status}</span>
+                        </p>
+                    )}
                     <form className="" onSubmit={cancelPayment}>
                         <button className="btn btn-outline-danger btn-sm"
                             type="submit"
