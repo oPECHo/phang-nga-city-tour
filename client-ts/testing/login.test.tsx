@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import Login from '../src/page/Login';
@@ -28,5 +28,21 @@ describe('LoginPage', () => {
         );
         expect(screen.getByText('ลงทะเบียนที่นี่')).toBeInTheDocument();
     })
+    it('Check button in pageLogin', () => {
+        render(
+            <MemoryRouter>
+                <Login/>
+            </MemoryRouter>
+        );
+        expect(screen.getByRole('link', { name: 'เข้าสู่ระบบ' })).toBeInTheDocument();
+    });
+    it('Check link text in pageLogin', () => {
+        render(
+            <MemoryRouter>
+                <Login/>
+            </MemoryRouter>
+        );
+        expect(screen.getByRole('link', { name: 'ลงทะเบียนที่นี่' })).toBeInTheDocument();
+    });
 })
 
