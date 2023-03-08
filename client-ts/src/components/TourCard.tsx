@@ -12,12 +12,13 @@ interface Props {
 }
 
 const TourCard = (props: Props) => {
-  const navigate = useNavigate();
-  const item = props.Tours.attributes;
-  const tourId = props.Tours.id;
-  const score = item.score;
-  const image = item.image.data[0].attributes.formats.thumbnail.url;
+  const item = props.Tours ? props.Tours.attributes : null;
+  const tourId = props.Tours ? props.Tours.id : null;
+  const score = item?.score;
+  const image = item?.image.data[0].attributes.formats.thumbnail.url;
   const thumbnail = `${conf.apiPrefix}${image}`;
+
+  const navigate = useNavigate();
 
 
   return (
@@ -34,16 +35,16 @@ const TourCard = (props: Props) => {
           </div>
           <div className="card-body">
             <h5 className="card-title font-weight-bold">
-              <a>{item.title}</a>
+              <a>{item?.title}</a>
             </h5>
             <ul className="list-unstyled list-inline mb-0">
               <div className="parent-element mx-auto" style={{ display: 'flex', alignItems: 'center' }}>
-                <Rating name="read-only mx-auto" value={score} readOnly />( {item.number} ท่าน )
+                <Rating name="read-only mx-auto" value={score} readOnly />( {item?.number} ท่าน )
               </div>
             </ul>
             <hr className="my-4" />
             <h6 className="mx-auto">
-              <p className="mb-2">ราคา {item.price.toLocaleString('en-US')} บาท/ท่าน</p>
+              <p className="mb-2">ราคา {item?.price.toLocaleString('en-US')} บาท/ท่าน</p>
             </h6>
           </div>
         </div>
