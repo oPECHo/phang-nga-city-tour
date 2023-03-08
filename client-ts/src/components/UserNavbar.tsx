@@ -21,10 +21,10 @@ function UserNavbar() {
         </Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/search/All">ค้นหา</Nav.Link>
-            <Nav.Link href="/Userstatus">ทัวร์ของคุณ</Nav.Link>
-            <Nav.Link href="/history">ประวัติ</Nav.Link>
-            <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">
+            <Nav.Link href="/search/All"style={{fontSize: "15px"}} >ค้นหา</Nav.Link>
+            <Nav.Link href="/Userstatus"style={{fontSize: "15px"}}>ทัวร์ของคุณ</Nav.Link>
+            <Nav.Link href="/history"style={{fontSize: "15px"}}>ประวัติ</Nav.Link>
+            <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown"style={{fontSize: "15px"}}>
               <NavDropdown.Item href="/search/All">ทั้งหมด</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/search/One-day-trip">ทริปวันเดียว</NavDropdown.Item>
