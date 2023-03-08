@@ -25,12 +25,12 @@ const SearchPage = () => {
 
     const fetchData = async () => {
         if (params.type === 'All') {
-            const res = await Repo.Tourdata.getAll();
+            const res = await Repo?.Tourdata.getAll();
             if (res) {
                 setTourData(res);
             }
         } else {
-            const res = await Repo.Tourdata.getCategory(params.type as string);
+            const res = await Repo?.Tourdata.getCategory(params.type as string);
             if (res) {
                 setTourData(res);
             }
