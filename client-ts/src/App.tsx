@@ -7,10 +7,11 @@ import RegisterPage from './page/Register'
 import TripDetailPage from './page/tripDetail'
 import { LoginRoute, ScrollToTop } from './helper'
 import UserStatusPage from './page/Userstatus'
-import GenrePage from './page/Genre'
+import GenrePage from './page/search'
 import ReviewPage from './page/Review'
 import HistoryPage from './page/history'
 import PaymentPage from './page/payment'
+import SearchPage from './page/search'
 
 
 
@@ -21,7 +22,7 @@ function App() {
       <Routes>
         <Route index element={<Indexpage />} />
         <Route path="/home" element={<Indexpage />} />
-        <Route path="/genre/:type" element={<GenrePage />} />
+        <Route path="/search/:type" element={<SearchPage />} />
         <Route path="/TripDetailPage/:id" element={<TripDetailPage />} />
         <Route path="/TripDetailPage/:id/review" element={<ReviewPage />} />
         <Route path="/TripDetailPage/:id/payment" element={<LoginRoute><PaymentPage /></LoginRoute>} />

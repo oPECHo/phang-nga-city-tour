@@ -22,15 +22,15 @@ function UserNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/Genre/All">ค้นหา</Nav.Link>
+            <Nav.Link href="/search/All">ค้นหา</Nav.Link>
             <Nav.Link href="/Userstatus">ทัวร์ของคุณ</Nav.Link>
             <Nav.Link href="/history">ประวัติ</Nav.Link>
             <NavDropdown title="หมวดหมู่" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/Genre/All">ทั้งหมด</NavDropdown.Item>
+              <NavDropdown.Item href="/search/All">ทั้งหมด</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Genre/One-day-trip">ทริปวันเดียว</NavDropdown.Item>
+              <NavDropdown.Item href="/search/One-day-trip">ทริปวันเดียว</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Genre/Package">แพ็คเกจ</NavDropdown.Item>
+              <NavDropdown.Item href="/search/Package">แพ็คเกจ</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           {!user && (
