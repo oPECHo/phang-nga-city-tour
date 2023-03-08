@@ -3,9 +3,12 @@ import PaymentStatus from "../models/paymentStatus";
 import qrcode from 'qrcode';
 import Repo from '../repositories'
 import numberTour from "../models/numberTour";
+import Tour from "../models/tour";
+import conf from "../conf";
 
 interface Props {
     statusData: PaymentStatus,
+    tourLeft: Tour
 }
 
 function CardUserStatus(props: Props) {
@@ -21,8 +24,7 @@ function CardUserStatus(props: Props) {
     const total_price = reviewData?.total_price;
 
     const [qrCode, setQrCode] = useState<string>('');
-
-    const tourLeft = Number(reviewData?.tour_left);
+    const [tourLeft, setTourLeft] = useState<Tour>(props.tourLeft);
     const tourPlus = tourLeft + quantity as number;
     const updatenumber: numberTour = {
         data: {
@@ -40,6 +42,20 @@ function CardUserStatus(props: Props) {
         }
     };
     const text_qrcode = 'ราคาที่ต้องจ่ายทั้งหมด ' + total_price.toLocaleString('en-US') + ' บาท'
+
+    useEffect(() => {
+        const fetchTour = async () => {
+            try {
+                const response = await fetch(`${conf.apiPrefix}${tourId}`);
+                const data = await response.json();
+                setTourLeft(data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        fetchTour();
+    }, [tourId]);
+
     useEffect(() => {
         qrcode.toDataURL(text_qrcode.toString(), (err, url) => {
             if (err) {

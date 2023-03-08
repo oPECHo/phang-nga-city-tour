@@ -46,6 +46,7 @@ const PaymentPage = () => {
     useEffect(() => {
         fetchData();
     }, [params.id]);
+    
     const text_qrcode = 'ราคาที่ต้องจ่ายทั้งหมด ' + total_price.toLocaleString('en-US') + ' บาท' 
     useEffect(() => {
         qrcode.toDataURL(text_qrcode, (err, url) => {

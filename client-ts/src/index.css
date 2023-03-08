@@ -8,6 +8,18 @@ body{
 	background-color: #eee;
 }
 
+.custom-toast-success {
+  background-color: #5cb85c;
+  color: #fff;
+  font-size: 16px;
+}
+
+.custom-toast-error {
+  background-color: #d9534f;
+  color: #fff;
+  font-size: 16px;
+}
+
 .no-scroll {
   overflow: hidden;
 }

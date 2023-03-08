@@ -26,8 +26,14 @@ export default function RegisterPage() {
             }
         } catch (err) {
             console.log(err);
-            toast.error("Invalid email or password", {
-                hideProgressBar: true
+            toast.error("อีเมลหรือรหัสผ่านไม่ถูกต้อง", {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                className: 'custom-toast-error'
             })
         }
     }

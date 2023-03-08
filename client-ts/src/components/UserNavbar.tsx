@@ -19,7 +19,6 @@ function UserNavbar() {
             </a>
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/search/All">ค้นหา</Nav.Link>
@@ -47,6 +46,9 @@ function UserNavbar() {
               </Nav.Link>
             </Nav>
           )}
+        </Navbar.Collapse>
+        <Nav className="ms-auto">
+
           {user && (
             <div>
               <Button variant="contained" onClick={() => setPopup(true)}>
@@ -55,7 +57,12 @@ function UserNavbar() {
               <IconButton sx={{ mr: 1 }} onClick={() => setPopup(true)}>
                 <Avatar src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp' />
               </IconButton>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            </div>
+          )}
 
+          {user && (
+            <div>
               <Dialog
                 open={popup}
                 onClose={() => setPopup(false)}
@@ -88,7 +95,8 @@ function UserNavbar() {
               </Dialog>
             </div>
           )}
-        </Navbar.Collapse>
+
+        </Nav>
       </Container>
     </Navbar >
   );

@@ -24,16 +24,28 @@ export default function Login() {
         console.log(data)
         if (data.jwt) {
           storeUser(data)
-          toast.success('Login successful', {
-            hideProgressBar: true
+          toast.success('เข้าสู่ระบบสำเร็จ', {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            className: 'custom-toast-success'
           })
           setUser(initialUser)
           navigate('/')
         }
       }
     } catch (err) {
-      toast.error("Invalid email or password", {
-        hideProgressBar: true
+      toast.error("อีเมลหรือรหัสผ่านไม่ถูกต้อง", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        className: 'custom-toast-error'
       })
     }
   }
