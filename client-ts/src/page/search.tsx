@@ -10,7 +10,7 @@ import UserNavbar from '../components/UserNavbar';
 import SearchBar from '../components/SearchBar';
 import TourCard from '../components/TourCard';
 
-const GenrePage = () => {
+const SearchPage = () => {
     const [data, setTourData] = useState<Tour[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>('');
     const params = useParams();
@@ -92,4 +92,4 @@ const GenrePage = () => {
     );
 };
 
-export default GenrePage;
+export default SearchPage;

@@ -31,9 +31,9 @@ const SearchBar = ({ onChange }: SearchBarProps) => {
               <i className="fa fa-caret-down"></i>
             </button>
             <ul className="dropdown-menu dropdown-menu-end" id="dropdownMenu" data-bs-popper="static">
-              <li><a className="dropdown-item" href="/Genre/All">ทั้งหมด</a></li>
-              <li><a className="dropdown-item" href="/Genre/One-day-trip">ทริปวันเดียว</a></li>
-              <li><a className="dropdown-item" href="/Genre/Package">แพ็คเกจ</a></li>
+              <li><a className="dropdown-item" href="/search/All">ทั้งหมด</a></li>
+              <li><a className="dropdown-item" href="/search/One-day-trip">ทริปวันเดียว</a></li>
+              <li><a className="dropdown-item" href="/search/Package">แพ็คเกจ</a></li>
             </ul>
           </div>
         </div>
