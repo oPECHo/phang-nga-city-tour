@@ -15,6 +15,14 @@ const SearchPage = () => {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const params = useParams();
 
+    const headtitle =   params.type === 'One-day-trip' ? 'ทริปวันเดียว' :
+                        params.type === 'Package' ? 'แพ็คเกจ' :
+                        'ทั้งหมด';
+
+    const filteredData = data.filter((item) =>
+        item.attributes.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     const fetchData = async () => {
         if (params.type === 'All') {
             const res = await Repo.Tourdata.getAll();
@@ -32,14 +40,8 @@ const SearchPage = () => {
     useEffect(() => {
         fetchData()
     }, [params.type])
-    
-    const headtitle =params.type === 'One-day-trip'? 'ทริปวันเดียว': 
-        params.type === 'Package'? 'แพ็คเกจ': 
-            'ทั้งหมด';
 
-    const filteredData = data.filter((item) =>
-        item.attributes.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+
 
     return (
         <div>

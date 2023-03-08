@@ -14,8 +14,9 @@ interface Props {
 const TourCard = (props: Props) => {
   const navigate = useNavigate();
   const item = props.Tours.attributes;
+  const tourId = props.Tours.id;
   const score = item.score;
-  const image = item.image.data[0].attributes.url;
+  const image = item.image.data[0].attributes.formats.thumbnail.url;
   const thumbnail = `${conf.apiPrefix}${image}`;
 
 
@@ -23,10 +24,10 @@ const TourCard = (props: Props) => {
     <div className="container">
       <section className="mx-auto my-5" style={{ maxWidth: '23rem' }}>
         <div className="card">
-          <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <div className="hover-overlay ripple" data-mdb-ripple-color="light">
             <AspectRatio objectFit="fill" >
               <img src={thumbnail} loading="lazy" alt=""  />
-              <div className="overlay" onClick={() => navigate(`/TripDetailPage/${props.Tours.id}`)} >
+              <div className="overlay" onClick={() => navigate(`/TripDetailPage/${tourId}`)} >
                 <p className="text" >รายละเอียดเพิ่มเติม</p>
               </div>
             </AspectRatio>
