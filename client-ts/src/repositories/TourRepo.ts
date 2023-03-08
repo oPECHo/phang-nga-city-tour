@@ -1,5 +1,3 @@
-import axios from "axios";
-//import payment from "../models/payment";
 import Tours from "../models/tour";
 import numberTour from "../models/numberTour";
 import { IRepository } from "./IRepository";

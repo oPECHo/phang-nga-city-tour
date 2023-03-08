@@ -65,7 +65,7 @@ export default function Login() {
                 <div className="row g-0">
                   <div className="col-md-6 col-lg-5 d-none d-md-block">
                     <img
-                      src="public/JamesBond.png"
+                      src="/JamesBond.png"
                       alt="login form"
                       className="img-fluid mx-auto object-fit-none border"
                       style={{
