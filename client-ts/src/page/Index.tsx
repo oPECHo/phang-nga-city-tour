@@ -10,7 +10,7 @@ function Indexpage() {
                 <Grid item>
                     <a href="/search/All">
                         <div className="text-center">
-                            <img  src="public/SearchButton.png" className="img-fluid search-button" alt="..." width="75%" height="75%" />
+                            <img  src="/SearchButton.png" className="img-fluid search-button" alt="..." width="75%" height="75%" />
                         </div>
                     </a>
                 </Grid>

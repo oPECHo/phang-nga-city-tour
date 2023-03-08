@@ -1,5 +1,5 @@
 .Home-BG {
-    background-image: url('../../public/JamesBond.png');
+    background-image: url('/JamesBond.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

@@ -6,6 +6,7 @@ import { userData } from '../helper';
 
 import "../design/Login.css"
 import UserNavbar from '../components/UserNavbar';
+import conf from '../conf';
 
 const initialUser = { username: '', email: '', password: '' };
 
@@ -16,7 +17,7 @@ export default function RegisterPage() {
     const handleSignUp = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(user);
-        const url = "http://localhost:1337/api/auth/local/register";
+        const url = `${conf.apiPrefix}/api/auth/local/register`;
         try {
             if (user.username && user.email && user.password) {
                 const res = await axios.post(url, user)

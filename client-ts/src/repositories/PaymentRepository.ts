@@ -6,8 +6,8 @@ import conf from "../conf";
 const user = userData()
 
 export class PaymentRepository implements IRepository<paymentStatus>{
-    urlPrefix = `${conf.apiPrefix}/payment-statuses?populate=*`
-    deletePrefix = `${conf.apiPrefix}/payment-statuses`
+    urlPrefix = `${conf.apiPrefix}/api/payment-statuses?populate=*`
+    deletePrefix = `${conf.apiPrefix}/api/payment-statuses`
     token = user.jwt
 
     async getPayment(): Promise<paymentStatus[] | null> {

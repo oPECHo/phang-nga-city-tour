@@ -13,7 +13,6 @@ body{
 }
 
 .tripDetail {
-  background-image: url('/public/เขาหลัก2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;

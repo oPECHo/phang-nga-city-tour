@@ -3,6 +3,7 @@ import Tour from '../models/tour';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Repo from '../repositories';
+import conf from '../conf';
 
 
 const TripDetail = () => {
@@ -11,7 +12,7 @@ const TripDetail = () => {
   const params = useParams();
 
   const data = tourdata.length > 0 ? tourdata[0].attributes : null;
-  const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
+  const thumbnail = `${conf.apiPrefix}${data?.image.data[0].attributes.url}`;
 
   const LinkToPayment = () => {
     navigate(`/TripDetailPage/${params.id}/payment`)

@@ -5,6 +5,7 @@ import { AspectRatio } from '@mui/joy';
 import { Rating } from '@mui/material';
 
 import '../design/TourCard.css'
+import conf from '../conf';
 
 interface Props {
   Tours: Tour;
@@ -15,7 +16,7 @@ const TourCard = (props: Props) => {
   const item = props.Tours.attributes;
   const score = item.score;
   const image = item.image.data[0].attributes.url;
-  const thumbnail = `http://localhost:1337${image}`;
+  const thumbnail = `${conf.apiPrefix}${image}`;
 
 
   return (
