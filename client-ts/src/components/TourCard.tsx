@@ -25,7 +25,7 @@ const TourCard = (props: Props) => {
     <div className="container">
       <section className="mx-auto my-5" style={{ maxWidth: '23rem' }}>
         <div className="card">
-          <div className="hover-overlay ripple" data-mdb-ripple-color="light">
+          <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
             <AspectRatio objectFit="fill" >
               <img src={thumbnail} loading="lazy" alt=""  />
               <div className="overlay" onClick={() => navigate(`/TripDetailPage/${tourId}`)} >

@@ -157,7 +157,7 @@ const PaymentPage = () => {
                                                         </div>
                                                         <div className="rounded border d-flex w-100 p-3 align-items-center">
                                                             <p className="mb-0">
-                                                                <img className='mx-1' src="../../public/scb.jpg" style={{ height: "20px", borderRadius: "3px" }} /> SCB
+                                                                <img className='mx-1' src="/scb.jpg" style={{ height: "20px", borderRadius: "3px" }} /> SCB
                                                             </p>
                                                             <div className="ms-auto">************3456</div>
                                                         </div>
@@ -171,7 +171,7 @@ const PaymentPage = () => {
                                                         </div>
                                                         <div className="rounded border d-flex w-100 p-3 align-items-center">
                                                             <p className="mb-0">
-                                                                <img className='mx-1' src="../../public/promptpay.jpg" style={{ height: "20px", borderRadius: "3px" }} /> promptpay
+                                                                <img className='mx-1' src="/promptpay.jpg" style={{ height: "20px", borderRadius: "3px" }} /> promptpay
                                                             </p>
                                                             <div className="ms-auto">************1038</div>
                                                         </div>
