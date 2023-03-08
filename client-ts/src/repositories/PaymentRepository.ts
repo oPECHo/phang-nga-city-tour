@@ -1,16 +1,17 @@
 import { IRepository } from "./IRepository"
 import paymentStatus from "../models/paymentStatus";
 import { userData } from "../helper";
+import conf from "../conf";
 
 const user = userData()
 
 export class PaymentRepository implements IRepository<paymentStatus>{
-    urlPrefix = "http://localhost:1337/api/payment-statuses?populate=*"
-    deletePrefix = "http://localhost:1337/api/payment-statuses"
+    urlPrefix = `${conf.apiPrefix}/payment-statuses?populate=*`
+    deletePrefix = `${conf.apiPrefix}/payment-statuses`
     token = user.jwt
 
     async getPayment(): Promise<paymentStatus[] | null> {
-        const res = await fetch(`${this.urlPrefix}`,{
+        const res = await fetch(`${this.urlPrefix}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${this.token}`
@@ -24,7 +25,7 @@ export class PaymentRepository implements IRepository<paymentStatus>{
         const resp = await fetch(`${this.urlPrefix}`, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${this.token}`, 
+                "Authorization": `Bearer ${this.token}`,
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             },

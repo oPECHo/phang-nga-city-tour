@@ -4,11 +4,12 @@ import Tours from "../models/tour";
 import numberTour from "../models/numberTour";
 import { IRepository } from "./IRepository";
 import { userData } from "../helper";
+import conf from "../conf";
 
 const user = userData()
 
 export class TourRepository implements IRepository<Tours | numberTour>{
-    urlPrefix = "http://localhost:1337/api/locations?populate=*"
+    urlPrefix = `${conf.apiPrefix}/locations?populate=*`
     token = user.jwt
 
     async getAll(): Promise<Tours[] | null> {
@@ -37,16 +38,16 @@ export class TourRepository implements IRepository<Tours | numberTour>{
 
 
     async updateTour(id: string | number, data: numberTour): Promise<numberTour> {
-         const resp = await fetch(`http://localhost:1337/api/locations/${id}`, {
-             method: "PUT",
-             headers: { 
-                 "Authorization": `Bearer ${this.token}`,
-                 "Accept": "application/json",
-                 "Content-Type": "application/json"
-             },
-             body: JSON.stringify(data)
-         })
-         const data_res = await resp.json();
-         return data_res
+        const resp = await fetch(`${conf.apiPrefix}/locations/${id}`, {
+            method: "PUT",
+            headers: {
+                "Authorization": `Bearer ${this.token}`,
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        const data_res = await resp.json();
+        return data_res
     }
 }
