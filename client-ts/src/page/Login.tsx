@@ -6,6 +6,7 @@ import { storeUser, userData } from '../helper';
 
 import "../design/Login.css"
 import UserNavbar from '../components/UserNavbar';
+import conf from '../conf';
 
 const initialUser = { identifier: '', password: '' };
 
@@ -16,7 +17,7 @@ export default function Login() {
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(user);
-    const url = "http://localhost:1337/api/auth/local"
+    const url = `${conf.apiPrefix}/api/auth/local`
     try {
       if (user.identifier && user.password) {
         const { data } = await axios.post(url, user)

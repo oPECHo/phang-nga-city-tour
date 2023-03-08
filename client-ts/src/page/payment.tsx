@@ -7,6 +7,7 @@ import qrcode from 'qrcode';
 import { userData } from '../helper';
 import PaymentStatus from '../models/paymentStatus';
 import numberTour from '../models/numberTour';
+import conf from '../conf';
 
 
 const PaymentPage = () => {
@@ -22,7 +23,7 @@ const PaymentPage = () => {
     const data = tourdata.length > 0 ? tourdata[0].attributes : null;
     const dataID = tourdata.length > 0 ? tourdata[0] : null;
 
-    const thumbnail = `http://localhost:1337${data?.image.data[0].attributes.url}`;
+    const thumbnail = `${conf.apiPrefix}${data?.image.data[0].attributes.url}`;
     const total_price = data?.price as number * quantity;
 
     const tourType = data?.categories.data[0].attributes.Type;

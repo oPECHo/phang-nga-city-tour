@@ -9,7 +9,7 @@ import conf from "../conf";
 const user = userData()
 
 export class TourRepository implements IRepository<Tours | numberTour>{
-    urlPrefix = `${conf.apiPrefix}/locations?populate=*`
+    urlPrefix = `${conf.apiPrefix}/api/locations?populate=*`
     token = user.jwt
 
     async getAll(): Promise<Tours[] | null> {
@@ -38,7 +38,7 @@ export class TourRepository implements IRepository<Tours | numberTour>{
 
 
     async updateTour(id: string | number, data: numberTour): Promise<numberTour> {
-        const resp = await fetch(`${conf.apiPrefix}/locations/${id}`, {
+        const resp = await fetch(`${conf.apiPrefix}/api/locations/${id}`, {
             method: "PUT",
             headers: {
                 "Authorization": `Bearer ${this.token}`,

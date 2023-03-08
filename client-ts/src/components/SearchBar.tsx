@@ -12,7 +12,7 @@ const SearchBar = ({ onChange }: SearchBarProps) => {
       <div className="row justify-content-between">
         <div className="col-md-6">
           <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={onChange} onKeyDown={(event) => {
+            <input className="form-control me-2" type="search" placeholder="ค้นหาชื่อทัวร์.." aria-label="Search" onChange={onChange} onKeyDown={(event) => {
               if (event.key === 'Enter') {
                 event.preventDefault();
               }
