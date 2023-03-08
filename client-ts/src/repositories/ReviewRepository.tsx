@@ -2,11 +2,12 @@ import Review from "../models/review";
 import { IRepository } from "./IRepository";
 import { userData } from "../helper";
 import Postreview from "../models/postreview";
+import conf from "../conf";
 
 const user = userData()
 
 export class ReviewRepository implements IRepository<Review | Postreview>{
-    urlPrefix = "http://localhost:1337/api/comments"
+    urlPrefix = `${conf.apiPrefix}/comments`
     token = user.jwt
 
     async getReview(tour_id: string | number): Promise<Review[] | null> {
@@ -18,7 +19,7 @@ export class ReviewRepository implements IRepository<Review | Postreview>{
     async createReview(data: Postreview): Promise<Postreview> {
         const resp = await fetch(`${this.urlPrefix}`, {
             method: "POST",
-            headers: { 
+            headers: {
                 "Authorization": `Bearer ${this.token}`,
                 "Accept": "application/json",
                 "Content-Type": "application/json"
