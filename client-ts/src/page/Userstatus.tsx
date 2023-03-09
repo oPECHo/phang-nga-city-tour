@@ -32,7 +32,7 @@ const UserStatusPage = () => {
                 <div className="container my-5">
                     <div className="row">
                         {paymentStatus.map((item) => (
-                            <CardUserStatus statusData={item} tourLeft={item} />
+                            <CardUserStatus statusData={item} />
                         ))}
                     </div>
                 </div>
